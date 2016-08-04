@@ -4,44 +4,48 @@
 &lt;h3 id="1"&gt;1.制作公钥&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;制造第一把公钥：&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ssh-keygen -t rsa -C "yq08051035@163.com"
-设置名称为id_rsa
-Enter file in which to save the key (.ssh/id_rsa): id_rsa&lt;/p&gt;
+&lt;p&gt;ssh-keygen -t rsa -C "yq08051035@163.com"&lt;/p&gt;
+&lt;p&gt;设置名称为id_rsa&lt;/p&gt;
+&lt;p&gt;Enter file in which to save the key (.ssh/id_rsa): id_rsa&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img alt="图片" src="http://yeching.info/images/p1.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;制造第二把公钥：&lt;/strong&gt;
-ssh-keygen -t rsa -C "yq08051035@gmail.com"
-设置名称为my
-Enter file in which to save the key (.ssh/id_rsa): my&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;制造第二把公钥：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh-keygen -t rsa -C "yq08051035@gmail.com"&lt;/p&gt;
+&lt;p&gt;设置名称为my&lt;/p&gt;
+&lt;p&gt;Enter file in which to save the key (.ssh/id_rsa): my&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img alt="图片" src="http://yeching.info/images/p2.png" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3 id="2id_rsapubssh"&gt;2.把id_rsa.pub添加到后台SSH账户&lt;/h3&gt;
-&lt;p&gt;查看文件是否存在
-&lt;img alt="图片" src="http://yeching.info/images/p3.png" /&gt;
-将id_rsa.pub添加到yq08051035@163.com帐号的后台ssh。 
-将my.pub添加到yq08051035@gmail.com帐号的后台ssh。&lt;/p&gt;
+&lt;p&gt;查看文件是否存在&lt;/p&gt;
+&lt;p&gt;&lt;img alt="图片" src="http://yeching.info/images/p3.png" /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将id_rsa.pub添加到yq08051035@163.com帐号的后台ssh。 &lt;/p&gt;
+&lt;p&gt;将my.pub添加到yq08051035@gmail.com帐号的后台ssh。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img alt="图片" src="http://yeching.info/images/p4.png" /&gt;&lt;/p&gt;
 &lt;h3 id="3sshconfig"&gt;3.在.ssh目录下配置config文件&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Host github.com
- HostName github.com
- PreferredAuthentications publickey
- IdentityFile ~/.ssh/id_rsa&lt;/p&gt;
-&lt;p&gt;Host my.github.com
- HostName github.com
- PreferredAuthentications publickey
- IdentityFile ~/.ssh/my&lt;/p&gt;
+&lt;p&gt;Host github.com&lt;/p&gt;
+&lt;p&gt;HostName github.com&lt;/p&gt;
+&lt;p&gt;PreferredAuthentications publickey&lt;/p&gt;
+&lt;p&gt;IdentityFile ~/.ssh/id_rsa&lt;/p&gt;
+&lt;p&gt;Host my.github.com&lt;/p&gt;
+&lt;p&gt;HostName github.com&lt;/p&gt;
+&lt;p&gt;PreferredAuthentications publickey&lt;/p&gt;
+&lt;p&gt;IdentityFile ~/.ssh/my&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id="4"&gt;4.测试&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ssh -T git@github.com
-Hi yeching! You've successfully authenticated, but GitHub does not provide shell access.&lt;/p&gt;
+&lt;p&gt;ssh -T git@github.com&lt;/p&gt;
+&lt;p&gt;Hi yeching! You've successfully authenticated, but GitHub does not provide shell access.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img alt="图片" src="http://yeching.info/images/p6.png" /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ssh -T git@my.github.com
-Hi aifusheng! You've successfully authenticated, but GitHub does not provide shell access.
-说明OK。&lt;/p&gt;
+&lt;p&gt;ssh -T git@my.github.com&lt;/p&gt;
+&lt;p&gt;Hi aifusheng! You've successfully authenticated, but GitHub does not provide shell access.&lt;/p&gt;
+&lt;p&gt;说明OK。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img alt="图片" src="http://yeching.info/images/p5.png" /&gt;&lt;/p&gt;
 &lt;p&gt;当我们要在一个仓库上PUSH提交的内容时，先解析出仓库地址，然后从该仓库的所属帐号中找到一把能解锁该提交的公钥。&lt;/p&gt;</summary><category term="Git"></category></entry><entry><title>Pelican</title><link href="http://yeching.info/pelican.html" rel="alternate"></link><updated>2016-02-13T00:00:00+08:00</updated><author><name>yeching</name></author><id>tag:yeching.info,2016-02-13:pelican.html</id><summary type="html">&lt;h3 id="pelican"&gt;欢迎来到Pelican!&lt;/h3&gt;

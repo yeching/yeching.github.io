@@ -86,44 +86,48 @@
 <h3 id="1">1.制作公钥</h3>
 <p><strong>制造第一把公钥：</strong></p>
 <blockquote>
-<p>ssh-keygen -t rsa -C "yq08051035@163.com"
-设置名称为id_rsa
-Enter file in which to save the key (.ssh/id_rsa): id_rsa</p>
+<p>ssh-keygen -t rsa -C "yq08051035@163.com"</p>
+<p>设置名称为id_rsa</p>
+<p>Enter file in which to save the key (.ssh/id_rsa): id_rsa</p>
 </blockquote>
 <p><img alt="图片" src="http://yeching.info/images/p1.png" /></p>
-<p><strong>制造第二把公钥：</strong>
-ssh-keygen -t rsa -C "yq08051035@gmail.com"
-设置名称为my
-Enter file in which to save the key (.ssh/id_rsa): my</p>
+<p><strong>制造第二把公钥：</strong></p>
+<blockquote>
+<p>ssh-keygen -t rsa -C "yq08051035@gmail.com"</p>
+<p>设置名称为my</p>
+<p>Enter file in which to save the key (.ssh/id_rsa): my</p>
+</blockquote>
 <p><img alt="图片" src="http://yeching.info/images/p2.png" /></p>
 <hr />
 <h3 id="2id_rsapubssh">2.把id_rsa.pub添加到后台SSH账户</h3>
-<p>查看文件是否存在
-<img alt="图片" src="http://yeching.info/images/p3.png" />
-将id_rsa.pub添加到yq08051035@163.com帐号的后台ssh。 
-将my.pub添加到yq08051035@gmail.com帐号的后台ssh。</p>
+<p>查看文件是否存在</p>
+<p><img alt="图片" src="http://yeching.info/images/p3.png" /></p>
+<blockquote>
+<p>将id_rsa.pub添加到yq08051035@163.com帐号的后台ssh。 </p>
+<p>将my.pub添加到yq08051035@gmail.com帐号的后台ssh。</p>
+</blockquote>
 <p><img alt="图片" src="http://yeching.info/images/p4.png" /></p>
 <h3 id="3sshconfig">3.在.ssh目录下配置config文件</h3>
 <blockquote>
-<p>Host github.com
- HostName github.com
- PreferredAuthentications publickey
- IdentityFile ~/.ssh/id_rsa</p>
-<p>Host my.github.com
- HostName github.com
- PreferredAuthentications publickey
- IdentityFile ~/.ssh/my</p>
+<p>Host github.com</p>
+<p>HostName github.com</p>
+<p>PreferredAuthentications publickey</p>
+<p>IdentityFile ~/.ssh/id_rsa</p>
+<p>Host my.github.com</p>
+<p>HostName github.com</p>
+<p>PreferredAuthentications publickey</p>
+<p>IdentityFile ~/.ssh/my</p>
 </blockquote>
 <h3 id="4">4.测试</h3>
 <blockquote>
-<p>ssh -T git@github.com
-Hi yeching! You've successfully authenticated, but GitHub does not provide shell access.</p>
+<p>ssh -T git@github.com</p>
+<p>Hi yeching! You've successfully authenticated, but GitHub does not provide shell access.</p>
 </blockquote>
 <p><img alt="图片" src="http://yeching.info/images/p6.png" /></p>
 <blockquote>
-<p>ssh -T git@my.github.com
-Hi aifusheng! You've successfully authenticated, but GitHub does not provide shell access.
-说明OK。</p>
+<p>ssh -T git@my.github.com</p>
+<p>Hi aifusheng! You've successfully authenticated, but GitHub does not provide shell access.</p>
+<p>说明OK。</p>
 </blockquote>
 <p><img alt="图片" src="http://yeching.info/images/p5.png" /></p>
 <p>当我们要在一个仓库上PUSH提交的内容时，先解析出仓库地址，然后从该仓库的所属帐号中找到一把能解锁该提交的公钥。</p>
