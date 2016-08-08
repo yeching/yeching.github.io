@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://yeching.info/</loc>
-<lastmod>2016-08-08T23:35:18-00:00</lastmod>
+<lastmod>2016-08-08T23:42:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://yeching.info/archives.html</loc>
-<lastmod>2016-08-08T23:35:18-00:00</lastmod>
+<lastmod>2016-08-08T23:42:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://yeching.info/tags.html</loc>
-<lastmod>2016-08-08T23:35:18-00:00</lastmod>
+<lastmod>2016-08-08T23:42:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://yeching.info/categories.html</loc>
-<lastmod>2016-08-08T23:35:18-00:00</lastmod>
+<lastmod>2016-08-08T23:42:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -55,6 +55,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://yeching.info/gitconfig.html</loc>
 <lastmod>2016-05-28T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://yeching.info/sanmao.html</loc>
+<lastmod>2016-05-23T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
