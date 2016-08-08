@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>yeching's website</title><link href="http://yeching.info/" rel="alternate"></link><link href="http://yeching.info/feeds/xue-xi-fang-fa-yu-si-kao.atom.xml" rel="self"></link><id>http://yeching.info/</id><updated>2016-02-01T00:00:00+08:00</updated><entry><title>工具大集合</title><link href="http://yeching.info/da-ji-he.html" rel="alternate"></link><updated>2016-02-01T00:00:00+08:00</updated><author><name>yeching</name></author><id>tag:yeching.info,2016-02-01:da-ji-he.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>yeching's website</title><link href="http://yeching.info/" rel="alternate"></link><link href="http://yeching.info/feeds/xue-xi-fang-fa-yu-si-kao.atom.xml" rel="self"></link><id>http://yeching.info/</id><updated>2016-02-01T00:00:00+08:00</updated><entry><title>工具方法大集合</title><link href="http://yeching.info/da-ji-he.html" rel="alternate"></link><updated>2016-02-01T00:00:00+08:00</updated><author><name>yeching</name></author><id>tag:yeching.info,2016-02-01:da-ji-he.html</id><summary type="html">
 &lt;p&gt;记录一些有用的关于学习生活的各种网站，软件工具等等&lt;/p&gt;
 &lt;h2 id="_1"&gt;各种网盘工具：&lt;/h2&gt;
 &lt;p&gt;1.&lt;a href="http://vdisk.weibo.com/"&gt;微盘&lt;/a&gt;:一个提供各种格式电子书籍资源下载的地方,配合各种阅读器。&lt;/p&gt;
 &lt;p&gt;2.&lt;a href="http://pan.baidu.com/"&gt;百度云盘&lt;/a&gt;和&lt;a href="http://yunpan.360.cn/"&gt;360云盘&lt;/a&gt;：属于大容量云盘，可以用来存储各种电影，纪录片，等大型文件。&lt;/p&gt;
 &lt;p&gt;3.&lt;a href="https://www.yinxiang.com/"&gt;印象笔记&lt;/a&gt;和&lt;a href="http://note.sdo.com/"&gt;麦库笔记&lt;/a&gt;：可以用来记笔记和写点自己的东西。&lt;/p&gt;
-&lt;h2 id="_2"&gt;常用的两种轻量级标记&lt;/h2&gt;
+&lt;h2 id="_2"&gt;常用的两种轻量级标记语言&lt;/h2&gt;
 &lt;p&gt;1.&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2.&lt;strong&gt;reStructuredText&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;具体请看&lt;a href="http://yeching.info/qing-liang-ji-biao-ji-yu-yan.html"&gt;轻量级标记语言 &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="_3"&gt;手机图片上传到电脑上&lt;/h2&gt;
+&lt;p&gt;1.在同一个局域网内，使用QQ的上传到电脑功能比较快。（windows系统）&lt;/p&gt;
 &lt;p&gt;。。。不断更新&lt;/p&gt;</summary><category term="方法"></category><category term="工具"></category></entry><entry><title>量变与质变的关系</title><link href="http://yeching.info/liang-bian-yu-zhi-bian-de-guan-xi.html" rel="alternate"></link><updated>2015-12-28T00:00:00+08:00</updated><author><name>yeching</name></author><id>tag:yeching.info,2015-12-28:liang-bian-yu-zhi-bian-de-guan-xi.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;生活小故事一：&lt;/strong&gt;做菜的时候，可能是量太大了或者今天味觉不太灵敏，当你第一次放了盐的时候，你品尝发现太淡了，于是乎你有加了一点点盐，品尝发现还是太淡了，你又一次重复操作，发现还是太淡了，你有点不耐烦了，一下加了上一次的好几倍量。这一次你品尝，你发现，完了完了，好像有点太咸了。（该咋办啊？还能咋办啊，就是吃呗）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;生活小故事二：&lt;/strong&gt;有一天，因为有急事，中午没能吃上午，忙完了已见天上的星星月亮了，那把我一个饿的，根本看不见路在何方。终于可以吃饭了，我拿起碗框框的就干了两碗，咋回事，肚子感觉还是有点不够，接着继续吃，吃到第四碗的时候，完了，好像吃不下去了。&lt;/p&gt;
