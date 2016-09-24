@@ -2,7 +2,7 @@
 ul{list-style:none;}
 body{background:url(../img/wall-16.jpg);}
 .clear{clear:both;}
-.g-doc{width:95%;margin:0 auto;}
+.g-doc{width:90%;margin:0 auto;}
 .g-hd{float:left;width:100%;margin-bottom:2px;background:green;color:white;border-radius:5px 5px 0 0;}
 .g-hd .m-logo{float:left;margin:15px 0 15px 20px;font-size:32px;font-weight:bold;}
 .g-hd .m-describe{float:right;margin:10px 30px 10px 0;font-size:20px;font-family:"Times New Roman",Georgia,Serif;color:white;}
