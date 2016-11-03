@@ -71,6 +71,7 @@ margin:10px auto;}
 .g-article .strong{font-weight:bold;}
 
 @media screen and (max-width:768px){
+.g-doc{width:95%;margin:0 auto;}
 .g-sd{width:100%;padding-bottom:30px;border-radius:4px;background:#6666CC;}
 .g-mn{padding:10px 1px 50px 1px;width:100%;border-radius:4px;}
 
