@@ -43,6 +43,7 @@ body{margin:0; padding:0; font:12px/1.14em "Lucida Grande","Lucida Sans Unicode"
 
 .top span ul{display:none;position:absolute;top:26px;right:-15px;width:70px;background:#5d5d5d;color:white;cursor:pointer;text-align:center;z-index:8888;}
 .top span ul li{border-bottom:1px solid white;padding:5px;}
+.top span ul li:hover{color:red;}
 .top span ul li:last-child{border-bottom:none;}
 .top span ul:after{
 	content:""; /*需要有内容，这里是一个空字符串*/
