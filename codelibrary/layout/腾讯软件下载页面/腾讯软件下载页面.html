@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>An HTML Template</title>
+<style>
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+
+/*base.css*/
+body{color:#323232;font-size:14px;font-family:Verdana, Geneva, sans-serif,"宋体";}
+a{color:#266392; text-decoration:none;}
+a:hover{text-decoration:underline;}
+h2{line-height:28px; border-bottom:1px solid #cce6f5; margin-bottom:10px;}
+h2 span{float:right;}
+h2 span a{font-size:12px; font-weight:normal;}
+.f-clearboth:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+/*layout.css*/
+#g-doc{width:910px;margin:10px auto;}
+
+#g-header{margin-bottom:10px;}
+#logo{margin-top:5px;}
+#logo h1{float:left;}
+#logo dl{float:right;margin-top:10px;}
+#logo dt{font-weight:bold; color:#5a5a5a; line-height:26px;}
+#logo dd{font-size:12px; color:#828282; line-height:24px;}
+#nav{width:100%;margin-top:8px;background:#7EC2F3;height:36px;overflow:hidden;border-radius:4px;}
+#nav ul{width:94%; margin:0 auto;}
+#nav li{float:left; line-height:21px; font-weight:bold; margin:5px 20px 0; padding:5px;font-size:16px;}
+#nav li:hover{background:white;border-radius:3px;padding-bottom:10px;}
+#nav li a{color:#fff;}
+#nav li a:hover{display:block;background:white;text-decoration:none;color:#000;}
+#nav li.current{background:white;border-radius:3px;padding-bottom:10px;color:black;}
+#nav li.current a{display:block;background:white;text-decoration:none;color:#000;}
+#nav li.qq_lab{float:right;}
+
+#g-main{margin-bottom:10px;}
+#content{float:left; width:600px;}
+#content .box{margin-top:10px;}
+.box{margin-bottom:15px;}
+.softwarelist{}
+.softwarelist li{margin-bottom:15px; width:100%; overflow:hidden;}
+.softwarelist li dl{float:left; padding-left:45px;}
+.softwarelist li span{float:right; font-size:12px; color:#630063; margin-top:5px;}
+.softwarelist li span a{font-size:12px; text-decoration:underline;}
+.softwarelist li span a:hover{text-decoration:none;}
+.softwarelist li dt{font-size:12px; color:#828282; line-height:26px;}
+.softwarelist li dt a{ text-decoration:underline; font-weight:bold; margin-right:10px;}
+.softwarelist li dt a:hover{text-decoration:none;}
+.softwarelist li dd{line-height:24px;}
+.software_1{background:url(images/icon_1.gif) 0 5px no-repeat;}
+.software_2{background:url(images/icon_2.gif) 0 5px no-repeat;}
+.software_3{background:url(images/icon_3.gif) 0 5px no-repeat;}
+.software_4{background:url(images/icon_4.gif) 0 5px no-repeat;}
+.software_5{background:url(images/icon_5.gif) 0 5px no-repeat;}
+.software_6{background:url(images/icon_6.gif) 0 5px no-repeat;}
+.new{background:url(images/new.gif) right 2px no-repeat; padding-right:15px;}
+.download{padding:3px 0 0 15px; background:url(images/downicon.gif) 0 6px no-repeat;} 
+
+#side{float:right; width:280px;}
+#side li a{font-size:12px;}
+.downlist{width:100%; overflow:hidden;}
+.downlist li{overflow:hidden; line-height:26px; padding-left:23px; margin-bottom:5px;}
+.downlist li span{float:right; font-size:12px; color:#630063;}
+.downlist li span a{font-size:12px; text-decoration:underline;}
+.downlist li span a:hover{text-decoration:none;}
+.soft_r_1{background:url(images/soft_r_1.gif) 0 5px no-repeat;}
+.soft_r_2{background:url(images/soft_r_2.gif) 0 5px no-repeat;}
+.soft_r_3{background:url(images/soft_r_3.gif) 0 5px no-repeat;}
+.soft_r_4{background:url(images/soft_r_4.gif) 0 5px no-repeat;}
+.soft_r_5{background:url(images/soft_r_5.gif) 0 5px no-repeat;}
+.soft_r_6{background:url(images/soft_r_6.gif) 0 5px no-repeat;}
+
+.newslist{width:100%;}
+.newslist li{line-height:22px;}
+
+.fri_link{width:100%;}
+.fri_link a{width:88px; float:left; font-size:12px; margin-right:5px; line-height:26px;}
+
+#g-footer{margin-top:10px; padding:15px 0; width:100%; text-align:center; border-top:1px solid #e6e6e6; background:#f8f8f8;}
+#g-footer li{line-height:24px; color:#9e9e9e; font-size:12px;}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<div id="g-doc">
+	<header id="g-header" class="">
+		<div id="logo" class="f-clearboth">
+		  <h1><a href="#"><img src="images/logo.gif"></a></h1>
+		  <dl>
+			<dt>腾讯软件中心，腾讯精品软件展示平台</dt>
+			<dd>我们会不断提升产品的性能和体验，为您提供最好用的软件！</dd>
+		  </dl>
+		</div>
+		<div id="nav">
+		  <ul>
+			<li class="current"><a href="#">首页</a></li>
+			<li><a href="#">PC产品大全</a></li>
+			<li><a href="#">Mac产品大全</a></li>
+			<li><a href="#">无线产品大全</a></li>
+			<li><a href="#">企业产品大全</a></li>
+			<li class="qq_lab"><a href="#">QQ实验室&gt;&gt;</a></li>
+		  </ul>
+		</div>
+	</header>
+	<div id="g-main" class="f-clearboth">
+		<section id="content"><img src="images/banner.png" width="600" height="200" class="" />
+		      <div class="box">
+				<h2><a href="#">腾讯软件</a><span><a href="#">更多>></a></span></h2>
+				<ul class="softwarelist">
+				  <li>
+					<dl class="software_1">
+					  <dt><a href="#">QQ 5.2</a>更新日期：2014-03-17</dt>
+					  <dd>免费的即时通讯平台，带来更多沟通乐趣</dd>
+					</dl>
+					<span><a href="#" class="download">下载</a> | <a href="#">官方网站</a></span> </li>
+				  <li>
+					<dl class="software_2">
+					  <dt><a href="#" class="new">腾讯电脑管家</a>更新日期：2014-01-15</dt>
+					  <dd>专业的免费杀毒软件，全面便捷管理电脑</dd>
+					</dl>
+					<span><a href="#" class="download">下载</a> | <a href="#">官方网站</a></span> </li>
+				  <li>
+					<dl class="software_3">
+					  <dt><a href="#">软件管理</a>更新日期：2014-03-19</dt>
+					  <dd>下载软件，就用软件管理</dd>
+					</dl>
+					<span><a href="#" class="download">下载</a> | <a href="#">官方网站</a></span> </li>
+				  <li>
+					<dl class="software_4">
+					  <dt><a href="#" class="new">QQ音乐2014贺岁版</a>更新日期：2014-01-24</dt>
+					  <dd>全新界面设计，视野更开阔，操作更简单</dd>
+					</dl>
+					<span><a href="#" class="download">下载</a> | <a href="#">官方网站</a></span> </li>
+				  <li>
+					<dl class="software_5">
+					  <dt><a href="#">QQ浏览器</a>更新日期：2014-03-13</dt>
+					  <dd>全新设计，简约轻快，精巧易用</dd>
+					</dl>
+					<span><a href="#" class="download">下载</a> | <a href="#">官方网站</a></span> </li>
+				  <li>
+					<dl class="software_6">
+					  <dt><a href="#">QQ影像</a>更新日期：2013-01-24</dt>
+					  <dd>管理、浏览、编辑、上传一站体验</dd>
+					</dl>
+					<span><a href="#" class="download">下载</a> | <a href="#">官方网站</a></span> </li>
+				</ul>
+			</div>
+		</section>
+		<section id="side">
+			<div class="box">
+				<h2>最新动态</h2>
+				<ul class="newslist">
+				  <li>&middot; <a href="#">腾讯电脑管家8.0正式版发布</a></li>
+				  <li>&middot; <a href="#">腾讯游戏平台首推强加速、LOL助手永久免费</a></li>
+				  <li>&middot; <a href="#">微云2.0六大终端全新出击，超强收藏功能</a></li>
+				  <li>&middot; <a href="#">腾讯手机管家(PC版)2.0新版 只为用户更好体验</a></li>
+				  <li>&middot; <a href="#">QQ影音3.7发布，提升转码速度</a></li>
+				  <li>&middot; <a href="#">QQ2012 Beta2(Q+)：全新Q+，更快更便捷</a></li>
+				  <li>&middot; <a href="#">Foxmail 7发布新版本，支持繁、简、英多语言</a></li>
+				</ul>
+			</div>
+			<div class="box">
+				<h2><a href="#">更多推荐</a> <span><a href="#">更多>></a></span></h2>
+				<ul class="downlist">
+				  <li class="soft_r_1"><a href="#">QQ旋风</a><span><a href="#" class="download">下载</a></span></li>
+				  <li class="soft_r_2"><a href="#">腾讯视频播放器</a><span><a href="#" class="download">下载</a></span></li>
+				  <li class="soft_r_3"><a href="#">QQ影音</a><span><a href="#" class="download">下载</a></span></li>
+				  <li class="soft_r_4"><a href="#">小Q书桌</a><span><a href="#" class="download">下载</a></span></li>
+				  <li class="soft_r_5"><a href="#">Foxmail</a><span><a href="#" class="download">下载</a></span></li>
+				  <li class="soft_r_6"><a href="#">顽固木马克星</a><span><a href="#" class="download">下载</a></span></li>
+				</ul>
+			</div>
+			<div class="box">
+				<h2>合作伙伴</h2>
+				<div class="fri_link"><a href="#">腾讯软件管理</a> <a href="#">腾讯网下载</a> <a href="#">下载吧</a> <a href="#">IT168</a><a href="#">东坡下载</a> <a href="#">完美下载</a> <a href="#">腾牛网</a> <a href="#">PC6下载站</a> <a href="#">乡巴佬下载</a></div>
+			</div>
+		</section>
+	</div>
+	<footer id="g-footer">
+		<ul>
+		  <li>Copyright © 1998 - 2012 Tencent. All Rights Reserved.</li>
+		  <li>腾讯公司 版权所有</li>
+		</ul>
+	</footer>
+<div>
+</body>
+</html>

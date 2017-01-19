@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>ribbons</title>
+<style>
+body{margin:20px;}
+.column{float:left;margin:20px;}
+section{margin:10px;}
+
+#ribbon-1 {
+	font: bold 16px/48px Cambria,Georgia,Times,serif;
+	width: 150px;
+	background:linear-gradient(#68c668, #50b150);
+	text-align:center;
+}
+
+#ribbon-2 {
+	font: bold 16px/48px Cambria,Georgia,Times,sans-serif;
+	width: 150px;
+	background:#ee232a;
+	text-align:center;
+	border-top-right-radius:24px;
+	border-bottom-right-radius:24px;
+}
+#ribbon-3 {
+	font: bold 16px/48px Cambria,Georgia,Times,sans-serif;
+	width: 150px;
+	background:linear-gradient(#fbb149, #f8960a);
+	text-align:center;
+	border-radius:24px;
+}
+
+#ribbon-4 {
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 126px;
+	text-align:center;
+	position: relative;
+	background: yellow;
+}
+#ribbon-4:after {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:100%;
+	border: 24px solid transparent;
+	border-color: transparent transparent transparent yellow;
+}
+#ribbon-5 {
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 102px;
+	text-align:center;
+	position: relative;
+	background: purple;
+}
+#ribbon-5:after {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:100%;
+	border: 24px solid transparent;
+	border-color: purple transparent purple purple;
+}
+#ribbon-6 {
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 126px;
+	text-align:center;
+	position: relative;
+	background: pink;
+	border-top-left-radius:24px;
+	border-bottom-left-radius:24px;
+}
+#ribbon-6:after {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:100%;
+	border: 24px solid transparent;
+	border-color: transparent transparent transparent pink;
+}
+#ribbon-7 {
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 102px;
+	text-align:center;
+	position: relative;
+	background: brown;
+	border-top-left-radius:24px;
+	border-bottom-left-radius:24px;
+}
+#ribbon-7:after {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:100%;
+	border: 24px solid transparent;
+	border-color: brown transparent brown brown;
+}
+#ribbon-8 {
+	margin-left:24px;
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 102px;
+	text-align:center;
+	position: relative;
+	background: magenta;
+}
+#ribbon-8:before {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:-48px;
+	border: 24px solid transparent;
+	border-color: transparent  magenta transparent transparent;
+}
+#ribbon-8:after {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:100%;
+	border: 24px solid transparent;
+	border-color: transparent transparent transparent magenta;
+}
+#ribbon-9 {
+	margin-left:48px;
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 65px;
+	text-align:center;
+	position: relative;
+	background: purple;
+}
+#ribbon-9:before {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:-48px;
+	border: 24px solid transparent;
+	border-color: purple purple purple transparent;
+}
+#ribbon-9:after {
+	content:"";
+	position: absolute;
+	top: 0;
+	left:100%;
+	border: 24px solid transparent;
+	border-color: purple transparent purple purple;
+}
+#ribbon-10 {
+	margin-left:48px;
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 250px;
+	text-align:center;
+	position: relative;
+	background: purple;
+}
+#ribbon-10:before {
+	content:"";
+	position: absolute;
+	top: 100%;
+	left:0;
+	border: 4px solid transparent;
+	border-color: #54253E #54253E transparent transparent;
+}
+#ribbon-10:after {
+	content:"";
+	position: absolute;
+	top: 100%;
+	right:0px;
+	border: 4px solid transparent;
+	border-color: #54253E transparent transparent #54253E;
+}
+#ribbon-11 {
+	margin-left:48px;
+	font: bold 16px Cambria,Georgia,Times,serif;
+	line-height: 48px;
+	width: 250px;
+	text-align:center;
+	position: relative;
+	background: #96293B;
+}
+#ribbon-11:before {
+	content:"";
+	position:absolute;
+	top:100%;
+	left:0;
+	border: 5px solid transparent;
+	border-color: #54253E #54253E transparent transparent;
+}
+#ribbon-11:after {
+	content:"";
+	position:absolute;
+	top:100%;
+	right:0;
+	border: 5px solid transparent;
+	border-color: #54253E transparent transparent #54253E;
+}
+#ribbon-11 > div {
+	width: 100%;
+}
+#ribbon-11 > div:before,
+#ribbon-11 > div:after {
+	content:"";
+	position: absolute;
+	width: 0;
+	height:0;
+	border: 24px solid #96293B;
+	top:10px;
+	z-index: -1;
+}
+#ribbon-11 > div:before {
+	border-left-color: transparent;
+	right: 100%;
+	margin-right: -10px;
+}
+#ribbon-11> div:after {
+	border-right-color: transparent;
+	left: 100%;
+	margin-left: -10px;
+}
+#ribbon-12 {
+	font:bold 16px Cambria,Georgia,Times,Serif;
+	width:250px;
+	text-align:center;
+	background:#AF3605;
+	position:relative;
+	line-height:48px;
+	margin:20px 0 0 50px;
+}
+#ribbon-12:before {
+	content:"";
+	position:absolute;
+	top:100%;
+	left:0px;
+	border-width:10px;
+	border-style:solid;
+	border-color:#76290A #76290A transparent transparent;
+}
+
+#ribbon-12:after {
+	content:"";
+	position:absolute;
+	top:100%;
+	right:0px;
+	border-width:10px;
+	border-style:solid;
+	border-color:#76290A transparent transparent #76290A;
+}
+
+#ribbon-12 div {
+	width:100%;
+	height:100%;
+}
+
+#ribbon-12 div:before, 
+#ribbon-12 div:after {
+	content:"";
+	position:absolute;
+	width:40px;
+	height:100%;
+	background:#983912;
+	top:20px;
+	z-index:-1;
+}
+#ribbon-12 div:before {
+	border-left-color:transparent;
+	right:100%;
+	margin-right:-20px;
+}
+#ribbon-12 div:after {
+	border-right-color:transparent;
+	left:100%;
+	margin-left:-20px;
+}
+
+#ribbon-12 div div:before, 
+#ribbon-12 div div:after {
+	content:"";
+	position:absolute;
+	width:20px;
+	height:0px;
+	background:transparent;
+	border:25px solid #AF3605;
+	top:10px;
+	z-index:3;
+}
+#ribbon-12 div div:before {
+	border-left-color:transparent;
+	margin-right:10px;
+}
+#ribbon-12 div div:after {
+	border-right-color:transparent;
+	margin-left:10px;
+}
+
+#ribbon-12 div div div:before, 
+#ribbon-12 div div div:after {
+	content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	background:transparent;
+	border:5px solid transparent;
+	top:100%;
+	margin-top:10px;
+	z-index:1;
+}
+
+#ribbon-12 div div div:before {
+	border-top-color:#76290A;
+	border-left-color:#76290A;
+	margin-left:20px;
+}
+
+#ribbon-12 div div div:after {
+	border-top-color:#76290A;
+	border-right-color:#76290A;
+	margin-right:20px;
+}
+</style>
+
+</head>
+<body>
+<div class="column">
+<section>
+	<div class="ribbons" id="ribbon-1">ribbon-1</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-2">ribbon-2</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-3">ribbon-3</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-4">ribbon-4</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-5">ribbon-5</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-6">ribbon-6</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-7">ribbon-7</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-8">ribbon-8</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-9">ribbon-9</div>
+</section>
+</div>
+<div class="column">
+<section>
+	<div class="ribbons" id="ribbon-10">ribbon-10</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-11">
+		<div>ribbon-11</div>
+	</div>
+</section>
+<section>
+	<div class="ribbons" id="ribbon-12">
+		<div>
+			<div>
+				<div>ribbon-12</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<script>
+</script>
+</body>
+</html>

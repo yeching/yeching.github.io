@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>javascript代码库</title>
+	<link rel="stylesheet" href="./css/javascriptlibrary.css"/>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div id="container">
+<ul id="sidebar" class="sidebar">
+	<!-- 基础实例 -->
+    <li id="list" class="close"><span>基础实例</span>
+		<ul>
+		  <li><a href="codelibrary/js/drop.html" target="main">伸缩菜单</a></li>
+		  <li><a href="codelibrary/js/backtop.html" target="main">回到顶部</a></li>
+		  <li><a href="codelibrary/js/tabcontrol.html" target="main">选项卡</a></li>
+		  <li><a href="codelibrary/js/returnhomepage.html" target="main">5秒后回到主页</a></li>
+		  <li><a href="codelibrary/js/clickflick.html" target="main">闪烁盒子</a></li>
+		  <li><a href="codelibrary/js/selectall or not.html" target="main">复选框全选与反选</a></li>
+		  <li><a href="codelibrary/js/showtime.html" target="main">显示时间</a></li>
+		  <li><a href="codelibrary/js/count down.html" target="main">过年倒计时</a></li>
+		  
+		  <li><a href="codelibrary/js/simplecalculator.html" target="main">简单计算器</a></li>
+		  <li><a href="codelibrary/js/eventphase.html" target="main">点击显示单前事件所在阶段</a></li>
+		  <li><a href="codelibrary/js/clickflick.html" target="main">功能检测实例</a></li>
+		</ul>
+  </li>
+  <!-- Event实例 -->
+  <li id="list" class="close"><span>Event实例</span>
+		<ul>
+		  <li><a href="codelibrary/js/EventCapturingExample.html" target="main">事件捕获</a></li>
+		  <li><a href="codelibrary/js/EventBubblingExample.html" target="main">事件冒泡</a></li>
+		  <li><a href="codelibrary/js/EventDelegationExample.html" target="main">事件委托代理</a></li>
+		  <li><a href="codelibrary/js/eventphase.html" target="main">点击显示单前事件所在阶段</a></li>
+		  <li><a href="codelibrary/js/getmouseposition.html" target="main">获取鼠标位置</a></li>
+		  <li><a href="codelibrary/js/HTMLEventHandler.html" target="main">HTML事件标签处理程序</a></li>
+		  <li><a href="codelibrary/js/EleAttrEventHandler.html" target="main">节点属性处理程序</a></li>
+		  <li><a href="codelibrary/js/addEventHandler.html" target="main">addEventHandler处理程序</a></li>
+		  
+		  <li><a href="codelibrary/js/IEEventHandler1.html" target="main">IE事件处理程序1</a></li>
+		  <li><a href="codelibrary/js/IEEventHandler2.html" target="main">IE事件处理程序2</a></li>
+		  <li><a href="codelibrary/js/EleAttrEventHandler.html" target="main">节点属性处理程序</a></li>
+		  <li><a href="codelibrary/js/addEventHandler.html" target="main">addEventHandere处理程序</a></li>
+		  <li><a href="codelibrary/js/EventUtil.js" target="main">跨浏览器处理程序与事件对象</a></li>
+		</ul>
+  </li>
+  <!-- 函数实例 -->
+  <li id="list" class="close"><span>函数实例</span>
+
+  </li>
+  <!-- 面向对象实例 -->
+  <li id="list" class="close"><span>面向对象实例</span>
+
+  </li>
+  <!-- 基础实例 -->
+  <li id="list" class="close"><span>表单实例</span>
+
+  </li>
+  <!-- Ajax实例 -->
+  <li id="list" class="close"><span>Ajax实例</span>
+
+  </li>
+  <!-- 无聊的小游戏 -->
+  <li id="list" class="close"><span>无聊的小游戏</span>
+
+  </li>
+</ul>
+</div> 
+<div><iframe id="result-preview" frameborder="0" name="main"></iframe></div>
+<script type="text/javascript"> 
+var sidebar=document.getElementById("sidebar");
+var lists=sidebar.querySelectorAll("#sidebar>li");
+var spans=sidebar.querySelectorAll("#sidebar>li>span");
+var uls=sidebar.querySelectorAll("#sidebar>li>ul");
+/*lists.onclick=function(){
+this.setAttribute("class","open");
+}*/
+//sidebar.onclick=function(){alert("dd");};
+/*lists.forEach(function (item) {
+             item.addEventListener('click', function(){
+				this.setAttribute("class","open");
+			 }, false);
+         });
+*/
+spans.forEach(function (item,index) {
+             item.addEventListener('click', function(event){
+				lists[index].className=(lists[index].className=="open")?"close":"open";
+				uls[index].style.display= (lists[index].className=="open")?"block":"none";
+			 }, false);
+         })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>addEventHandere事件处理程序</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <input type="button" id="myBtn" value="Click Me" />
+    <p>This example won't work in Internet Explorer.</p>
+    <script type="text/javascript">
+        var btn = document.getElementById("myBtn");
+        btn.addEventListener("click", function(){
+            alert(this.id);
+        }, false);
+        btn.addEventListener("click", function(){
+            alert("Hello world!");
+        }, false);
+
+    </script>
+</body>
+</html>

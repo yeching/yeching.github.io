@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>图片屏幕滚动</title>
+	<style>
+  *{margin:0;
+    padding:0;
+    list-style:none;}
+	img{height:140px;
+        width:240px;}
+	.wrap{width:800px;height:140px;overflow:hidden;border:5px solid gray;}
+	.wrap ul{width:2400px;height:140px;}
+	.wrap li{float:left;}
+
+
+  </style>
+  <script type="text/javascript">
+  window.onload=function(){
+    var wrap=document.getElementById('wrap');
+    var pic=document.getElementById('pic');
+	var pic_list=pic.getElementsByTagName("li");
+	var len=0;
+	
+	var timer = setInterval(function(){
+	if(len>=1200)
+	{
+		len=0;
+	}
+	len=len+5;
+	pic.style.marginLeft = -len+"px";
+
+},100);
+}
+  </script>	
+</head>
+<body>
+  <div class="wrap" id='wrap'>
+  <!-- 多添加了五张一样的图片，为了能够无缝循环播放 -->
+    <ul id="pic">
+      <li><img src="../images/1.jpg" alt=""></li>
+      <li><img src="../images/2.jpg" alt=""></li>
+      <li><img src="../images/3.jpg" alt=""></li>
+      <li><img src="../images/4.jpg" alt=""></li>
+      <li><img src="../images/5.jpg" alt=""></li>
+      <li><img src="../images/1.jpg" alt=""></li>
+      <li><img src="../images/2.jpg" alt=""></li>
+      <li><img src="../images/3.jpg" alt=""></li>
+      <li><img src="../images/4.jpg" alt=""></li>
+      <li><img src="../images/5.jpg" alt=""></li> 	  
+    </ul>
+  </div>
+</body>
+</html>

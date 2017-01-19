@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>An HTML Template</title>
+<style>
+body{widht:960px;margin:0 auto;}
+form{margin:20px auto;}/*表单居中*/
+
+/*demo1*/
+
+.search1{
+width:500px;
+position:relative;/*定位上下文*/
+}
+.search1 input{
+	width:500px;/*和form一样宽，让按钮定位在搜索框里面*/
+	height:35px;
+	padding-left:8px;/*添加内边距，搜索内容与搜索框隔开*/
+	border-radius:5px;/*添加圆角*/
+	background:#EFEFEF;
+	outline:none; /*去掉默认的轮廓线*/
+	border:none;/*去掉外边框*/
+}
+.search1 .button{
+width:35px; 
+height:35px;
+background:url(./icons.png) 0 3px;/*图标*/
+cursor:pointer;/*鼠标指针样式*/
+position:absolute;/*绝对定位*/
+right:0;
+top:0;
+border:none;
+}
+
+/*demo2*/
+
+.search2{
+	width:780px;/*给最外层form设置一个宽度*/
+	height:42px;
+	border:2px solid #AE4141;
+	border-radius:2px;
+	position:relative;
+	text-align:left;
+}
+.search2 input{
+	height:38px;
+	border:1px solid transparent;/*透明边框*/
+	color:#333;
+	font-size:14px;
+	line-height:38px;
+	padding-left:8px;
+	width:675px;
+	outline:none;
+}
+.search2 .button{
+width:95px;
+height:42px;
+font-size:16px;
+cursor:pointer;
+position:absolute;
+top:0;
+right:0;
+background:#AE4141;
+color:white;
+border:none;
+}
+
+/*demo3*/
+
+.search3{
+	border-radius:5px;
+	width:780px;
+	height:42px;
+	position:relative;
+	text-align:left;
+}
+.search3 input{
+	height:38px;
+	border:1px solid #CCCCCC;
+	border-right:transparent;
+	color:#333;
+	font-size:14px;
+	line-height:38px;
+	padding-left:8px;
+	width:677px;
+	outline:none;
+}
+/*获得焦点时，改变边框样式*/
+.search3 input:focus{
+	border:1px solid #3385FF;
+	border-right:transparent;
+}
+.camera{
+	z-index:10;
+	position:absolute; 
+	top:13px; 
+	right:100px; 
+	background:url(./camera.png) no-repeat 0 0;
+	width:18px;
+	height:19px;
+}
+/*鼠标经过悬浮切换图标*/
+.camera:hover {
+	background:url(./camera.png) no-repeat 0 -20px;/*一张图片上有两个图标*/
+	cursor:pointer;
+}
+.search3 .button{
+width:95px;
+height:42px;
+font-size:16px;
+cursor:pointer;
+position:absolute;
+top:0;
+right:0;
+background:#3385FF;
+color:white;
+border:1px solid #3385FF;
+
+}
+
+/*demo4*/
+.search4 {	
+	width:500px;
+	height:20px;
+}
+.search4 input{
+	width:120px;
+	padding:5px;/*让字体与搜索框有一定距离*/
+	border-radius:15px;;
+	border:1px solid ;
+	outline:0; /*去掉默认的轮廓线*/
+	//box-shadow:-2px -2px 0 #7D7D7D,-2px -2px 0 #7D7D7D inset;
+	/*搜索框过渡动画*/
+	-moz-transform:/* Firefox */
+	-webkit-transition:2s width;/* Chrome 及 Safari */
+	-ms-transition:2s width;/* 微软 Internet Explorer */
+	-o-transition:2s width;/* Opera */
+	transition:2s width;/* W3C 标准属性 */
+	background:#EFEFEF;
+}
+.search4 input:focus { width:340px;}/*在获得焦点时扩展到这么宽*/
+</style>
+</head>
+<body>
+<!-- demo1 -->
+<form class="search1" action="#" method="post">
+<input type="text" id="search-content" name="search-content" placeholder="在这里输入关键字..." />
+<button class="button" type="submit"></button>
+</form>
+
+<!-- demo2 -->
+<form class="search2" action="#" method="post">
+<input type="text" id="search-content" name="search-content" placeholder="在这里输入关键字..." />
+<button class="button" type="submit">搜索</button>
+</form>
+
+<!-- demo3 -->
+<form class="search3" action="#" method="post">
+<input type="text" id="search-content" name="search-content" placeholder="在这里输入关键字..." />
+<span class="camera"></span>
+<button class="button" type="submit">GO</button>
+</form>
+
+<!-- demo4 -->
+<form class="search4" action="#" method="post">
+<label for="search-content">搜一搜吧:</label>
+<input type="text" id="search-content" name="search-content" placeholder="在这里输入关键字..." />
+</form>
+</body>
+</html>

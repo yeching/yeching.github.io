@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>表格</title>
+	<style>
+	*{margin:0;padding:0;}
+	
+	table{border-collapse:collapse;margin:10px;}
+
+	.custom{width:40%;border-collapse:collapse;}
+	.custom td, .custom th {font-size:1em;padding:3px 7px 2px 7px;border:2px solid green;}
+	.custom th 
+	  {
+	  font-size:1.1em;
+	  text-align:left;
+	  padding-top:5px;
+	  padding-bottom:4px;
+	  background-color:green;
+	  color:#ffffff;}
+	.custom tr.alt td 
+	  {
+	  color:#000000;
+	  background-color:#EAF2D3;}
+
+	.l-float{float:left;}
+	table caption{color:blue;font-size:18px;}
+	</style>
+</head>
+<body>
+<table>
+	<caption>1.无框表格</caption>
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>年龄</th>
+	</tr>
+	<tr>
+		<td>小明</td>
+		<td>男</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>小红</td>
+		<td>女</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>小强</td>
+		<td>男</td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td>小芳</td>
+		<td>女</td>
+		<td>15</td>
+	</tr>
+</table>
+<table border="1">
+	<caption>2.有框表格</caption>
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>年龄</th>
+	</tr>
+	<tr>
+		<td>小明</td>
+		<td>男</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>小红</td>
+		<td>女</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>小强</td>
+		<td>男</td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td>小芳</td>
+		<td>女</td>
+		<td>15</td>
+	</tr>
+</table>
+<table class="custom">
+	<caption>3.好看的表格</caption>
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>年龄</th>
+	</tr>
+	<tr>
+		<td>小明</td>
+		<td>男</td>
+		<td>13</td>
+	</tr>
+	<tr class="alt">
+		<td>小红</td>
+		<td>女</td>
+		<td>12</td>
+	</tr>
+	<tr>
+		<td>小强</td>
+		<td>男</td>
+		<td>15</td>
+	</tr>
+	<tr class="alt">
+		<td>小芳</td>
+		<td>女</td>
+		<td>15</td>
+	</tr>
+</table>
+</table>
+<table class="l-float" border="1">
+	<caption>4.跨行表格</caption>
+	<tr>
+		<th>姓名</th>
+		<td>小明</td>
+		<td>小红</td>
+		<td>小强</td>
+		<td>小芳</td>
+	</tr>
+	<tr>
+		<th>姓别</th>
+		<td>男</td>
+		<td>女</td>
+		<td>男</td>
+		<td>女</td>
+	</tr>
+	<tr>
+		<th rowspan="2">成绩</th>
+		<td>85</td>
+		<td>86</td>
+		<td>85</td>
+		<td>86</td>
+	</tr>
+	<tr>
+		<td>85</td>
+		<td>86</td>
+		<td>85</td>
+		<td>86</td>
+	</tr>
+</table>
+</table>
+<table class="l-float" border="1">
+	<caption>5.跨列表格</caption>
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th colspan="2">成绩</th>
+	</tr>
+	<tr>
+		<td>小明</td>
+		<td>男</td>
+		<td>85</td>
+		<td>86</td>
+	</tr>
+	<tr>
+		<td>小红</td>
+		<td>女</td>
+		<td>85</td>
+		<td>86</td>
+	</tr>
+	<tr>
+		<td>小强</td>
+		<td>男</td>
+		<td>85</td>
+		<td>86</td>
+	</tr>
+	<tr>
+		<td>小芳</td>
+		<td>女</td>
+		<td>85</td>
+		<td>86</td>
+	</tr>
+</table>
+</body>
+</html>

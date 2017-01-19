@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>按钮元件</title>
+<style>
+/**{margin:0;padding:0;}
+button{margin:10px;width:100px;height:50px;font-size:20px;font-weight:bold;display:inline-block;}
+#btn1{
+border-radius: 8px;
+}
+#btn2{
+border-radius: 8px;
+background-image: -moz-linear-gradient(bottom,hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+}*/
+*{margin:0;padding:0;}
+body{width:800px;margin:10px auto;}
+button{	margin:10px;}
+.btn-a{
+	width:100px;
+	height:50px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	cursor: pointer;
+	border-radius:8px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	text-shadow:1px 1px rgba(255,255,255,0.5);
+}
+#btn1{background:linear-gradient(#6dbde4, #399dd8);	border: 1px solid #2d88bf;}
+#btn2{background:linear-gradient(#ee232a, #cc1c23);	border: 1px solid red;}
+#btn3{background:linear-gradient(#fbb149, #f8960a);	border: 1px solid orange}
+#btn4{background:linear-gradient(#68c668, #50b150);	border: 1px solid green;}
+#btn5{background:linear-gradient(#fefefe, #bebebe);	border: 1px solid #dddddd;}
+.btn-b{
+	margin:10px;
+	width:200px;
+	height:80px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	cursor: pointer;
+	border-radius:8px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	text-shadow:1px 1px rgba(255,255,255,0.5);
+}
+#btn7{
+border:none;
+background:#DB4648;
+box-shadow:0 8px 0 #96293B,4px 4px 8px rgba(0,0,0,0.5);
+}
+#btn8{
+border:none;
+background:#96293B;
+box-shadow:0 8px 0 #54253E,4px 4px 8px rgba(0,0,0,0.5);
+}
+#btn9{
+border-radius:0;
+border:none;
+background:#DD171F;
+box-shadow:0 8px 0 #BB0910,4px 4px 8px rgba(0,0,0,0.5);
+}
+.btn-c{
+	width:150px;
+	height:60px;
+	border:2px solid #CC5181;
+	background:linear-gradient(#DA6489,#CC5181);
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	text-shadow:1px 1px rgba(255,255,255,0.5);
+	box-shadow:0 4px 0 #A82A5D,0 -1px rgba(255,255,255,0.2) inset;
+}
+#btn10{
+	border-radius:50%;
+}
+#btn11{
+	border-radius:30px;
+}
+#btn12{
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+}
+#btn13{
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+}
+#btn14{
+	border-top-right-radius:75px 60px;
+	border-top-left-radius:75px 60px;
+}
+#btn15{
+	border-top-right-radius:75px 30px;
+	border-top-left-radius:75px 30px;
+}
+#btn16{
+	border-bottom-right-radius:150px 30px;
+	border-top-left-radius:150px 30px;
+}
+#btn17{
+	border-top-right-radius:150px 60px;
+	border-bottom-left-radius:150px 60px;
+}
+#btn18{
+display: inline-block;
+border-radius: 8px;
+box-shadow:0 8px 0 #BB0910,0 0 20px rgba(0,0,0,0.2);
+color:white;
+font-size:20px;
+}
+#btn18 span {
+display: inline-block;
+padding: 25px 75px;
+background-color: #DD171F;
+border-radius: 8px;
+}
+#btn18:active span {
+-webkit-transform: translate(0, 4px);
+-moz-transform: translate(0, 4px);
+-o-transform: translate(0, 4px);
+transform: translate(0, 4px);
+}
+@-webkit-keyframes blinkBtn { /* 闪烁动画 */
+	  0% { background-color: #DB4648; -webkit-box-shadow: 0 0 10px #DB4648; font-weight:normal;}
+	  50% { background-color: #96293B; -webkit-box-shadow: 0 0 20px #96293B;font-weight:bold; }
+	  100% { background-color: #DB4648; -webkit-box-shadow: 0 0 10px #DB4648;font-weight:normal;}
+}
+#btn19{
+	margin:10px;
+	width:200px;
+	height:80px;
+	cursor: pointer;
+	border-radius:8px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	text-shadow:1px 1px rgba(255,255,255,0.5);
+	border:none;
+	background:#DB4648;
+	box-shadow:0 8px 0 #96293B,4px 4px 8px rgba(0,0,0,0.5);
+    -webkit-animation: blinkBtn 2s infinite; 
+}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<h2>下载 上传 &lt;&lt;上一页 下一页&gt;&gt; 搜索 确定 重设 发送</h2>
+<button id="btn1" class="btn-a">下载</button>
+<button id="btn2" class="btn-a">下载</button>
+<button id="btn3"  class="btn-a">下载</button>
+<button id="btn4" class="btn-a">下载</button>
+<button id="btn5"  class="btn-a">下载</button>
+<button id="btn6" class="btn-a">下载</button>
+<br/>
+<button id="btn7" class="btn-b">下载</button>
+<button id="btn8" class="btn-b">下载</button>
+<button id="btn9" class="btn-b">下载</button>
+<br/>
+<button id="btn10" class="btn-c">下载</button>
+<button id="btn11" class="btn-c">下载</button>
+<button id="btn12" class="btn-c">下载</button>
+<button id="btn13" class="btn-c">下载</button>
+<button id="btn14" class="btn-c">下载</button>
+<button id="btn15" class="btn-c">下载</button>
+<button id="btn16" class="btn-c">下载</button>
+<button id="btn17" class="btn-c">下载</button>
+<h2>更酷的按钮</h2>
+	<a href="#" id="btn18">
+    <span>下载</span>
+	</a>
+	<button id="btn19">下载</button>
+	
+</body>
+</html>

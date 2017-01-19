@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>两列左侧自适应布局</title>
+<style>
+* {margin:0;padding:0;}
+body{max-width:960px;margin:0 auto; padding:0;border:1px solid;font-size:20px;color:white;}
+li {
+list-style-type:none;
+}
+.header{height:50px; background:black; }
+
+.right-box{width:150px;float:right; background:red;}
+.left-box{width:100%; margin-left:-160px;float:left; }
+.left-boxc{margin-left:160px;background:green;}
+
+.footer{ height:50px; background:black; clear:both;}
+</style>
+</head>
+<body>
+<div class="header">head</div>
+<div class="main">
+	<div class="left-box">
+	  <div class="left-boxc">
+		<h1>晕轮效应</h1>
+		<p>晕轮效应最早是由美国著名心理学家桑戴克于本世纪二十年代提出的。他认为，人们对人的认知和判断往往只从局部出发，扩散而得出整体印象，也即常常以偏概全。一个人如果被标明是好的，他就会被一种积极肯定的光环笼罩，并被赋予一切都好的品质；如果一个人被标明是坏的，他就被一种消极否定的光环所笼罩，并被认为具有各种坏品质。这就好象刮风天气前夜月亮周围出现的圆环（月晕），其实呢，圆环不过是月亮光的扩大化而已。据此，桑戴克为这一心理现象起了一个恰如其分的名称“晕轮效应”，也称作“光环作用”。</p>
+		<p>有两个人，一个穿的雍容华贵，另外一个穿的破烂不堪（一穷一富），一同来到一个地方借宿，当他们离开后，主人发现一样贵重的东西不见了，这个时候，主人主观的就想到会不会是那个穿的破烂不堪的人偷的。这就是晕轮效应的体现，主人觉得穿的好的人，肯定不会偷东西，因为他不差钱，相反，穿的破烂不堪的就有偷东西的理由，因为他们穷。
+		</p>
+	  </div>
+
+	</div>
+	<div class="right-box">
+		<ul>
+		  <li><a href="#">链接1</a></li>
+		  <li><a href="#">链接2</a></li>
+		  <li><a href="#">链接3</a></li>
+		  <li><a href="#">链接4</a></li>
+		  <li><a href="#">链接5</a></li>
+		  <li><a href="#">链接6</a></li>		  
+		</ul>	
+	</div>
+</div>
+<div class="footer">footer</div>
+</body>
+</html>

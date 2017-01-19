@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>节点属性处理程序</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <input type="button" id="myBtn" value="Click Me" />
+    <input type="button" id="myRemoveBtn" value="Remove Event Handler" />
+    <script type="text/javascript">
+        var btn = document.getElementById("myBtn");
+        btn.onclick = function(){
+            alert(this.id);
+        };
+        
+        var removeBtn = document.getElementById("myRemoveBtn");
+        removeBtn.onclick = function(){
+            btn.onclick = null;
+        };
+    </script>
+</body>
+</html>

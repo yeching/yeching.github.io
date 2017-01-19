@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style type="text/css">
+	*{padding:0px;margin: 0px;font:12px normal "microsoft yahei";}
+	/**/
+	#tabs {width:290px;padding:5px;height:150px;margin:20px;}
+	
+	#tabs ul{height:30px;border-bottom:2px orange solid;}
+	
+	#tabs ul li{list-style:none;width:60px;height:28px;float:left;margin:0px 10px;line-height:28px;text-align: center;border:1px solid #aaaaaa;border-bottom:none;}
+	
+	#tabs ul li.select{border-top:2px solid orange;border-bottom: 2px solid #fff;/*将ul的bottom遮住*/}
+	
+	#tabs div{height:120px;border:2px solid orange;border-top:none;}
+	.hide{display: none;}
+    </style>
+    <script type="text/javascript">
+         window.onload = function(){
+             var oTab = document.getElementById("tabs");
+             var oUl = oTab.getElementsByTagName("ul")[0];
+             var oLis = oUl.getElementsByTagName("li");
+             var oDivs= oTab.getElementsByTagName("div");
+
+             for(var i= 0,len = oLis.length;i<len;i++){
+                 oLis[i].index = i;
+                 oLis[i].onclick = function() {
+                     for(var n= 0;n<len;n++){
+					 /*把全部的li和ul换成下面的样式*/
+                         oLis[n].className = "";
+                         oDivs[n].className = "hide";
+                     }
+					 /*把选中的li和ul换成下面的样式*/
+                     this.className = "select";
+                     oDivs[this.index].className = "";
+                 }
+             };
+         }
+    </script>
+
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li class="select">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+    </ul>
+    <div>tab1
+    </div>
+    <div class="hide">tab2
+    </div>
+    <div class="hide">tab3
+    </div>
+</div>
+
+</body>
+</html>

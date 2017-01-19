@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>指针式时钟和数字式时针</title>
+<style>
+*{padding:0;margin:0;}
+canvas{border:1px dashed;background:black;}
+</style>
+
+</head>
+<body>
+<canvas id="drawingCanvas" width="400" height="300">
+<script>
+var canvas=document.getElementById("drawingCanvas"),
+    context=canvas.getContext("2d");
+window.onload=function(){
+setInterval("drawClock()",1000);
+}
+function drawClock(){
+context.clearRect(0,0,canvas.width,canvas.height);
+context.save();
+
+//绘制表盘
+context.beginPath();
+context.lineWidth=4;
+context.strokeStyle = "#A6E22E";//表盘上的所有线的颜色
+context.fillStyle="black";//填充颜色
+context.arc(200,150,50,0,2*Math.PI);
+context.fill();
+context.stroke();
+
+//绘制时钟表盘上的数字
+context.beginPath();
+context.translate(200,150);
+context.font="bold 10px Arial";
+context.fillStyle="#A6E22E ";
+context.textAlign="center";//让文本垂直居中，和指针能够对齐
+context.textBaseline="middle";
+/*
+画表盘数字
+context.fillText("1",40*Math.sin(Math.PI/6),-40*Math.cos(Math.PI/6));
+context.fillText("2",40*Math.sin(Math.PI/3),-40*Math.cos(Math.PI/3));
+context.fillText("3",40,0);
+context.fillText("4",40*Math.cos(Math.PI/6),40*Math.sin(Math.PI/6));
+context.fillText("5",40*Math.cos(Math.PI/3),40*Math.sin(Math.PI/3));
+context.fillText("6",0,40);
+context.fillText("7",-40*Math.sin(Math.PI/6),40*Math.cos(Math.PI/6));
+context.fillText("8",-40*Math.sin(Math.PI/3),40*Math.cos(Math.PI/3));
+context.fillText("9",-40,0);
+context.fillText("10",-40*Math.cos(Math.PI/6),-40*Math.sin(Math.PI/6));
+context.fillText("11",-40*Math.cos(Math.PI/3),-40*Math.sin(Math.PI/3));
+context.fillText("12",0,-40);
+*/
+//利用循环画比较方便，每画一个数字，增加PI/6，数字的定位是利用三角函数，算出偏移的x和y的值
+for(var i=1;i<13;i++){
+context.fillText(i,40*Math.sin(Math.PI*i/6),-40*Math.cos(Math.PI*i/6));
+}
+
+context.fill();
+context.stroke();
+
+var date=new Date();
+var h = date.getHours();
+var m = date.getMinutes();
+var s=date.getSeconds();
+
+/*下面为什么要减去Math.PI/2弧度，是因为表盘的零度位置和画布坐标系的零度位置不一致（坐标的零度比表盘的零度超前PI/2）*/
+var sa=s*2*Math.PI/60-Math.PI/2;
+var ma=m*2*Math.PI/60-Math.PI/2+s*2*Math.PI/(60*60);//分钟本身角度加上秒钟转化为分钟的角度
+var ha=h*2*Math.PI/12-Math.PI/2+m*2*Math.PI/(60*12);
+
+//画表针
+
+context.beginPath();
+context.lineWidth=2;
+/**
+*因为弧度可以使用角度参数，所以在画布上画一个半径为20，弧度特别小的，看上去就像一个点，然后利用lineTo(),从而画出指针，根据时间变化指针转动（其实是从新画一条线）
+*/
+context.arc(0,0,20,ha,ha+0.01);
+context.lineTo(0,0);
+
+context.arc(0,0,25,ma,ma+0.01);
+context.lineTo(0,0);
+
+context.arc(0,0,20,sa,sa+0.01);
+context.lineTo(0,0);
+context.stroke();
+
+//画中间的轴点
+context.beginPath();
+context.arc(0,0,3,0,2*Math.PI);
+context.fill();
+
+//数字时钟
+var hours   = String(h);
+var minutes = String(m);
+var seconds = String(s);
+context.beginPath();
+context.fillStyle="#ff0000";
+context.font="bold 40px 华文彩云";
+
+if (hours.length == 1)   h   = '0' + h;
+if (minutes.length == 1) m = '0' + m;
+if (seconds.length == 1) s = '0' + s;
+context.fillText(h+":"+m+":"+s,0,-80);
+
+/*save 和restore使用理解 save()方法只是保存绘图上下文的设置和变换，不会保存绘图上下文的内容*/
+context.restore();
+}
+</script>
+</body>
+</html>

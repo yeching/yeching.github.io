@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>鼠标所在位置的坐标</title>
+<style>
+body{margin:20px 0 0 20px;}
+</style>
+<script>
+window.onmousemove=function(ev){
+        var xValue1=ev.clientX,
+            yValue1=ev.clientY,
+            xValue2=ev.screenX,
+            yValue2=ev.screenY;
+            
+        document.getElementById('xcord1').value = xValue1;
+        document.getElementById('ycord1').value = yValue1;
+        document.getElementById('xcord2').value = xValue2;
+        document.getElementById('ycord2').value = yValue2;
+    }
+</script>
+</head>
+<body>
+<h1>返回鼠标所在位置的坐标</h1>
+clientX:<input id="xcord1" type="text" /> clientY:<input id="ycord1" type="text" /><br/> 
+screenX:<input id="xcord2" type="text" /> screenY:<input id="ycord2" type="text" /> 
+</body>
+</html>

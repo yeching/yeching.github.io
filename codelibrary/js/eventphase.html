@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>立方体图像</title>
+<style type="text/css">
+div{background:rgba(0,0,0,.2);}
+</style>
+</head>
+<body>
+<div><p>clickme</p></div>
+<script>
+var phases = {
+  1: 'capture(捕获)',
+  2: 'target(目标)',
+  3: 'bubble(冒泡)'
+};
+
+var div = document.querySelector('div');
+var p = document.querySelector('p');
+
+//给每一个阶段添加监听函数
+div.addEventListener('click', callback, true);
+p.addEventListener('click', callback, true);
+div.addEventListener('click', callback, false);
+p.addEventListener('click', callback, false);
+
+function callback(event) {
+  var tag = event.currentTarget.tagName;//获得标签名
+  var phase = phases[event.eventPhase];//event.eventPhase返回一个数值
+  alert("Tag: '" + tag + "'. EventPhase: '" + phase + "'");
+}
+</script>
+</body>
+</html>

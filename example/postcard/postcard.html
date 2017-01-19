@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>明信片</title>
+<style>
+* {margin:0; padding:0;}
+
+.postcard{
+	//margin:150px 300px;
+	width: 165mm;
+	height: 102mm;
+	position:relative;
+	border:1px dashed white;
+	background:linear-gradient(#fff,#ADD8E6);
+	box-shadow:5px 5px 50px rgba(0,0,0,.3);
+}
+
+.postcard:after{
+	content:url(bg.jpg);
+	position:absolute;
+	top:30mm;
+	left:15mm;
+	height:190px;
+	width:140px;
+	border-radius:50%;
+	overflow:hidden;
+	opacity:0.5;
+	box-shadow:5px 5px 50px 20px rgba(0,0,0,.3);
+}
+.toppostcode{position:absolute;top:4mm; left:2mm;width:}
+.contentarea{position:absolute;top:20mm;left:10mm;width:60mm;height:80mm;}
+
+.contentarea p{
+	font-size:20px;
+	line-height:1.5em;
+	font-family:"楷体";
+	color:#000;
+	font-weight:bold;
+}
+li{
+width:8.5mm; 
+height:10mm; 
+float:left; 
+list-style:none; 
+border:1px solid black;
+margin-right:1.5mm; 
+text-align:center;
+line-height:10mm;
+color:#8470FF;}
+
+.stamparea{position:absolute;top:3mm;right:4mm;width:20mm; height:20mm; background:url(postcard.jpg) no-repeat center;box-shadow:2px 2px 5px rgba(0,0,0,.3);border:1px dashed white;}
+
+.address{width:80mm;position:absolute;bottom:20mm;right:4mm;color:#DC143C;}
+
+hr{margin-top:5mm;}
+
+.frompostcode{position:absolute;bottom:4mm; right:4mm;}
+/*
+@keyframes postcardAnimation{
+0% {margin:-150px -300px;transform:rotate(0deg) scale(0.2);}
+100%{margin:150px 300px;transform:rotate(360deg) scale(1);}
+}
+.postcard{animation:postcardAnimation 4s;}*/
+</style>
+</head>
+<body>
+<!-- 
+标准尺寸规格:165×102(毫米)和148×100(毫米)。
+明信片上贴邮票的矩形框尺寸20×20mm。
+编码的红框为六个,每个是7.5×10毫米(宽和高) 
+-->
+<div class="postcard">
+	<div class="toppostcode">
+		<ul>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+		</ul>
+	</div>
+	<div class="contentarea">
+		<p>
+			经过那段遗憾<br/>
+			请你放心<br/>
+			我变得更加坚强<br/>
+			世界不管怎样荒凉<br/>
+			爱过你就不怕孤单<br/>
+			我最亲爱的<br/>
+			你过的怎么样<br/>
+			没我的日子<br/>
+			你别来无恙<br/>
+		</p>
+	</div>
+	<div class="stamparea"></div>
+	<div class="addressarea">
+		<div class="address">
+			To:<hr/>
+			Name:<hr/>
+			From:<hr/>
+		</div>
+		<div class="frompostcode">
+			<ul>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			</ul>
+		</div>
+	</div>
+<div>
+</body>
+</html>

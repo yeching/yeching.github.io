@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Javascript 返回顶部</title>
+	<style type="text/css">
+		body{width:700px;height:2000px;background:linear-gradient(red,green,yellow,blue,orange,gray);}
+		#btn {width:40px; height:40px; position:fixed; right:65px; bottom:10px; background:url(images/top_bg.png) no-repeat left top;}
+		#btn:hover {background:url(images/top_bg.png) no-repeat 0 -40px;}/*显示图片的下半部分*/
+		
+	</style>
+	<script>
+	/*	function scrolltop(){
+	window.scrollTo(0,0);
+	window.scrollBy(0,-10)
+}*/
+function backtop(){
+window.scrollBy(0,-10);
+var scrolldelay=setTimeout('backtop()',5);
+if(document.documentElement.scrollTop==0)clearTimeout(scrolldelay);
+}
+	</script>
+	
+</head>
+<body>
+	
+	<div onclick="backtop()" id="btn" title="回到顶部"></div>
+</body>
+</html>

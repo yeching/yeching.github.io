@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>焦点轮播图</title>
+	<style>
+  *{margin:0;
+    padding:0;
+    list-style:none;}
+	img{height:300px;
+        width:500px;}
+  .wrap{height:300px;
+        width:500px;
+        overflow: hidden;
+        position: relative;}
+  .wrap ul{position:absolute;} 
+  .wrap ul li{height:300px;}
+  .wrap ol{position:absolute;
+           right:5px;
+           bottom:10px;}
+  .wrap ol li{height:20px; width: 20px;
+              background:#ccc;
+              border:solid 1px #666;
+              margin-left:5px;
+              color:#000;
+              float:left;
+              line-height:20px;
+              text-align:center;
+              cursor:pointer;}
+  .wrap ol .on{background:#E97305;
+               color:#fff;}
+  .arrow { cursor: pointer; line-height: 39px;display:none; text-align: center; font-size: 36px; font-weight: bold; width: 40px; height: 40px;  position: absolute; z-index: 2; top: 130px; background-color: RGBA(0,0,0,.3); color: #fff;}
+  .arrow:hover { background-color: RGBA(0,0,0,.7);}
+  #wrap:hover .arrow { display: block;}
+  #prev { left: 20px;}
+  #next { right: 20px;}
+
+  </style>
+  <script type="text/javascript">
+  window.onload=function(){
+    var wrap=document.getElementById('wrap'),
+        pic=document.getElementById('pic'),
+        list=document.getElementById('list').getElementsByTagName('li'),
+        index=0,
+        timer=null;
+	var prev = document.getElementById('prev');
+	var next = document.getElementById('next');
+		/*自动切换*/
+      function auto(){
+        timer=setInterval(function(){
+          index++;
+          if(index>=list.length){
+            index=0;
+          }
+          change(index);
+        },2000);  
+      }
+      auto();
+	  	   /*停止自动切换*/
+       wrap.onmouseover=function(){
+          clearInterval(timer);
+       }
+       wrap.onmouseout=auto;/**/
+		/*切换过程实现*/
+      function change(curIndex){
+        pic.style.marginTop=-300*curIndex+'px';/*注意用的是marginTop而不是margin-top,最后一定要加上px单位*/
+        for(var n=0;n<list.length;n++){
+            list[n].className='';
+        }
+          list[curIndex].className='on';
+          index=curIndex;
+       }
+
+	   /*手动切换*/
+       for(var i=0;i<list.length;i++){
+          list[i].id=i;
+          list[i].onmouseover=function(){
+            change(this.id);          
+          }
+        }
+	prev.onclick=function(){
+		if(index>0){
+			index=index-1;
+		}
+		else{
+			index=4;
+		}
+		change(index);
+	}
+	next.onclick=function(){
+		if(index>=4){
+			index=0;
+		}
+		else{
+			index=index+1;
+		}
+		change(index);
+	}
+   }
+
+  </script>	
+</head>
+<body>
+  <div class="wrap" id='wrap'>
+    <ul id="pic">
+      <li><img src="../images/6.jpg" alt=""></li>
+      <li><img src="../images/7.jpg" alt=""></li>
+      <li><img src="../images/8.jpg" alt=""></li>
+      <li><img src="../images/9.jpg" alt=""></li>
+      <li><img src="../images/10.jpg" alt=""></li>    
+    </ul>
+    <ol id="list">
+      <li class="on">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ol>
+	<span id="prev" class="arrow">&lt;</span>
+    <span id="next" class="arrow">&gt;</span>
+  </div>
+</body>
+</html>

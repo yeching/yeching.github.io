@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<meta http-equiv="content-type"content="text/html;charset=utf-8">
+	<title>javascript显示时间</title>
+	<script>
+window.onload=function(){
+showTime();
+}
+function checkTime(i){
+if (i<10){
+i='0'+i;
+}
+return i;
+}
+function showTime(){
+	var myDate=new Date();
+	var year=myDate.getFullYear();
+	var month=myDate.getMonth()+1;
+	var date=myDate.getDate();
+	var day=myDate.getDay();
+	var hours=myDate.getHours();
+	var minutes=myDate.getMinutes();
+	var seconds=myDate.getSeconds();
+	var weekday=new Array(7)
+	weekday[0]="星期日"
+	weekday[1]="星期一"
+	weekday[2]="星期二"
+	weekday[3]="星期三"
+	weekday[4]="星期四"
+	weekday[5]="星期五"
+	weekday[6]="星期六"
+	hours=checkTime(hours);
+	minutes=checkTime(minutes);
+	seconds=checkTime(seconds);
+	document.getElementById('showtime').innerHTML=year+' 年 '+month+' 月 '+date+' 日 '+'  '+weekday[day]+'    '+hours+':'+minutes+':'+seconds;
+	setTimeout(showTime,500);
+}
+	</script>
+<style>
+.time{padding:15px;font-size:28px;color:white;background:black;}
+</style>
+</head>
+<body>
+	<h1 onmouseover="dis()">javascript 时间</h1>
+	<div id="showtime" class="time">显示时间位置</div>
+</body>
+</html>
