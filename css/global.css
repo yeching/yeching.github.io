@@ -61,10 +61,10 @@ body{margin:0; padding:0; font:12px/1.14em "Lucida Grande","Lucida Sans Unicode"
 	margin-right:10px;
 	position:relative;
 }
-.g-head nav li ul{width:100px;height:auto;display:none;position:absolute;top:30px;left:0;z-index:9999;}
+.g-head nav li ul{width:100px;height:auto;display:none;position:absolute;top:29px;left:0;z-index:9999;}
 .g-head nav li ul li{height:50px;width:100px;margin:0;border-top:1px solid white;}
 .g-head nav li ul li a{display:block;width:100px;height:20px;background:rgba(174,41,41,.5);color:#fff;border-top:1px solid white;}
-.g-head nav li ul li a:first-child{border-top:none;}
+.g-head nav li ul li a:first-child{border-top:1px solid transparent;}
 .g-head nav li ul li a:hover{background:#AE4141;color:#fff;}
 .g-head nav li:hover ul{display:block;}
 
