@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>font测试,还可以添加背景，行间距</title>
+<style>
+
+#control{background:#A1E4FF;padding:10px;border-radius:8px;margin-bottom:20px;}
+#display{border:1px solid;padding:10px;}
+section{margin:10px;}
+input,select{width:100px;}
+span{display:inline-block;width:100px;font-weight:bold;}
+</style>
+
+</head>
+<body>
+<h1>font测试,还可以添加背景，行间距</h1>
+<div id="box">
+  <div id="control">
+<section>
+<span>font-family:</span>
+<select id="font_family">
+        <option value="宋体">宋体</option>
+	<option value="黑体">黑体</option>
+	<option value="幼圆">幼圆</option>
+	<option value="微软雅黑">微软雅黑</option>
+	<option value="楷体">楷体</option>
+	<option value="隶书">隶书</option>
+	<option value="方正姚体">方正姚体</option>
+	<option value="方正舒体">方正舒体</option>
+	<option value="华文彩云">华文彩云</option>
+</select>
+</section>
+
+<section>
+<span>font-style:</span>
+<select id="font_style">
+        <option value="normal">normal</option>
+	<option value="italic">italic</option>
+</select>
+</section>
+
+<section>
+<span>font-size:</span>
+<input id="font_size" type="number" min="12" max="40" step="1" />
+</section>
+
+<section>
+<span>font-weight:</span>
+<select id="font_weight">
+	<option value="normal">normal</option>
+	<option value="bold">bold</option>
+</select>
+</section>
+
+<section>
+<span>color:</span>
+<input id="font_color" type="color" />
+</section>
+
+  </div>
+  <div id="display">
+这是一段供测试用的文字:<br/>晕轮效应最早是由美国著名心理学家桑戴克于本世纪二十年代提出的。他认为，人们对人的认知和判断往往只从局部出发，扩散而得出整体印象，也即常常以偏概全。一个人如果被标明是好的，他就会被一种积极肯定的光环笼罩，并被赋予一切都好的品质；如果一个人被标明是坏的，他就被一种消极否定的光环所笼罩，并被认为具有各种坏品质。这就好象刮风天气前夜月亮周围出现的圆环（月晕），其实呢，圆环不过是月亮光的扩大化而已。据此，桑戴克为这一心理现象起了一个恰如其分的名称“晕轮效应”，也称作“光环作用”。
+  </div>
+</div>
+<script>
+font_family = document.getElementById("font_family");
+font_style = document.getElementById("font_style");
+font_size = document.getElementById("font_size");
+font_weight = document.getElementById("font_weight");
+font_color = document.getElementById("font_color");
+display=document.getElementById("display");
+
+font_family.onchange=function(){display.style.fontFamily=font_family.value;}
+
+font_size.onchange=function(){display.style.fontSize=font_size.value+"px";}
+
+font_style.onchange=function(){display.style.fontStyle=font_style.value;}
+
+font_weight.onchange=function(){display.style.fontWeight=font_weight.value;}
+
+font_color.onchange=function(){display.style.color=font_color.value;}
+</script>
+</body>
+</html>

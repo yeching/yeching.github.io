@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>盒阴影调试工具</title>
+<style> 
+	#con{margin:115px auto;width:400px;height:100px;border:2px solid;border-radius:10px;font-size:30px;line-height:100px;text-align:center;}
+	#control{background:#DEEBF7;padding:20px;border-radius:10px;}
+	section{height:40px;}
+	select{display:inline;}
+	input[type="range"]{vertical-align:middle;}
+	#result{padding:10px;background:#F5F5D5;border-radius:10px;}
+</style>
+</head>
+<body>
+<div id="con"><span>box-shadow</span></div>
+<div id="control">
+	<section>
+		水平位移：<input type="text" />
+		<select>
+			<option value="px">px</option>
+			<option value="em">em</option>
+		</select>
+		<input type="range" min="0" max="110">
+	</section>
+	
+	<section>
+		垂直位移：<input type="text" />
+		<select>
+			<option value="px">px</option>
+			<option value="em">em</option>
+		</select>
+		<input type="range" min="0" max="110">
+	</section>
+	
+	<section>
+		模糊距离：<input type="text" />
+		<select>
+			<option value="px">px</option>
+			<option value="em">em</option>
+		</select>
+		<input type="range" min="0" max="50">
+	</section>
+	
+	<section>
+		阴影大小：<input type="text" />
+		<select>
+			<option value="px">px</option>
+			<option value="em">em</option>
+		</select>
+		<input type="range" min="-30" max="30">
+	</section>
+	
+	<section>
+		阴影颜色：<input type="text" />
+		<input type="color">
+	</section>
+	
+	<section>
+		内外阴影：<input type="text" />
+		<select>
+			<option value="">outset</option>
+			<option value="inset">inset</option>
+		</select>
+	</section>
+	
+	<section>
+		 代码：<span id="result"></span>
+	</section>	
+	
+</div>
+<script>
+var oDiv=document.querySelector("div");
+var oInputRanges=document.querySelectorAll("input[type=range]");
+var oInputTexts=document.querySelectorAll("input[type=text]");
+var oSelects=document.querySelectorAll("select");
+var oColor=document.querySelector("input[type=color]");
+var result=document.getElementById("result");
+
+setInterval(function(){
+	oInputRanges.forEach(function(item,index){//使用定时器，使得拖动滑动条实时显示变化
+		oInputTexts[index].value=item.value;
+		oInputTexts[4].value=oColor.value;
+		oInputTexts[5].value=oSelects[4].value;
+	})
+	
+	oDiv.style.boxShadow=oInputTexts[0].value+oSelects[0].value+" "+oInputTexts[1].value+oSelects[1].value+" "+oInputTexts[2].value+oSelects[2].value+" "+oInputTexts[3].value+oSelects[3].value+" "+oInputTexts[4].value+" "+oInputTexts[5].value;
+	result.innerHTML="box-shadow:"+oInputTexts[0].value+oSelects[0].value+" "+oInputTexts[1].value+oSelects[1].value+" "+oInputTexts[2].value+oSelects[2].value+" "+oInputTexts[3].value+oSelects[3].value+" "+oInputTexts[4].value+" "+oInputTexts[5].value+";";
+},10);
+</script>
+</body>
+</html>

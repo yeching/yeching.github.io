@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML代码效果显示器</title>
+<style>
+*{margin:0;padding:0;}
+body{width:1200px;margin:0 auto;}
+h1{
+padding:5px;
+text-align:center;
+margin:10px 0 10px 25px;
+font-family:"华文彩云";
+color:white;
+background:rgba(0,0,0,0.6);
+border:15px ridge #C7C8C9;
+box-shadow:1px
+}
+#box{border:15px ridge #C7C8C9;float:left;width:100%;height:500px;margin:0 auto;position:relative;}
+#code{float:left;width:550px;height:500px;border:transparent;}
+#result-preview{width:550px;height:500px;float:right;border:transparent;}
+#function-menu{height:100%;position:absolute;left:550px;top:0;border-left:5px ridge #C7C8C9;border-right:5px ridge #C7C8C9;}
+button{
+margin:25px auto;
+padding:10px;
+border-radius:50%;
+border:1px solid gray;
+box-shadow:0px 0px 5px 2px gray;
+display:block;
+font-family:"华文彩云";
+font-size:16px;
+outline:transparent;
+}
+button:hover{cursor:pointer;background:rgba(0,0,0,.8);color:white;outline:transparent;}
+</style>
+<script>
+function run(){
+  var code = document.getElementById("code").value;
+  //iframe元素具有contentWindow属性，引用该窗体的window对象
+  var resultwindow = document.getElementById("result-preview").contentWindow;
+  //打开一个流用来接收document.write()方法的输出内容
+  resultwindow.document.open();
+  resultwindow.document.write(code);
+  resultwindow.document.close();
+}
+
+function help(){
+	var helpWin=window.open("", "helpWin","height=500,width=600,toolbar=no,menubar=no,left=100");
+	helpWin.document.write("<h2>把你的代码输入到左边区域，或者赋值粘贴，点击运行即可看到效果</h2><br/>"+"<h3>把下面的HTML代码复制到左边测试一下吧</h3><br/>"+"&lt;html&gt;<br/>"+"&lt;head&gt;<br/>"+"&lt;title&gt;测试&lt;/title&gt;<br/>"+"&lt;/head&gt;<br/>"+"&lt;body&gt;<br/>"+"&lt;h1&gt;这是测试标题&lt;/h1&gt;<br/>"+"&lt;/body&gt;<br/>"+"&lt;/html&gt;<br/>")
+
+}
+function theme(){
+	document.documentElement.style.background="black";
+	document.getElementById("box").style.background="white";
+}
+</script>
+</head>
+<body>
+<h1>HTML代码效果显示器</h1>
+<div id="box">
+
+	<textarea id="code" placeholder="请在这输入你的代码..."></textarea>
+	<div id="function-menu">
+		<button onclick="run()">运行</button>
+		<button onclick="help()">帮助</button>
+		<button onclick="theme()">更换背景</button>
+	</div>
+	<iframe id="result-preview"></iframe>
+</div>
+
+</body>
+</html>
