@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>直播吧用户反馈表单</title>
+<style>
+form{width:600px;margin:20px auto;}
+input,label,textarea{display:block;}
+fieldset{border-radius:10px;width:500px;}
+fieldset{border:0;}
+legend {
+font-size:24px;
+font-weight:bold;
+border-bottom:2px solid #ccc;
+	}
+input[type="text"],textarea{width:400px;border:1px solid #ccc;border-radius:5px;padding:0.2em 0 0.2em 0.3em;margin:10px 0;}
+input[type="submit"]{float:right;margin-right:100px;font-size:20px;border:1px solid #ccc;border-radius:3px;box-shadow:1px 1px 1px 0 rgba(0,0,0,0.1);}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+	<form class="" action="#" method="post">
+	<fieldset>
+	<!-- 控件组的文字说明，或标题 -->
+	<legend>用户反馈表单</legend>
+		<section>
+		<!-- for 属性把标注与控件关联起来，它的值必须与控件 ID 值相同 -->
+		<label>联络信息</label>
+		<!-- text 属性让这个控件可以输入文本 -->
+		<input type="text" placeholder="您的QQ号码：必填，以便我们给您回复" autofocus required/>
+		<label>反馈内容</label>
+		<textarea placeholder="请输入反馈，我们将不断改进"></textarea>
+		<input type="submit" value="提交"/>
+		</section>
+	</fieldset>
+	</form>
+</body>
+</html>
