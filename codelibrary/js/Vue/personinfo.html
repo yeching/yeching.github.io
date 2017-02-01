@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>个人信息登记表</title>
+	<style>
+	.form-group{margin:5px;width:400px;}
+	.form-group label,input[type="text"]{display:inline-block;width:150px;}
+	.form-group label{text-align:right;}
+	button{background:#A5D34C;border:none;padding:4px 12px;border-radius:5px;cursor:pointer;}
+	table{border-collapse:collapse;width:500px;text-align:center;}
+	tr,td,th{border:1px solid;}
+	tbody button{background:red;color:white;margin-left:10px;}
+	tbody button:first-child{background:blue;}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+
+		<fieldset>
+			<legend>
+				个人信息登记表
+			</legend>
+			<div class="form-group">
+				<label>姓名:</label>
+				<input type="text" v-model="newPerson.name"/>
+			</div>
+			<div class="form-group">
+				<label>年龄:</label>
+				<input type="text" v-model="newPerson.age"/>
+			</div>
+			<div class="form-group">
+				<label>性别:</label>
+				<select v-model="newPerson.sex">
+				<option value="男">男</option>
+				<option value="女">女</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>联系方式:</label>
+				<input type="text" v-model="newPerson.contact"/>
+			</div>
+			<div class="form-group">
+				<label></label>
+				<button @click="createPerson">添加</button>
+				<button @click="savePerson($index)" style="display:none;" id="save">保存</button>
+			</div>
+	</fieldset>
+	<table>
+		<thead>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>性别</th>
+				<th>联系方式</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr v-for="person in people">
+				<td>{{ person.name }}</td>
+				<td>{{ person.age }}</td>
+				<td>{{ person.sex }}</td>
+				<td>{{ person.contact }}</td>
+				<td><button @click="changePerson($index)">修改</button><button @click="deletePerson($index)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			newPerson: {
+				name: '姓名',
+				age: 0,
+				sex: '男',
+				contact:'123456'
+			},
+			people: [{
+				name: 'James',
+				age: 31,
+				sex: '男',
+				contact:"13579"
+			}, {
+				name: 'Paul',
+				age: 29,
+				sex: '男',
+				contact:"02468"
+			}]
+		},
+		methods:{
+			createPerson: function(){
+				this.people.push(this.newPerson);
+				// 添加完newPerson对象后，重置newPerson对象
+				this.newPerson = {name: 'name', age: 0, sex: '男',contact:'123456'}
+			},
+			changePerson: function(index){
+				// 修改一个数组元素
+				this.newPerson=this.people[index];
+				//显示savebutton
+				document.getElementById("save").style.display="inline";
+			},
+			savePerson: function(index){
+				// 添加完newPerson对象后，重置newPerson对象
+				this.newPerson = {name: 'name', age: 0, sex: '男',contact:'123456'};
+				//隐藏savebutton
+				document.getElementById("save").style.display="none";
+			},
+			deletePerson: function(index){
+				// 删一个数组元素
+				this.people.splice(index,1);
+			}
+		}
+	})
+</script>
+
+</html>

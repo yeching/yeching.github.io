@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>游戏</title> 
+<style> 
+	#con{width:400px;height:400px;background:rgba(0,0,0,.2);position:relative;}
+	#con #loadarea{position:absolute;top:45%;left:20%;}
+	#con #menu{display:none;text-align:center;padding-top:50px;}
+	#con #menu button{margin-bottom:5px;padding:10px 50px;background:black;color:white;font-size:28px;font-weight:bold;border-radius:10px;border:4px solid white;cursor:pointer;}
+</style>
+</head>
+<body>
+<div id="con">
+<section id="loadarea">
+<progress value="0" max="100" id="load"></progress>
+<span id="loadPrompt"></span>
+</section>
+<section id="menu">
+<button id="start">开始游戏</button>
+<button id="description">游戏说明</button>
+<button id="musicbutton">关闭音乐</button>
+</section>
+<audio id="music" loop>
+	<source src="music.ogg" type="audio/ogg"></source>
+</audio>
+</div>
+<script>
+	var menu=document.getElementById("menu");
+	var music=document.getElementById("music");
+	window.onload=function(){
+		progressLoad();
+		game();
+	}
+	function progressLoad(){
+		var count=0;
+		var load=document.getElementById("load");
+		var loadPrompt=document.getElementById("loadPrompt");
+		
+		setInterval(function(){
+			count++;
+      		load.value=count;
+      		loadPrompt.innerHTML=(count<=100)?"游戏加载"+count+"%":"加载完成";
+			if(count==100){
+					var loadarea=document.getElementById("loadarea");
+					loadarea.parentNode.removeChild(loadarea);//删除loadarea节点
+					menu.style.display="block";//显示游戏菜单
+					music.play();
+			}
+		},50)
+	}
+	function game(){
+		var start=document.getElementById("start");
+		var musicbutton=document.getElementById("musicbutton");
+		musicbutton.onclick=function(){music.pause();}
+	}
+</script>
+</body>
+</html>
