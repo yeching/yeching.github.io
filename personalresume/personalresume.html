@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>personal-resume</title> 
+<style> 
+*{margin:0;padding:0}
+body{position:relative;}
+li{list-style:none;}
+a{text-decoration:none;color:white;}
+nav{position:fixed;top:-50px;right:5%;}
+nav li{width:30px;height:150px;font-size:28px;background:#22B573;color:white;padding:60px 8px 8px 8px;border-radius:14px;float:left;margin-left:20px;vertical-align:middle;cursor:pointer;}
+
+nav li.select{transform:rotate(5deg) translate(0,40px);transform-origin:top center;background:#20B2AA}
+#part1{width:100%;text-align:center;height:700px;background:#22C3AA;}
+#part1 img{width:150px;height:150px;border:10px solid white;border-radius:50%;margin-top:100px;}
+#part1 img:hover{transform:scale(1.5);}
+#part1 h1{color:white;font-size:60px;text-shadow:4px 4px rgba(255,255,255,.2);}
+#part1 p{color:rgba(255,255,255,.8);font-size:20px;}
+#part1 p a{color:rgba(0,0,0,.5);text-decoration:underline;font-size:24px;}
+
+#part2{height:700px;background:purple;overflow:hidden;}
+#part2 h1{color:rgba(255,255,255,.5);font-size:30px;cursor:pointer;}
+#part2 p{color:rgba(0,0,0,.5);font-size:20px;}
+#part2 section{padding-left:80px;float:left;margin:10px 20px;width:420px;}
+#part2 section:nth-of-type(1){background:url(editor.png) no-repeat;}
+#part2 section:nth-of-type(2){background:url(clock.png) no-repeat;}
+#part2 section:nth-of-type(3){background:url(cube.png) no-repeat;}
+#part2 section:nth-of-type(4){background:url(search.png) no-repeat;}
+#part2 section:nth-of-type(5){background:url(chat.png) no-repeat;}
+#part2 section:nth-of-type(6){background:url(IP.png) no-repeat;}
+#part2 section:nth-of-type(7){background:url(game.png) no-repeat;}
+#part2 section:nth-of-type(8){background:url(vue.png) no-repeat;height:100px;}
+#part2 section:nth-of-type(9){background:url(tool.png) no-repeat;}
+#part2 section:nth-of-type(10){background:url(response.png) no-repeat;}
+#part2 section:nth-of-type(11){margin:40px 30%;}
+#part2 span{font-size:30px;border:4px solid white;padding:15px ;border-radius:5px;text-align:middle;}
+#part3{height:700px;background:#22C3AA;font-size:24px;text-align:center;}
+#part3 section{padding-top:100px;}
+#part3 h1{color:white;font-size:60px;text-shadow:4px 4px rgba(255,255,255,.2);padding-bottom:50px;}
+#part3 p{margin:20px;}
+#part3 span{background:#22B573;margin:20px;padding:5px 10px;border-radius:10px;}
+#part4{height:700px;background:purple;text-align:center;}
+#part4 section{width:600px;margin:auto;padding-top:30px;}
+#part4 section div{margin:20px;}
+#part4 h1{color:white;font-size:60px;text-shadow:4px 4px rgba(255,255,255,.2);padding-bottom:30px;}
+#part4 p{color:rgba(255,255,255,.5);font-size:24px;margin:10px}
+.highlight{border:4px solid white;border-radius:5px;}
+</style>
+</head>
+<body>
+
+<nav>
+	<ul>
+		<li class="select"><a href="#part1">个人简介</a></li>
+		<li><a href="#part2">项目经验</a></li>
+		<li><a href="#part3">专业技能</a></li>
+		<li><a href="#part4">工作经历</a></li>
+	</ul>
+</nav>
+<div id="part1">
+	<img src="image.png" />
+	<p>兴趣所致，激情所在</p>
+	<p>唯有热爱，方能走的更高更远</p>
+	<h1>叶青</h1>
+	<p>本科/辽宁科技大学</p>
+	<p>工作年限：1年</p></li>
+	<p>技术博客：<a href="http://www.cnblogs.com/YeChing/" target="_blank">这里</a></p>
+	<p>Github：<a href="https://github.com/yeching/" target="_blank">这里</a></p>
+	<p>手机：15566263417（辽宁鞍山）</p>
+	<p>Email：yeching.info@gmail.com </p>
+	<p>QQ/微信号：760832997 / yeching_info</p>
+</div>
+<div id="part2">
+	<section>
+		<h1><a href="http://yeching.info/codelibrary/js/HTMLresultreview.html" target="_blank">HTML效果显示器</a></h1>
+		<p>支持直接本地离线使用</p>
+	</section>
+	<section>
+		<h1><a href="../example/canvas-clock.html" target="_blank">Clock</a></h1>
+		<p>利用HTML5 canvas和JavaScript做的特效</p>
+	</section>
+	<section>
+		<h1><a href="../example/cubephoto.html" target="_blank">Cube PhotoWall</a></h1>
+		<p>利用css3多种特性做的插件</p>
+	</section>
+	<section>
+		<h1><a href="https://github.com/yeching/python/tree/master/mywebsite" target="_blank">电影搜索网站</a></h1>
+		<p>主要用了python的web框架，通过urllib爬取豆瓣网上的电影数据，将其下载保存到mysql数据库中，最后连接数据库，将数据显示在网站中。</p>
+	</section>
+	<section>
+		<h1><a href="https://github.com/yeching/python/tree/master/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7" target="_blank">Chat</a></h1>
+		<p>用了python的Tkinter图形库，socket套接字，thread线程等技术做的一款在线聊天工具</p>
+	</section>
+	<section>
+		<h1><a href="https://github.com/yeching/python/tree/master/%E6%9F%A5%E8%AF%A2ip" target="_blank">IP Address</a></h1>
+		<p>利用了python的Tkinter图形库和淘宝提供的API接口，实现查询IP地址的具体信息</p>
+	</section>
+	<section>
+		<h1><a href="https://github.com/yeching/python/tree/master/%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7" target="_blank">Plane Wars</a></h1>
+		<p>利用了python的pygame 2d游戏引擎,以及多种python技术</p>
+	</section>
+	<section>
+		<h1><a href="../codelibrary/js/Vue/personinfo.html" target="_blank">Form</a></h1>
+		<p>利用了最新的Vue框架实现的登记表</p>
+	</section>
+	<section>
+		<h1><a href="../codelibrary/js/box-shadow.html" target="_blank">Box-Shadow Tool</a></h1>
+		<p>一个可以调试盒阴影的工具,自动生成代码</p>
+	</section>
+	<section>
+		<h1><a href="../codelibrary/ResponsiveWeb/index.html" target="_blank">Response website</a></h1>
+		<p>一个响应式的个人博客网站</p>
+	</section>
+	<section>
+	<span>更多内容请移步<a href="http://yeching.info" target="_blank">这里</a></span>
+	</section>
+</div>
+<div id="part3">
+	<section>
+	<h1>专业技术</h1>
+	<p><span>HTML</span><span>CSS</span><span>网页设计</span></p>
+	<p><span>JavaScript</span><span>jquery</span><span>Vue.js</span></p>
+	<p><span>Python</span><span>Linux</span><span>Django</span><span>Pygame</span><span>MySQL</span></p>
+	</section>
+</div>
+<div id="part4">
+	<section>
+	<h1>工作经历</h1>
+	<div>
+	<p class="highlight">2015年12月 - 2016年3月</p>
+	<p>树人科技：负责测试软件功能</p>
+	<p>相关技术：主要利用python的一些函数库写一些自动化工具,写了<a href="https://github.com/yeching/python/tree/master/documentTool">documentTool</a>文档处理工具，利用pygame写了一些<a href="https://github.com/yeching/python/tree/master/game">小游戏</a></p>
+	</div>
+	<div>
+	<p class="highlight">2016年7月 - 2016年12月</p>
+	<p>陆凯科技：负责公司的产品页面重建,网站交互设计、网站前端界面实现，</p>
+	<p>相关技术：利用新的HTML5的canvas,视频和CSS3的过渡动画等新特性对公司的产品网站进行改造,网页布局,媒体查询,利用jquery,dom编写一些<a href="http://yeching.info/">特效插件</a>,写了一些HTML5和CSS3特性的<a href="http://yeching.info/javascriptlibrary.html">调试工具</a>,同时开始自学Node.js和vue.js</p>
+	</div>
+	</section>
+</div>
+<script>
+var oLis=document.querySelectorAll("nav li");
+var body=document.querySelector("body");
+oLis.forEach(function(item,index){
+	item.onclick=function(){
+		for (var i=0,len=oLis.length;i<len;i++){
+			oLis[i].className="";
+		}
+		item.className="select";
+	}
+})
+</script>
+</body>
+</html>
