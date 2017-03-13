@@ -243,7 +243,7 @@ background-size: 100% 30vh;
 .sort-list{
 	display: flex;
 	flex-direction: column;
-	width:20%;
+	width:30%;
 	background:#e6e6e6;
 	text-align: center;
 	height:100vh;		
@@ -251,12 +251,12 @@ background-size: 100% 30vh;
 	padding:2rem 0;
 }
 .sort-list span{
-	padding:0.5rem;
+	padding:0.5rem 0;
 }
 .product-lists{
-	margin-left:20%;
+	margin-left:30%;
 	margin-bottom:10%;
-	padding:2rem;
+	padding:0.5rem;
 }
 .product-list-item{
 	display: none;
