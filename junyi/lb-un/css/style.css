@@ -135,10 +135,18 @@ background-size: 100% 30vh;
 	justify-content: space-between;
 	border-bottom:1px solid rgba(0,0,0,.2)	
 }
+.g-news .news-list a p{
+	height:3rem;
+	font-size:1rem;
+	line-height:1.4rem;
+	overflow:hidden;
+	padding:2px;
+}
 .g-news .news-list a img{
 	box-sizing: border-box;
 	width:30%;
 	height:3rem;
+
 	
 	}
 .g-news .news-list a p{
@@ -194,14 +202,14 @@ background-size: 100% 30vh;
 	background:rgba(0,0,0,.2);
 	color:white;
 	font-size:1.2em;
-	margin-bottom:130px;
+	margin-bottom:5rem;
 	}
 	
 /*fix menu*/
 
 .g-fix-menu{
 	box-sizing: border-box;
-	padding:0.5rem;
+	padding:0.2rem;
 	display: flex;
 	justify-content: space-around;
 	border-top:1px solid #e6e6e6;
@@ -220,7 +228,7 @@ background-size: 100% 30vh;
 }
 
 .g-fix-menu a img{
-	margin-bottom:0.5rem;
+	margin-bottom:0.1rem;
 	width:10vw;
 	
 	}
