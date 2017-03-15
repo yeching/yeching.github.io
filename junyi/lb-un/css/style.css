@@ -308,14 +308,19 @@ article{
 }
 .article-header img{
 	width:100%;
+	height:15rem;
+}
+.article-content{
+	font-size:1.2rem;
+	line-height:1.4rem;
 }
 .article-content .contact-info{
 	font-size:1.2rem;
 	line-height:1.4rem;
 }
-.article-content .add-info h2{
+.article-content h1,h2{
 	padding:0.5rem 0;
-	font-size:1.2rem;
+	font-size:1.4rem;
 	
 }
 .article-content .add-info p{
