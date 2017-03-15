@@ -8,8 +8,36 @@
     <script type="text/javascript" src="js/lrtk.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link type="text/css" href="css/style.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.banner.revolution.min.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <!-- 返回顶部 开始 -->
+    <script>
+        $(function() {
+            $(".btn_top").hide();
+            $(".btn_top").live("click",function(){
+                $('html, body').animate({scrollTop: 0},300);return false;
+            })
+            $(window).bind('scroll resize',function(){
+                if($(window).scrollTop()<=300){
+                    $(".btn_top").hide();
+                }else{
+                    $(".btn_top").show();
+                }
+            })
+        })
+    </script>
+    <!-- 返回顶部 结束 -->
 </head>
 <body>
+<!-- 代码 开始 -->
+<div class="izl-rmenu">
+    <a class="consult" target="_blank"><div class="phone" style="display:none;">020-28034000</div></a>
+    <a class="cart"><div class="pic"></div></a>
+    <a href="javascript:void(0)" class="btn_top" style="display: block;"></a>
+</div>
+<a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=757709562&site=qq&menu=yes" id="udesk-feedback-tab" class="udesk-feedback-tab-left" style="display: block; background-color: black;"></a>
+<!-- 代码 结束 -->
 <!--header-->
 <div class="hd-bg">
     <header class="hd-content">
@@ -22,14 +50,81 @@
             <!--header right-->
             <div class="hd-top-title">
                 <!--header login／reg、phone-->
-                <div class="hd-top-fom">
-                    <a href="#">登录</a><span class="hd-top-numbertitle">/</span><a href="#" class="hd-top-ft">注册</a><img src="images/phone_icon.png" class="hd-top-imgs"><span class="hd-top-numbertitle">服务热线：<font class="hd-top-number">020-28034000</font></span>
+                <div class="hd-top-fom main_nav">
+                    <a  class="cd-signin" href="#0">登录</a><span class="hd-top-numbertitle">/</span><a class="cd-signup hd-top-ft" href="#0">注册</a><img src="images/phone_icon.png" class="hd-top-imgs"><span class="hd-top-numbertitle">服务热线：<font class="hd-top-number">020-28034000</font></span>
+                </div>
+
+                <div class="cd-user-modal">
+                    <div class="cd-user-modal-container">
+                        <ul class="cd-switcher">
+                            <li><a href="#0">用户登录</a></li>
+                            <li><a href="#0">注册新用户</a></li>
+                        </ul>
+
+                        <div id="cd-login"> <!-- 登录表单 -->
+                            <form class="cd-form">
+                                <p class="fieldset">
+                                    <label class="image-replace cd-username" for="signin-username">用户名</label>
+                                    <input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="输入用户名">
+                                </p>
+
+                                <p class="fieldset">
+                                    <label class="image-replace cd-password" for="signin-password">密码</label>
+                                    <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="输入密码">
+                                </p>
+                                <p class="fieldset">
+                                    <input class="full-width2" type="submit" value="登 录">
+                                </p>
+                            </form>
+                        </div>
+
+                        <div id="cd-signup"> <!-- 注册表单 -->
+                            <form class="cd-form">
+                                <p class="fieldset">
+                                    <label class="image-replace cd-username" for="signup-username">用户名</label>
+                                    <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="输入用户名">
+                                </p>
+
+                                <p class="fieldset">
+                                    <label class="image-replace cd-password" for="signup-password">密码</label>
+                                    <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="输入密码">
+                                </p>
+
+                                <p class="fieldset">
+                                    <label class="image-replace cd-password" for="signup-password">确认密码</label>
+                                    <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="确认密码">
+                                </p>
+
+
+                                <p class="fieldset">
+                                    <label class="image-replace cd-username" for="signup-username">真实姓名</label>
+                                    <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="真实姓名">
+                                </p>
+
+                                <!--<p class="fieldset">-->
+                                    <!--<label class="image-replace cd-username" for="signup-username">手机号码</label>-->
+                                    <!--<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="手机号码">-->
+                                <!--</p>-->
+
+                                <p class="fieldset">
+                                    <label class="image-replace cd-email" for="signup-email">邮箱地址</label>
+                                    <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="邮箱地址">
+                                </p>
+
+                                <p class="fieldset">
+                                    <input class="full-width2" type="submit" value="注册新用户">
+                                </p>
+                            </form>
+                        </div>
+
+                        <a href="#0" class="cd-close-form">关闭</a>
+                    </div>
                 </div>
                 <!--header login／reg、phone end-->
                 <!--header nav-->
                 <nav class="nav">
                     <ul class="nav_menu">
-                        <li class="nav_menu-item"><a href="about.html"  class="active">网站首页</a></li>
+                        <li class="nav_menu-item"><a href="index.html"  class="active">网站首页</a></li>
                         <li class="nav_menu-item"><a href="about.html" >公司简介</a>
                             <ul class="nav_submenu">
                                 <li class="nav_submenu-item"> <a href="about.html" >公司简介</a></li>
@@ -56,31 +151,30 @@
                                 <li class="nav_submenu-item"> <a href="product_list.html" >"韵"整体系列</a></li>
                             </ul>
                         </li>
-                        <li class="nav_menu-item"><a href="#" >理邦布局</a>
+                        <li class="nav_menu-item"><a href="mendian.html" >理邦布局</a>
                             <ul class="nav_submenu">
-                                <li class="nav_submenu-item"> <a href="#" >门店展示</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >分支机构</a></li>
+                                <li class="nav_submenu-item"> <a href="mendian.html" >门店展示</a></li>
+                                <li class="nav_submenu-item"> <a href="fenzhi.html" >分支机构</a></li>
                             </ul>
                         </li>
-                        <li class="nav_menu-item"><a href="#" >牵手理邦</a>
+                        <li class="nav_menu-item"><a href="jiamengtiaojian.html" >牵手理邦</a>
                             <ul class="nav_submenu">
-                                <li class="nav_submenu-item"> <a href="#" >加盟须知</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >加盟条件</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >加盟程序</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >加盟申请</a></li>
+                                <li class="nav_submenu-item"> <a href="jiamengtiaojian.html" >加盟条件</a></li>
+                                <li class="nav_submenu-item"> <a href="jiamengchengxu.html" >加盟程序</a></li>
+                                <li class="nav_submenu-item"> <a href="jiamengshenqing.html" >加盟申请</a></li>
                             </ul>
                         </li>
-                        <li class="nav_menu-item"><a href="#" >加入理邦</a>
+                        <li class="nav_menu-item"><a href="join.html" >加入理邦</a>
                             <ul class="nav_submenu">
-                                <li class="nav_submenu-item"> <a href="#" >人才招聘</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >招聘信息</a></li>
+                                <li class="nav_submenu-item"> <a href="join.html" >人才招聘</a></li>
+                                <li class="nav_submenu-item"> <a href="zhaopin.html" >招聘信息</a></li>
                             </ul>
                         </li>
-                        <li class="nav_menu-item"><a href="#" >联系理邦</a>
+                        <li class="nav_menu-item"><a href="contact.html" >联系理邦</a>
                             <ul class="nav_submenu">
-                                <li class="nav_submenu-item"> <a href="#" >联系方式</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >信息反馈</a></li>
-                                <li class="nav_submenu-item"> <a href="#" >定制流程</a></li>
+                                <li class="nav_submenu-item"> <a href="contact.html" >联系方式</a></li>
+                                <li class="nav_submenu-item"> <a href="feedback.html" >信息反馈</a></li>
+                                <li class="nav_submenu-item"> <a href="dingzhi.html" >定制流程</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -93,28 +187,22 @@
 </div>
 <!--header end-->
 <!--banner-->
-<div class="slider mr">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="images/banner2.jpg" alt="" style="width: 100%; height: auto;">
-            </div>
-            <div class="item">
-                <img src="images/banner1.jpg" alt="" style="width: 100%; height: auto;">
-            </div>
-            <div class="item ">
-                <img src="images/banner3.jpg" alt="" style="width: 100%; height: auto;">
-            </div>
-
+<div id="wrapper">
+    <div class="fullwidthbanner-container">
+        <div class="fullwidthbanner">
+            <ul>
+                <li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="300">
+                    <img src="images/banner2.jpg" alt="" />
+                </li>
+                <li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300" data-link="#">
+                    <img src="images/banner1.jpg" alt="" />
+                </li>
+                <li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-link="#">
+                    <img src="images/banner3.jpg" alt="" />
+                </li>
+            </ul>
         </div>
     </div>
-    <script src="js/bootstrap.min.js"></script>
 </div>
 <!--banner end-->
 <!--main-->

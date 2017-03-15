@@ -268,7 +268,7 @@ h1 {
     text-decoration: none;
     display: block;
     width: 80px;
-    background: #8b1f53;
+    background: #4d4f4d;
 }
 .m-lt-nav_item ul li a.active{
     font-size: 12px;
@@ -276,7 +276,7 @@ h1 {
     text-decoration: none;
     display: block;
     width: 80px;
-    background: #8b1f53;
+    background: #4d4f4d;
 }
 
 
@@ -309,7 +309,7 @@ h1 {
     text-decoration: none;
     display: block;
     width: 80px;
-    background: #8b1f53;
+    background: #4d4f4d;
 }
 .m-lt-nav_item1 ul li a.active{
     font-size: 12px;
@@ -317,7 +317,7 @@ h1 {
     text-decoration: none;
     display: block;
     width: 80px;
-    background: #8b1f53;
+    background: #4d4f4d;
 }
 
 
@@ -350,7 +350,7 @@ h1 {
     text-decoration: none;
     display: block;
     width: 84px;
-    background: #8b1f53;
+    background: #4d4f4d;
 }
 .m-lt-nav_item2 ul li a.active{
     font-size: 12px;
@@ -358,9 +358,93 @@ h1 {
     text-decoration: none;
     display: block;
     width: 84px;
-    background: #8b1f53;
+    background: #4d4f4d;
 }
 
+
+
+
+.m-lt-nav_item3{
+    width: 19%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 16px;
+}
+.m-lt-nav_item3 ul{
+    list-style: none;
+}
+.m-lt-nav_item3 ul li{
+    float: left;
+    width: 84px;
+    margin-right: 10px;
+    line-height: 2.6em;
+}
+.m-lt-nav_item3 ul li a{
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    width: 84px;
+    background: gainsboro;
+}
+.m-lt-nav_item3 ul li a:hover{
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 84px;
+    background: #4d4f4d;
+}
+.m-lt-nav_item3 ul li a.active{
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 84px;
+    background: #4d4f4d;
+}
+
+
+
+.m-lt-nav_item4{
+    width: 38%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 16px;
+}
+.m-lt-nav_item4 ul{
+    list-style: none;
+}
+.m-lt-nav_item4 ul li{
+    float: left;
+    width: 84px;
+    margin-right: 10px;
+    line-height: 2.6em;
+}
+.m-lt-nav_item4 ul li a{
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    width: 84px;
+    background: gainsboro;
+}
+.m-lt-nav_item4 ul li a:hover{
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 84px;
+    background: #4d4f4d;
+}
+.m-lt-nav_item4 ul li a.active{
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 84px;
+    background: #4d4f4d;
+}
 
 
 .m-content{
@@ -376,11 +460,12 @@ h1 {
     padding: 10px 10px 10px 10px;
     line-height: 2em;
 }
+.m-content-nr1{
+    line-height: 2em;
+}
 .m-all{
     padding-top: 8px;
 }
-
-
 
 .m-lists {
     width: 1002px;
@@ -528,4 +613,361 @@ h1 {
 .m-pro-content{
     line-height: 2em;
     padding: 10px 10px 10px 10px;
+}
+
+.news_titles{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.news_titles_tap{
+    padding-top: 10px;
+    text-align: center;
+}
+.news_titles_tap span{
+    color: #5f5f5f;
+    padding-left: 10px;
+}
+.news_show_content{
+    padding-top: 10px;
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+.prv{
+    float: left;
+}
+.prv a{
+    text-decoration: none;
+    color: #000000;
+}
+.prv a:hover{
+    color: #8b1f53;
+}
+.next{
+    float: right;
+}
+.next a{
+    text-decoration: none;
+    color: #000000;
+}
+.next a:hover{
+    color: #8b1f53;
+}
+
+.m-shenqing{
+    padding: 0px 10px 10px 10px;
+}
+
+
+.tops{
+    width: 8%;
+    font-size: 14px;
+}
+.inp{
+    width: 80%;
+    height: 30px;
+    border: 1px solid gainsboro;
+}
+
+
+
+
+
+
+
+/*加盟申请*/
+.container {
+    max-width:900px;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+    padding:12px;
+}
+
+#contact h3 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#contact h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 5px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+    width:100%;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+}
+
+#contact textarea {
+    height:100px;
+    max-width:100%;
+    resize:none;
+}
+
+#contact button[type="submit"] {
+    cursor:pointer;
+    width:899px;
+    border:none;
+    /*background:#0CF;*/
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+    /*background:#09C;*/
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+    outline:0;
+    border:1px solid #999;
+}
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
+}
+
+.m-jm-lt{
+    padding: 20px;
+    text-align: center;
+}
+.m-jm-lt img{
+    width: 675px;
+    height: 587px;
+}
+.m-jm-lt1{
+    padding: 20px;
+    text-align: center;
+}
+.m-jm-lt1 img{
+    width: 675px;
+    height: 587px;
+}
+
+.m-zp-list{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.m-zp-list ul{
+    list-style: none;
+}
+.m-zp-list ul li{
+    width: 800px;
+    height: 265px;
+    border: 1px dashed gainsboro;
+    margin-bottom: 10px;
+}
+.zhaopin_title{
+    background: #f2ebd1;
+    width: 100%;
+    height: 35px;
+}
+.zhaopin_title span{
+    position: relative;
+    left: 15px;
+    top:6px;
+    font-size: 16px;
+}
+.zhaopin_list_top{
+    padding-left: 16px;
+    padding-top: 5px;
+    border-bottom: 1px dashed gainsboro;
+    padding-bottom: 5px;
+}
+.zhaopin_list_top span{
+    margin-right: 30px;
+}
+
+.zhaopin_list_miaoshu{
+    padding-left: 16px;
+    padding-top: 5px;
+    border-bottom: 1px dashed gainsboro;
+    padding-bottom: 5px;
+}
+.zhaopin_list_contact{
+    padding-left: 16px;
+    padding-top: 5px;
+    /*border-bottom: 1px dashed gainsboro;*/
+}
+
+.izl-rmenu{
+    margin-right: 0;
+    width: 82px;
+    position: fixed;
+    right: 2px;
+    top: 65%;
+    -webkit-box-shadow: #DDD 0px 1px 5px;
+    -moz-box-shadow: #DDD 0px 1px 5px;
+    box-shadow: #DDD 0px 1px 5px;
+    z-index:999;
+}
+.izl-rmenu .consult{
+    background-image: url(../images/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center -77px;
+    display: block;
+    height: 76px;
+    width: 82px;
+}
+.izl-rmenu .consult .phone {
+    background-color: rgb(247,247,255);
+    position: absolute;
+    width: 160px;
+    left: -160px;
+    top: 0px;
+    line-height: 73px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    box-shadow: #DDD -1px 1px 4px;
+}
+.izl-rmenu a.consult:hover .phone{display:inline !important;}
+.izl-rmenu .cart {
+    background-image: url(../images/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    height: 16px;
+    width: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #45BDFF;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 18px;
+    padding-bottom: 47px;
+    padding-left: 48px;
+}
+.izl-rmenu a.cart:hover .pic{display:block;}
+.izl-rmenu .btn_top {
+    background-image: url(../images/float_top.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 39px;
+    width: 82px;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+}
+.izl-rmenu .btn_top:hover {
+    background-image: url(../images/float_top.gif);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.izl-rmenu .cart .pic {
+    display:none;
+    position: absolute;
+    left: -160px;
+    top: 65px;
+    width: 160px;
+    height: 160px;
+    background:url(../images/weixin.jpg);
+}
+#udesk-feedback-tab {
+    position: fixed;
+    right: 2px;
+    top: 65%;
+    margin-top: -76px;
+    -webkit-box-shadow: #DDD 0px -1px 5px;
+    -moz-box-shadow: #DDD 0px -1px 5px;
+    box-shadow: #DDD 0px -1px 5px;
+    z-index: 10000;
+    cursor: pointer;
+    background-image: url(../images/consult_icon.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 76px;
+    width: 82px;
+    background-color: #FFF!important;
+    z-index:999;
+}
+/* 分页 */
+.ep-pages{
+
+    clear:both;
+    text-align:center;
+    font-size:14px;
+    vertical-align:top;
+    margin: 20px 0 0;
+    overflow: hidden;
+}
+.ep-pages a, .ep-pages span{
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+    margin:5px 1px 0 0;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    overflow:hidden;
+    vertical-align:top;
+    text-decoration: none;
+}
+.ep-pages a:hover{
+    background:#8b1f53;
+    border:1px solid #dddddd;
+    text-decoration:none
+}
+.ep-pages a, .ep-pages a:visited{
+    color:#666;
+}
+.ep-pages a:hover, .ep-pages a:active{
+    color:#ffffff
+}
+.ep-pages .current{
+    background:#8b1f53;
+    border:1px solid #dddddd;
+    color:#fff
+}
+.ep-pages a.current, .ep-pages a.current:visited{
+    color:#ffffff
+}
+.ep-pages a.current:hover, .ep-pages a.current:active{
+    color:#ffffff
 }
