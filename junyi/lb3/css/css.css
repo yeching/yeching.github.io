@@ -659,30 +659,6 @@ a {
 	font-family: "RobotoLt","Microsoft YaHei"
 }
 
-
-.main-item1 {
-	position: relative
-}
-
-.main-item1 .gt1 {
-	text-transform: uppercase;
-	line-height: 28px;
-	height: 50px;
-	font-size: 24px;
-	color: #333;
-	font-family: "Aileron","Microsoft YaHei"
-}
-
-.main-item1 .gt2 {
-	text-transform: uppercase;
-	line-height: 30px;
-	height: 60px;
-	font-size: 30px;
-	color: #319fb1;
-	font-family: "RobotoLt","Microsoft YaHei"
-}
-
-
 .index-company .item {
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
@@ -704,7 +680,7 @@ a {
 	transform-origin: center center;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 	height: 488px;
 	margin-right: 22px
@@ -1018,7 +994,7 @@ a {
 	display: block;
 	background-repeat: no-repeat;
 	background-position: center bottom;
-	background-size: contain;
+	background-size: 100%;
 	background-color: #eee;
 	position: relative;
 	overflow: hidden;
