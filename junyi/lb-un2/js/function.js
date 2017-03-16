@@ -33,5 +33,5 @@ oS.forEach(function(item,index,array){
 		oS[index].classList.add("sort-active");
 		oP[index].style.display="flex";
 	},false)
-})
+});
 }	
