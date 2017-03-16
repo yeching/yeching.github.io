@@ -1,0 +1,932 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="cleartype" content="on" />
+<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/roboto-light.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/aileron-thin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/myriadpro-regular.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/aileron-regular.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jquery.mcustomscrollbar.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/css.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+    <script type="text/javascript" src="js/jquery.banner.revolution.min.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/lrtk.js"></script>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+    <!--引用百度地图API-->
+    <style type="text/css">
+        html,body{margin:0;padding:0;}
+        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<title></title>
+<style>
+
+.head-inner{
+	box-sizing: border-box;
+	display: flex;
+	height:50px;
+	justify-content: space-between;
+	align-items:center;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);
+	padding:0 20px;
+	position:fixed;
+	width:100%;
+	z-index:9999;
+	top:0;
+	left:0;
+	background:rgba(255,255,255,0.8);
+	}
+.lb-logo img{height:33px;}
+.user-btns{
+	height:28px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+ .cd-signin,.cd-signup{
+ 	height:28px;
+ 	line-height:28px;
+ 	padding:0 15px;
+ 	display: block;
+ 	background:blue;
+	color:#000;
+	margin-right:2px;
+	font-size: 12px;
+	color:white;
+	background:#00a0e9;
+	border:1px solid #00a0e9;
+	border-radius: 3px;
+	cursor: pointer;
+}
+ .cd-signin:hover,.cd-signup:hover{
+ 	background:#fff;color:#000;
+ }
+ 
+ 
+.cd-user-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 54, 66, 0.9);
+    z-index: 9988;
+    overflow-y: auto;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
+    -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
+    transition: opacity 0.3s 0, visibility 0 0.3s;
+}
+.cd-user-modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s 0, visibility 0 0;
+    -moz-transition: opacity 0.3s 0, visibility 0 0;
+    transition: opacity 0.3s 0, visibility 0 0;
+}
+.cd-user-modal.is-visible .cd-user-modal-container {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.cd-user-modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: #FFF;
+    margin: 3em auto 4em;
+    cursor: auto;
+    border-radius: 0.25em;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.cd-user-modal-container .cd-switcher{
+	margin:0;
+	padding:0;
+}
+.cd-user-modal-container .cd-switcher:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.cd-user-modal-container .cd-switcher li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    list-style: none;
+}
+.cd-user-modal-container .cd-switcher li:first-child a {
+    border-radius: .25em 0 0 0;
+}
+.cd-user-modal-container .cd-switcher li:last-child a {
+    border-radius: 0 .25em 0 0;
+}
+.cd-user-modal-container .cd-switcher a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #d2d8d8;
+    color: #809191;
+    text-decoration: none;
+}
+.cd-user-modal-container .cd-switcher a.selected {
+    background: #FFF;
+    color: #505260;
+}
+@media only screen and (min-width: 600px) {
+    .cd-user-modal-container {
+        margin: 4em auto;
+    }
+    .cd-user-modal-container .cd-switcher a {
+        height: 70px;
+        line-height: 70px;
+    }
+}
+
+.cd-form {
+    padding: 1.4em;
+}
+.cd-form .fieldset {
+    position: relative;
+    margin: 1.4em 0;
+}
+.cd-form .fieldset:first-child {
+    margin-top: 0;
+}
+.cd-form .fieldset:last-child {
+    margin-bottom: 0;
+}
+.cd-form label {
+    font-size: 16px;
+    font-size: 0.875rem;
+}
+.cd-form label.image-replace {
+    /* replace text with an icon */
+    display: inline-block;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    color: transparent;
+    text-shadow: none;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+.cd-form label.cd-username {
+    background-image: url("images/img/cd-icon-username.svg");
+}
+.cd-form label.cd-email {
+    background-image: url("images/img/cd-icon-email.svg");
+}
+.cd-form label.cd-password {
+    background-image: url("images/img/cd-icon-password.svg");
+}
+.cd-form input {
+    margin: 0;
+    padding: 0;
+    border-radius: 0.25em;
+}
+.cd-form input.full-width {
+    width: 80%;
+}
+.cd-form input.full-width2 {
+    width: 94%;
+}
+.cd-form input.has-padding {
+    padding: 12px 20px 12px 50px;
+}
+.cd-form input.has-border {
+    border: 1px solid #d2d8d8;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.cd-form input.has-border:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+.cd-form input.has-error {
+    border: 1px solid #d76666;
+}
+.cd-form input[type=password] {
+    /* space left for the HIDE button */
+    padding-right: 65px;
+}
+.cd-form input[type=submit] {
+    padding: 16px 0;
+    cursor: pointer;
+    background: #2f889a;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.no-touch .cd-form input[type=submit]:hover, .no-touch .cd-form input[type=submit]:focus {
+    background: #3599ae;
+    outline: none;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .cd-form {
+        padding: 2em;
+        margin-left: 30px;
+    }
+    .cd-form .fieldset {
+        margin: 2em 0;
+    }
+    .cd-form .fieldset:first-child {
+        margin-top: 0;
+    }
+    .cd-form .fieldset:last-child {
+        margin-bottom: 0;
+    }
+    .cd-form input.has-padding {
+        padding: 16px 20px 16px 50px;
+    }
+    .cd-form input[type=submit] {
+
+    }
+}
+
+
+
+.cd-close-form {
+    /* form X button on top right */
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: -40px;
+    background: url("images/img/cd-icon-close.svg") no-repeat center center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@media only screen and (min-width: 1170px) {
+    .cd-close-form {
+        display: none;
+    }
+}
+
+#cd-login, #cd-signup, #cd-reset-password {
+    display: none;
+}
+
+#cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected {
+    display: block;
+}
+ 
+ 
+ .m-title{width:100%;text-align: center;}
+.m-title h1{
+    font-size: 24px;
+}
+  .m-title h1:before,.m-title h1:after{
+  content:url(images/m-title-line.png)
+  }
+  
+   .m-title h1:before{
+	padding-right:20px;
+   }
+   .m-title h1:after{
+	padding-left:20px;
+   }   
+    .max{
+        width: 100%;
+        margin: 5px auto;
+    }
+    .taxt_sy{
+        box-sizing: border-box;
+        width: 100%;
+        height: 120px;
+        display: block;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        resize: vertical;
+        padding: 4px;
+    }
+    .foother_main{
+        width: 100%;
+        background: #534F4C;
+        overflow: hidden;
+        border-top:2px solid gainsboro;
+    }
+    .foother{
+        width: 980px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #ffffff;
+    }
+    .lt_add{
+        float: left;
+    }
+    .lt_add ul{
+        list-style: none;
+    }
+    .about_nn{
+        float: left;
+        padding-left: 25px;
+    }
+    .about_nn ul{
+        list-style: none;
+    }
+    .about_nn ul li{
+        line-height: 2em;
+    }
+
+.more .mask-layer{
+    position: absolute;
+    width: 100%;
+    height:521px;
+    background:rgba(0,0,0,.6);
+    top:100%;
+    left:0;
+    transition: top 1s;
+    text-align: center;
+    font-size:30px;
+    line-height:521px;
+    color:#fff;
+    font-weight:bold;
+}
+.more:hover .mask-layer{
+    top:0;
+}
+
+
+.list .mask-layer{
+    position: absolute;
+    width: 100%;
+    height:250px;
+    background:rgba(0,0,0,.6);
+    top:100%;
+    left:0;
+    transition: top 1s;
+    text-align: center;
+    font-size:30px;
+    line-height:250px;
+    color:#fff;
+    font-weight:bold;
+}
+.list:hover .mask-layer{
+    top:0;
+}
+</style>
+<script type="text/javascript" src="js/jwplayer.js"></script>
+</head>
+<body data-controller="Home" data-actioni="Index" data-base="/" data-cid="9">
+<!-- 代码 开始 -->
+<div class="main-im">
+    <div id="open_im" class="open-im">&nbsp;</div>
+    <div class="im_main" id="im_main">
+        <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+            <div class="qq-container"></div>
+            <div class="qq-hover-c"><img class="img-qq" src="images/qq.png"></div>
+            <span> QQ在线咨询</span>
+        </a>
+        <!--<div class="im-tel">-->
+        <!--<div>售前咨询热线</div>-->
+        <!--<div class="tel-num">400-123-45678</div>-->
+        <!--<div>售后咨询热线</div>-->
+        <!--<div class="tel-num">010-12345678</div>-->
+        <!--</div>-->
+        <div class="im-footer" style="position:relative">
+            <div class="weixing-container">
+                <div class="weixing-show">
+                    <div class="weixing-txt">微信扫一扫</div>
+                    <img class="weixing-ma" src="picture/qr.png">
+                    <div class="weixing-sanjiao"></div>
+                    <div class="weixing-sanjiao-big"></div>
+                </div>
+            </div>
+            <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
+<!-- 代码 结束 -->
+<div class="head-inner">
+	<div class="lb-logo">
+		<a href="default.html"><img src="picture/logo.png"/></a>
+	</div>
+	<div class="user-btns hd-top-fom main_nav">
+		<a class="cd-signin" href="#" >登录</a>
+		<a class="cd-signup" href="#">注册</a>
+	</div>	
+</div>
+<div class="cd-user-modal">
+	<div class="cd-user-modal-container">
+		<ul class="cd-switcher">
+			<li><a href="#0">用户登录</a></li>
+			<li><a href="#0">注册新用户</a></li>
+		</ul>
+
+		<div id="cd-login"> <!-- 登录表单 -->
+			<form class="cd-form">
+				<p class="fieldset">
+					<label class="image-replace cd-username" for="signin-username">用户名</label>
+					<input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="输入用户名">
+				</p>
+
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signin-password">密码</label>
+					<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="输入密码">
+				</p>
+				<p class="fieldset">
+					<input class="full-width2" type="submit" value="登 录">
+				</p>
+			</form>
+		</div>
+
+		<div id="cd-signup"> <!-- 注册表单 -->
+			<form class="cd-form">
+				<p class="fieldset">
+					<label class="image-replace cd-username" for="signup-username">用户名</label>
+					<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="输入用户名">
+				</p>
+
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signup-password">密码</label>
+					<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="输入密码">
+				</p>
+
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signup-password">确认密码</label>
+					<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="确认密码">
+				</p>
+
+
+				<p class="fieldset">
+					<label class="image-replace cd-username" for="signup-username">真实姓名</label>
+					<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="真实姓名">
+				</p>
+
+				<!--<p class="fieldset">-->
+					<!--<label class="image-replace cd-username" for="signup-username">手机号码</label>-->
+					<!--<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="手机号码">-->
+				<!--</p>-->
+
+				<p class="fieldset">
+					<label class="image-replace cd-email" for="signup-email">邮箱地址</label>
+					<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="邮箱地址">
+				</p>
+
+				<p class="fieldset">
+					<input class="full-width2" type="submit" value="注册新用户">
+				</p>
+			</form>
+		</div>
+		<a href="#0" class="cd-close-form">关闭</a>
+	</div>
+</div>
+<!--header login／reg、phone end-->
+<div class="mlAuto main">
+    <div id="wrapper">
+        <div class="fullwidthbanner-container">
+            <div class="fullwidthbanner">
+                <ul>
+                    <li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300">
+                        <img src="images/banner.jpg" alt="" />
+                    </li>
+                    <li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300">
+                        <img src="images/banner.jpg" alt="" />
+                    </li>
+                    <li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300">
+                        <img src="images/banner.jpg" alt="" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="height10"></div>
+    <div class="height10"></div>
+    <div class="m-title" style="font-size: 24px;font-family: 微软雅黑;padding-bottom: 15px;"><h1>了解理邦</h1></div>
+
+    <div class="main-item has-animate index-design" style="z-index: 96;">
+        <div class="height10"></div>
+        <div class="item l">
+            <div class="item-c">
+                <!--<div class="gt1">-->
+                    <!--Designers-->
+                <!--</div>-->
+                <!--<div class="gt2">-->
+                    <!--kano.cn team-->
+                <!--</div>-->
+                <a href="/Designer/" class="more" style="background-image: url(./images/jianjie_img.jpg);">
+                    <div class="mask-layer">
+                        <span>理邦简介</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="item r">
+            <div class="item-c">
+                <!--<div class="gt1">-->
+                    <!--classic-->
+                <!--</div>-->
+                <!--<div class="gt2">-->
+                    <!--kano.cn Showroom-->
+                <!--</div>-->
+                <div class="row r1">
+                    <a href="/ShowRoom/" class="list">
+                        <div class="img" style="background-image: url(images/zizhi_img.jpg)"></div>
+                        <div class="mask-layer">
+                            <span>理邦资质</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row r1">
+                    <a href="/ShowRoom/" class="list">
+                        <div class="img" style="background-image: url(images/news_img.jpg)"></div>
+                        <div class="mask-layer">
+                            <span>理邦动态</span>
+                        </div>
+                    </a>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--百度地图容器-->
+        <div style="width:100%;height:400px;border:#ccc solid 1px; margin-top: 8px;" id="dituContent"></div>
+        <div class="height50"></div>
+<div class="m-title" style="font-size: 24px;font-family: 微软雅黑;padding-bottom: 15px;"><h1>理邦产品</h1></div>
+<div class="main-item has-animate index-product">
+<div class='r inner-auto-width' data-width='3' data-margin='42'><div class='max'>
+                    <a href="#" title="太空新款系列" class="item-c auto-list">
+                        <div class="img" style="background-image: url(images/taikong.jpeg);"></div>
+                        <div class="mask">
+                            <div class="text">太空新款系列</div>
+                        </div>
+                    </a>
+                    <a href="#" title="苹果屏风系列" class="item-c auto-list">
+                        <div class="img" style="background-image: url(images/pingguo.jpg);"></div>
+                        <div class="mask">
+                            <div class="text">苹果屏风系列</div>
+                        </div>
+                    </a>
+                    <a href="#" title="百变屏风系列" class="item-c auto-list">
+                        <div class="img" style="background-image: url(images/baibian.jpeg);"></div>
+                        <div class="mask">
+                            <div class="text">百变屏风系列</div>
+                        </div>
+                    </a>
+                    <a href="#" title="黑特班台系列" class="item-c auto-list">
+                        <div class="img" style="background-image: url(images/baibian.jpeg);"></div>
+                        <div class="mask">
+                            <div class="text">黑特班台系列</div>
+                        </div>
+                    </a>
+                    <a href="#" title="肯赛斯台系列" class="item-c auto-list">
+                        <div class="img" style="background-image: url(images/pingguo.jpg);"></div>
+                        <div class="mask">
+                            <div class="text">肯赛斯台系列</div>
+                        </div>
+                    </a>
+                    <a href="#" title="韵整体系列" class="item-c auto-list">
+                        <div class="img" style="background-image: url(images/taikong.jpeg);"></div>
+                        <div class="mask">
+                            <div class="text">&quot;韵&quot;整体系列</div>
+                        </div>
+                    </a>
+</div></div>
+    <!--<div align="right" style="clear: both;">-->
+        <!--<a href="/Product/" class="more">-->
+            <!--<span>All  Series</span>-->
+        <!--</a>-->
+    <!--</div>-->
+</div>
+<div class="height10"></div>
+
+    <!--<div align="right" style="clear: both;">-->
+        <!--<a href="/Product/" class="more">-->
+            <!--<span>All  Series</span>-->
+        <!--</a>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="m-title" style="font-size: 24px;font-family: 微软雅黑;padding-bottom: 15px;"><h1>理邦合作</h1></div>
+<div class="main-item has-animate index-design" style="z-index: 96;">
+    <div class="height10"></div>
+    <div class="item l">
+        <div class="item-c">
+            <!--<div class="gt1">-->
+            <!--Designers-->
+            <!--</div>-->
+            <!--<div class="gt2">-->
+            <!--kano.cn team-->
+            <!--</div>-->
+            <a href="/Designer/" class="more" style="background-image: url(./images/jiarulibang_img.jpg);">
+                <div class="mask-layer">
+                    <span>加盟理邦</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="item r">
+        <div class="item-c">
+            <!--<div class="gt1">-->
+            <!--classic-->
+            <!--</div>-->
+            <!--<div class="gt2">-->
+            <!--kano.cn Showroom-->
+            <!--</div>-->
+            <div class="row r1">
+                <a href="/ShowRoom/" class="list">
+                    <div class="img" style="background-image: url(images/youhuihuodong_img.jpg)"></div>
+                    <div class="mask-layer">
+                        <span>优惠活动</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="row r1">
+                <a href="/ShowRoom/" class="list">
+                    <div class="img" style="background-image: url(images/zaixianxiadan_img.jpg)"></div>
+                    <div class="mask-layer">
+                        <span>在线下单</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+        <!--<div class="join">-->
+            <!--<div class="mlAuto has-animate small-item">-->
+                <!--<div class="main-title">-->
+                    <!--<div class="cn">-->
+                        <!--在线留言-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form">-->
+                    <!--<form method="post" name="form" id="form" action="">-->
+                        <!--<table width="100%" cellpadding="0" cellspacing="0" border="0">-->
+                            <!--<tr>-->
+                                <!--<td class="td" width="440">-->
+                            <!--<span class="input">-->
+                                <!--<div class="input-c">-->
+                                    <!--<input class="hint" value="留言主题" name="CompanyName" />-->
+                                <!--</div>-->
+                            <!--</span>-->
+                                <!--</td>-->
+                                <!--<td class="td">&nbsp;</td>-->
+                                <!--<td class="td" width="440">-->
+                            <!--<span class="input">-->
+                                <!--<div class="input-c">-->
+                                    <!--<input class="hint" value="客户名称" name="CompanyAddress" />-->
+                                <!--</div>-->
+                            <!--</span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+
+                        <!--<table width="100%" cellpadding="0" cellspacing="0" border="0">-->
+                            <!--<tr>-->
+                                <!--<td class="td" width="440">-->
+                            <!--<span class="input">-->
+                                <!--<div class="input-c">-->
+                                    <!--<input class="hint" value="联系电话" name="CompanyName" />-->
+                                <!--</div>-->
+                            <!--</span>-->
+                                <!--</td>-->
+                                <!--<td class="td">&nbsp;</td>-->
+                                <!--<td class="td" width="440">-->
+                            <!--<span class="input">-->
+                                <!--<div class="input-c">-->
+                                    <!--<input class="hint" value="QQ/MSN" name="CompanyAddress" />-->
+                                <!--</div>-->
+                            <!--</span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--<table width="100%" cellpadding="0" cellspacing="0" border="0">-->
+                            <!--<tr>-->
+                                <!--<td class="td">-->
+                            <!--<span class="input">-->
+                                <!--<div class="input-c">-->
+                                    <!--<label style="display: block;">留言内容</label>-->
+                                    <!--<textarea class="taxt_sy"></textarea>-->
+                                <!--</div>-->
+                            <!--</span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--<div align="center">-->
+                            <!--<a href="javascript:void(0);" class="submit">-->
+                                <!--提交留言-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <!--</div>-->
+                <!--<div class="form-bg"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+<div class="height50"></div>
+<div class="height10"></div>
+        <div class="foother_main">
+            <div class="foother">
+                <div class="lt_name">
+
+                    <div class="lt_add">
+                        <ul>
+                            <h2>理邦家具</h2>
+                            <li>地址:广州市花都区新华镇清布南阳工业区水厂路自编10号</li>
+                            <li>总机:020-28034000</li>
+                            <li>免费热线:400－0980－811</li>
+                        </ul>
+                    </div>
+
+                    <div class="about_nn">
+                        <ul>
+                            <li>理邦简介</li>
+                            <li>理邦资质</li>
+                            <li>理邦动态</li>
+                        </ul>
+                    </div>
+
+                    <div class="about_nn">
+                        <ul>
+                            <li>太空新款系列</li>
+                            <li>苹果屏风系列</li>
+                            <li>百变屏风系列</li>
+                            <li>黑特班台系列</li>
+                            <li>肯赛斯台系列</li>
+                            <li>&quot;韵&quot;整体系列</li>
+                        </ul>
+                    </div>
+
+                    <div class="about_nn">
+                        <ul>
+                            <li>加盟理邦</li>
+                            <li>在线下单</li>
+                            <li>优惠活动</li>
+                        </ul>
+                    </div>
+
+                    <div class="about_nn">
+                        <ul>
+                            <li>
+                                微信公众号
+                                <div style="width: 100px; height:100px;"><img src="picture/qr.png"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom" style="clear: both">
+            <div class="content mlAuto">
+                <div class="l">广州理邦家具制造有限公司<br/></div><div class="r">技术支持：<a href="">骏易信息技术有限公司</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="qrcode">
+        <img src="picture/427b0ed60e4b0b055af14e9cef495330.png" width="150" />
+    </div>
+    <!--<a href="javascript:void(0);" class="menu-btn"></a>-->
+    <!--<a href="http://en.kano-cn.com/" class="language-btn"></a>-->
+    <!--<a href="javascript:void(0);" class="back-btn"></a>-->
+</body>
+<script src="js/main.js">
+</script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.266947,23.400324);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        map.addControl(ctrl_sca);
+    }
+
+    //标注点数组
+    var markerArr = [{title:"理邦家具",content:"地&nbsp;址：广州市花都区新华镇清布南阳工业区水厂路自编10号<br/>总&nbsp;机：020-28034000<br/>免费热线：400－0980－811<br/>微信公众号：libras5588<br/>营销接待QQ:4000980811<br/>传&nbsp;真:&nbsp;020-36038699<br/>联系人:&nbsp;吴先生<br/>手&nbsp;机:&nbsp;18602075588<br/>邮&nbsp;箱:&nbsp;jimmy@lb-un.com",point:"113.266345|23.398151",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+    ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor:"#808080",
+                color:"#333",
+                cursor:"pointer"
+            });
+
+            (function(){
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://map.baidu.com/image/us_cursor.gif", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+</script>
+</html>
