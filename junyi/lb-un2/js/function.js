@@ -22,6 +22,7 @@ oImgs.forEach(function(item,index,array){
 	},false)
 })
 **/
+/*
 var oS=document.querySelectorAll("#sort-list>span");
 var oP=document.querySelectorAll("#product-lists>div");
 oS.forEach(function(item,index,array){
@@ -33,5 +34,5 @@ oS.forEach(function(item,index,array){
 		oS[index].classList.add("sort-active");
 		oP[index].style.display="flex";
 	},false)
-});
+});*/
 }	

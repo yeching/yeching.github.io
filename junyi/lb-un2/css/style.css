@@ -10,6 +10,7 @@ body{
 	min-width:300px; 
 	margin:0 auto;
 	}
+h1{text-align: center;}
 ul{list-style:none;}	
 a{text-decoration: none;color:black;}
 
@@ -120,7 +121,7 @@ background-size: 100% 30vh;
 .g-company .know-title{
 	padding-left:1rem;
 	border-left:4px solid dodgerblue;
-	}
+}
 .g-company .know-list{
 	display: flex;
 	flex-wrap: wrap;
@@ -139,8 +140,6 @@ background-size: 100% 30vh;
 	box-shadow: 0.2rem 0.2rem 0.5rem #8a8a8a;
 	text-align: center;
 }
-
-
 .g-company .know-list a img{
 	margin-bottom:0.8rem;
 	width:100%;
@@ -183,11 +182,6 @@ background-size: 100% 30vh;
 	color:#8a8a8a;
 }
 /* sort paga*/
-.sort-active{
-	background:#fff;
-	color:black;
-	box-shadow: 1px 1px 5px rgba(0,0,0,.8);
-	}
 .sort-menu{
 	display: flex;
 	flex-direction: column;
@@ -196,24 +190,28 @@ background-size: 100% 30vh;
 	}
 
 .sort-list{
-	display: flex;
-	background:rgba(230,230,230,.5);		
+	display: flex;	
 	flex-wrap: wrap;
 	justify-content: space-around;
 	text-align: center;
-	box-shadow: 0 1px 2px rgba(0,0,0,.7);
+	box-sizing: border-box;
+	width:100vw;
+	height:85vh;
 }
-.sort-list span{
+.sort-list a{
 	box-sizing: border-box;
 	display: block;
 	padding:0.5rem 0;
 	margin:0.5rem;
-	width:40%;
-	border-radius:50%;
+	width:40vw;
+	height:25vh;
+	border-radius:10px;
 	font-size: 1.1rem;
 	font-family: "楷体";
+	background:rgba(230,230,230,.5);
+	line-height: 25vh;	
 }
-.sort-list span:hover{
+.sort-list a:hover{
 	cursor: pointer;
 }
 .product-lists{
@@ -222,7 +220,7 @@ background-size: 100% 30vh;
 	flex-direction: column;
 }
 .product-list-item{
-	display: none;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
@@ -248,9 +246,12 @@ article{
 	padding:0.8rem;
 	margin-bottom:15%;
 }
-
+article h1{text-align: left;}
 .article-header p{
 	margin-bottom:0.5rem;
+	font-size:1.2rem;
+	font-family: "楷体";
+	line-height:1.4rem;
 }
 .article-header p span{
 	color:#707070;
@@ -265,7 +266,7 @@ article{
 }
 .article-content{
 	font-size:1.2rem;
-	line-height:1.4rem;
+	line-height:1.14rem;
 	font-family: "楷体";
 	
 }
@@ -337,4 +338,4 @@ article{
 	box-sizing: border-box;
 	width:70%;
 	padding:0.2rem 0.5rem;
-	}
+}
