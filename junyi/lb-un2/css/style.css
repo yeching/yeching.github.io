@@ -191,6 +191,7 @@ background-size: 100% 30vh;
 .sort-menu{
 	display: flex;
 	flex-direction: column;
+	margin-bottom:15%;
 	
 	}
 
@@ -265,6 +266,8 @@ article{
 .article-content{
 	font-size:1.2rem;
 	line-height:1.4rem;
+	font-family: "楷体";
+	
 }
 .article-content .contact-info{
 	font-size:1.2rem;
