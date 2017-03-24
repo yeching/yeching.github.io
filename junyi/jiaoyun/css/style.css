@@ -234,6 +234,7 @@ ul.ck-slide-wrapper img{width:100vw;height:30vh;}
 	height:6vh;
 	align-self: center;
 }
+.checklogin{font-size:0.8rem;height:4vh;margin:0;}
 .checklogin *{display:flex;margin:0;padding:0;}
 .checklogin input[type="checkbox"]{
 	width:auto;
@@ -337,4 +338,56 @@ ul.ck-slide-wrapper img{width:100vw;height:30vh;}
 	position:absolute;
 	top:100%;
 	left:56%;
+}
+
+
+/*car produce*/
+.car-list{
+	display: flex;
+	flex-direction: column;
+	font-size:0.8rem;
+}
+
+.car-list a{
+	display: flex;
+	margin-bottom:2rem;
+	line-height:2rem;
+	padding:0.5rem;
+	padding-left:1rem;
+	background:#E30735;
+	color:#fff;
+	font-size:0.8rem;
+	font-weight:bold;
+	box-shadow:0 2px 5px rgba(227,7,53,0.6);
+}
+.car-list a:nth-of-type(1){
+	margin-top:0.5rem;
+}
+.car-list a:before{
+	width:2rem;
+	height:2rem;
+	background:#fff;
+	line-height:2rem;
+	text-align: center;
+	color:#000;
+	font-size:1.2rem;
+	border-radius:50%;	
+	margin-right:1rem;
+	
+	
+}
+.car-list a:nth-of-type(1):before{
+	content:"1";
+
+}
+.car-list a:nth-of-type(2):before{
+	content:"2";
+}
+.car-list a:nth-of-type(3):before{
+	content:"3";
+
+}
+.car-list a:nth-of-type(4):before{
+	content:"4";
+
 }
