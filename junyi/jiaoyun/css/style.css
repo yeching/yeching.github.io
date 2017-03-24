@@ -173,7 +173,7 @@ ul.ck-slide-wrapper img{width:100vw;height:30vh;}
 	margin-bottom:0.3rem;
 	}
 .article p{
-	padding:0.2rem;
+	padding-bottom:0.8rem;
 	line-height:1.4rem;
 	font-size:1rem;
 	}
@@ -390,4 +390,33 @@ ul.ck-slide-wrapper img{width:100vw;height:30vh;}
 .car-list a:nth-of-type(4):before{
 	content:"4";
 
+}
+
+/*aboutmenu*/
+.aboutmenu{
+	display: flex;
+	padding:0.5rem 3rem;
+	justify-content: space-between;
+	border-bottom:1px solid gainsboro;
+	margin-bottom:2px;
+	
+}
+.aboutmenu a{
+	box-sizing:border-box;
+	width:45%;
+	font-weight:bold;
+	font-size:1.2rem;
+	padding:0.5rem 0.2rem;
+	border:1px solid whitesmoke;
+	border-radius:5px;
+	background:red;
+	text-align: center;
+	color:#fff;
+}
+.aboutmenu a:nth-of-type(1){
+	background:#D20404;
+}
+.aboutmenu a:nth-of-type(2){
+	background:#347F00;
+	
 }
