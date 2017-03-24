@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轿运联盟</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="yeching yeching.info" />
+<link rel="stylesheet" href="css/style.css" />
+<style type="text/css">
+
+</style>
+ </head>
+ 
+<body>
+<!-- 文档 -->
+<div class="g-doc">
+	<div class="g-logo">
+		轿运联盟
+	</div>
+	<!--banner-->
+	<div class="ck-slide">
+		<ul class="ck-slide-wrapper">
+			<li>
+            <a href="javascript:"><img src="img/banner1.png" alt=""></a>
+			</li>
+			<li>
+				<a href="javascript:"><img src="img/banner2.png" alt=""></a>
+			</li>
+			<li>
+				<a href="javascript:"><img src="img/banner3.png" alt=""></a>
+			</li>
+		</ul>
+		<div class="ck-slidebox">
+			<div class="slideWrap">
+				<ul class="dot-wrap">
+					<li class="current"><em>1</em></li>
+					<li><em>2</em></li>
+					<li><em>3</em></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	<!--/banner-->
+	<!--main menu-->
+	<div class="g-main-menu">
+		<a href="about.html">
+			<img src="img/1.png" alt="关于我们" />
+		</a>
+		<a href="company-news.html">
+			<img src="img/2.png" alt="新闻动态" />
+		</a>
+		<a href="brand-introduce.html">
+			<img src="img/3.png" alt="维修保养" />
+		</a>
+		<a href="#">
+			<img src="img/4.png" alt="车辆介绍" />
+		</a>
+		<a href="#">
+			<img src="img/5.png" alt="在线预定" />
+		</a>
+		<a href="#">
+			<img src="img/6.png" alt="常见问题" />
+		</a>
+	</div>
+	<!--/main menu-->
+</div>
+<!--fix-menu-->
+<div id="g-fix-menu" class="g-fix-menu">
+		<a href="index.html">
+			<img src="img/home.png" />
+			<span>首页</span>
+		</a>
+		<a href="place.html">
+			<img src="img/place.png" />
+			<span>位置</span>
+		</a>
+		<a href="contact.html">
+			<img src="img/call.png" />
+			<span>一键呼叫</span>
+		</a> 	
+		<a href="register.html">
+			<img src="img/member.png" />
+			<span>会员中心</span>
+		</a> 			
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<!--<script src="js/slide.min.js"></script>-->
+<script src="js/slide.js"></script>
+<script>
+	$('.ck-slide').ckSlide({
+		autoPlay: true,//默认为不自动播放，需要时请以此设置
+		dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
+		interval:3000,//默认间隔3000毫秒
+		isAnimate:true
+	});
+</script>
+</body>
+</html>

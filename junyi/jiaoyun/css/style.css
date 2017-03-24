@@ -1,0 +1,340 @@
+/*base*/
+*{padding:0;margin:0;}
+body{
+	font-size:62.5%;
+	font-family:"Microsoft YaHei",Arial;
+	 overflow-x:hidden; 
+	 overflow-y:auto;
+	 }
+.g-doc{  
+	min-width:300px; 
+	margin:0 auto;
+	margin-bottom:12vh;
+	}
+ul{list-style:none;}	
+a{
+	text-decoration: none;
+	color:black;
+	}
+/*logo*/
+.g-logo{
+	height:8vh;
+	background:#E30735;
+	line-height:8vh;
+	color:white;
+	text-align: center;
+	font-size:1.4rem;
+}
+
+/*banner*/
+.ck-slide { width: 100vw; height: 30vh; margin: 0 auto;}
+.ck-slide ul.ck-slide-wrapper { height: 30vh;}
+ul.ck-slide-wrapper img{width:100vw;height:30vh;}
+.ck-slide ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	z-index:1001
+}
+.ck-slide {
+	position: relative;
+	overflow: hidden;
+}
+.ck-slide ul.ck-slide-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+.ck-slide ul.ck-slide-wrapper li {
+	position: absolute; margin-top:0px;
+}
+.ck-slide ul.ck-slide-wrapper li a{
+	/*a标签是行内元素，宽高对a标签不起作用，这里必须添加line-height:0px;display:black，否则垂直滚动<li>之间会出现间隔*/
+	line-height:0px;
+	display:block;
+}
+.ck-slide .ck-prev, .ck-slide .ck-next {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 35px;
+	height: 70px;
+	margin-top: -35px;
+	border-radius: 3px;
+	opacity: .15;
+	background: red;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	transition: opacity .2s linear 0s;
+}
+.ck-slide .ck-prev {
+	left: 5px;
+	background: url(../images/arrow-left.png) #000 50% no-repeat;
+}
+.ck-slide .ck-next {
+	right: 5px;
+	background: url(../images/arrow-right.png) #000 50% no-repeat;
+}
+.ck-slidebox {
+	position: absolute;
+	left: 50%;
+	bottom: 12px;
+	z-index: 30;
+}
+.ck-slidebox ul {
+	height: 20px;
+	padding: 0 4px;
+	border-radius: 8px;
+	background: rgba(0,0,0,0.5);
+}
+.ck-slidebox ul li {
+	float: left;
+	height: 12px;
+	margin: 4px 4px;
+}
+.ck-slidebox ul li em {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: #fff;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.ck-slidebox ul li.current em {
+	background-color: #fe6500;
+}
+.ck-slidebox ul li em:hover {
+	background-color: #fe6500;
+}
+/*g-menu*/
+.g-main-menu{
+	display: flex;
+	flex-wrap: wrap;
+	padding:1%;
+	justify-content: space-around;
+	height:50vh;
+}
+.g-main-menu a{
+	width:45%;
+	height:30%;
+}
+.g-main-menu a img{
+	width:100%;
+	height:100%;
+}
+/*fix menu*/
+
+.g-fix-menu{
+	box-sizing: border-box;
+	padding:0.2rem;
+	display: flex;
+	justify-content: space-around;
+	border-top:1px solid #e6e6e6;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	z-index:1000;
+	background:#E30735;
+	height:12vh;
+}
+
+.g-fix-menu a{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	z-index:1001;
+	width:25%;
+}
+
+.g-fix-menu a img{
+	margin-bottom:0.1rem;
+	height:10vw;
+	width:10vw;
+	margin:auto;
+	}
+.g-fix-menu span{
+	color:#fff;
+}
+
+/*article*/
+.article{
+	color:#000;
+}
+.article h1{
+	font-size:1.2rem;
+	text-align: center;
+	padding:0.3rem;
+	border-bottom:1px solid gainsboro;
+	margin-bottom:0.3rem;
+	}
+.article p{
+	padding:0.2rem;
+	line-height:1.4rem;
+	font-size:1rem;
+	}
+.article img{
+	display:block;
+	box-sizing:border-box;
+	width:100vw;
+	margin:0;
+	padding:0;
+	}
+
+/*login register*/
+.login-header{
+	display: flex;
+	height:8vh;
+	background:white;
+	border-bottom:1px solid gainsboro;
+	box-sizing: border-box;
+	padding:0.2rem;
+	}
+.login-header a{
+	width:50%;
+	text-align: center;
+	font-size:1.4rem;
+}
+.login-active{color:#E30735;}
+.login-header span{color:gray;line-height:8vh;}	
+.login-form span a{color:cornflowerblue;}	
+.login-form{width:100%;box-sizing: border-box;padding:0.5rem;}
+.login-row{display: flex;height:8vh;margin:1rem 0;}
+.login-row label{width:20%;line-height:8vh;font-size:0.8rem;}
+.login-row input{box-sizing:border-box;width:80%;font-size:0.8rem;}
+.login-form span{display: flex;justify-content: flex-end;}
+.login-form button{
+	display:block;
+	height:8vh;
+	width:100%;
+	font-size:1.2rem;
+	background:#E30735;
+	color:white;
+	border:1px solid white;}
+.login-form .surelogin{
+	justify-content:space-between;
+	}
+.surelogin label{
+	width:20%;
+	line-height:8vh;
+	font-size:0.8rem;
+}
+.surelogin input{
+	box-sizing:border-box;
+	width:40%;
+	font-size:0.8rem;
+}
+.surelogin img{
+	margin:0 auto;
+	width:35%;
+	height:6vh;
+	align-self: center;
+}
+.checklogin *{display:flex;margin:0;padding:0;}
+.checklogin input[type="checkbox"]{
+	width:auto;
+	height:4vh;
+	margin-right:0.5rem;
+}
+.checklogin span{height:4vh;}
+.checklogin a{height:4vh;color:cornflowerblue;}
+
+.findtitle{background:gainsboro;display:flex;line-height:6vh;align-items: center;}
+.findtitle img{width:15%;height:6vh;}
+.findtitle span{font-size: 1.2rem;}
+
+/*news list*/
+
+.news-menu{
+	padding:0.5rem 0.2rem;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	border-bottom: 2px solid gainsboro;
+}
+.news-menu a{
+	box-sizing:border-box;
+	width:32%;
+	font-weight:bold;
+	font-size:1.2rem;
+	padding:0.5rem 0.2rem;
+	border:1px solid whitesmoke;
+	border-radius:5px;
+	}
+.news-menu a:nth-of-type(1){
+	background:#0685FA;
+	color:#fff;
+}
+.news-menu a:nth-of-type(2){
+	background:#EB9B04;
+	color:#fff;
+}
+.news-menu a:nth-of-type(3){
+	background:#04C605;
+	color:#fff;
+}
+.news-list{
+	box-sizing: border-box;
+	padding:0.2rem;
+	
+	}
+.news-list .news-list-title{
+	font-size: 1.2rem;
+	padding:0.3rem;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 4px solid #E30735;
+	margin-bottom:0.2rem;
+}
+.news-list-item{
+	display: flex;
+	flex-direction: column;
+}
+.news-list-item a{
+	display: flex;
+	box-sizing: border-box;
+	margin:0.2rem;
+	height:12vh;
+	overflow: hidden;
+	width:100%;
+	cursor: pointer;
+	font-size:0.8rem;
+	line-height:1.1rem;
+	justify-content: space-between;
+}
+.news-list-item a img{
+	height:12vh;
+	width:30%;
+	margin-right:0.3rem;
+}
+.news-list-item a span{
+	width:70%;
+}
+
+/*baidu map*/
+.allmap{
+	width:100vw;
+	height:80vh;
+}
+.callpan{
+
+	margin:0 2rem;
+	margin-top:60vh;
+	border:2px solid #E30735;
+	position: relative;
+}
+.callpan:after{
+	content:"";
+	display: block;
+	width:0;
+	height:0;
+	border:1rem solid transparent;
+	border-top:1rem solid #E30735;
+	position:absolute;
+	top:100%;
+	left:56%;
+}
