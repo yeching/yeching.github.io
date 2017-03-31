@@ -1,58 +1,6 @@
-#descriple{
-	padding:5px 5px 5px 25px;
-	position:relative;
-	background:rgba(0,0,0,.3);
-	color:white;
-	box-shadow:5px 5px 20px rgba(0,0,0,.5);
-	border-radius:20px;
-}
-#descriple *{font-family:"楷体";}
-#descriple:before{
-	content:"";
-	display:block;
-	width:50px;
-	height:15px;
-	border:2px ridge gray;
-	border-radius:4px;
-	position:absolute;
-	top:13.5px;
-	left:-40px;
-	box-shadow:1px 1px 0px rgba(0,0,0,.5);
-}
-#descriple:after{
-	content:"";
-	display:block;
-	width:50px;
-	height:15px;
-	border:2px ridge gray;
-	border-radius:4px;
-	position:absolute;
-	bottom:13.5px;
-	left:-40px;
-	box-shadow:1px 1px 0px rgba(0,0,0,.5);
-}
-
-
-#content{margin:10px 0;}
-#content>div{margin-bottom:10px;}
-#content .caption{padding-bottom:4px;border-bottom:2px solid #929292;}
-#content .caption .listname{background:#AE4141;color:white;padding:5px;border-radius:4px 4px 0 0;}
-#content .caption .more{margin-right:10px;float:right;color:#AE4141;}
-#content .caption .more a{display:block;color:#AE4141;padding:3px;}
-#content .caption .more a:hover{background:#AE4141;color:white;}
-#interest ul li{float:left;margin:5px;}
-#interest ul li.item1{width:500px;height:300px;}
-#interest ul li.item2{width:420px;height:300px;overflow:hidden;}
-#interest ul li.item3{width:810px;height:150px;overflow:hidden;}
-#interest ul li.item4{width:500px;height:300px;overflow:hidden;}
-#interest ul li.item5{width:400px;height:300px;overflow:hidden;}
-#interest ul li.item6{width:1000px;height:300px;overflow:hidden;}
-#interest ul li.item7{width:850px;height:200px;overflow:hidden;}
-#interest ul li.item8{width:420px;height:420px;overflow:hidden;}
-#interest ul li.item8{width:800px;height:400px;overflow:hidden;}
-
-#resource ul{width:250px;display:inline-block;margin:5px 30px;vertical-align:top;}
-#resource ul li{border-bottom:1px dashed;background:#CDCDCD;font-family:"楷体";padding-left:10px;padding-right:10px;}
+#resource{display:flex;font-size:16px;}
+#resource ul{width:250px;display:flex;flex-direction:column;margin:5px 30px;}
+#resource ul li{border-bottom:1px dashed;background:#CDCDCD;font-family:"楷体";padding:10px;padding-left:10px;padding-right:10px;}
 #resource ul li a{color:black;}
 #resource ul li a:hover{color:red;text-decoration:underline;background:none;}
 #resource ul li:first-child{border-radius: 2px 2px 0 0;background:#929292;color:black;}
