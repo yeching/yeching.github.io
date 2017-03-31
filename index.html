@@ -1,158 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="./css/global.css"/>
-<link rel="stylesheet" href="./css/index.css"/>
-<base target="_blank">
-<title>yeching</title>
-<style>
-</style>
-</head>
-<body>
-<div class="doc">
-	<header class="g-head">
-		<div class="top">
-			<span><a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a></span>
-			<span><a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a></span>
-			<span id="prefer"><a href="javascript:void(0);">换肤</a>
-				<ul>
-				  <li>默认</li>
-				  <li>白天</li>
-				  <li>晚上</li>
-				  <li>护眼模式</li>
-				</ul>
-			</span>
-
-		</div>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<!--
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Articles</a></li>
-						<li><a href="#">代码库</a></li>
-						<li><a href="#">项目实例</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
-				-->
-				<li><a href="javascriptlibrary.html">JavaScript</a></li>
-				<li><a href="codelibrary.html">代码库</a></li>
-				<li><a href="javascript:void(0);">其它</a>
-					<ul>
-						<li><a href="http://www.cnblogs.com/YeChing/">博客园</a></li>
-						<li><a href="http://www.jianshu.com/u/d271393bb1d4">简书</a></li>
-						<li><a href="https://github.com/yeching/">GitHub</a></li>
-						<li><a href="http://www.juzimi.com/u/1067043">句子迷</a></li>
-					</ul>
-				<li>
-				<li><a href="personalresume/personalresume.html">个人简历</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="g-main">
-		<div id="descriple">
-			<h1>体会</h1>
-			<p>方法：多动手实践，多阅读，多思考</p>
-			<p>态度：专注，少些浮躁，坚定信念，向大牛看齐</p>
-			<p>目标：多创造出一些有价值的东西，形成自己的核心价值体系</p>
-		</div>
-		<div id="content">
-			<div id="interest">
-				<div class="caption">
-					<span class="listname">好玩有趣的</span>
-					<span class="more"><a href="javascriptlibrary.html">更多&gt;&gt;</a></span>
-				</div>
-				<ul class="clear">
-					<li class="item1"><iframe src="example/focusimg-example.html" width="500px" height="300px" frameborder="0"></iframe></li>
-					<li class="item2"><iframe src="example/canvas-clock.html" width="420px" height="310px" frameborder="0"></iframe></li>
-					<li class="item3"><iframe src="example/scrollimg-example.html" width="810px" height="150px" frameborder="0"></iframe></li>
-					<li class="item4"><iframe src="example/accordion-example.html" width="500px" height="300px" frameborder="0"></iframe></li>
-					<li class="item5"><video src="images/video.mov"  controls="controls" height="300px" width="400px" loop="loop">
-你得浏览器不支持video
-</video></li>
-					<li class="item6"><iframe src="example/map.html" width="1000px" height="300px" frameborder="0"></iframe></li>
-					<li class="item7"><iframe src="example/photowall3d.html" width="850px" height="200px" frameborder="0"></iframe></li>
-					<li class="item8"><iframe src="example/cubephoto.html" width="420px" height="420px" frameborder="0"></iframe></li>
-					<li class="item9"><iframe src="example/postcard/postcard.html" width="800px" height="400px" frameborder="0"></iframe></li>
-				</ul>
+	<head>
+		<meta charset="UTF-8">
+		<title>yeching</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+	<!-- 文档 -->
+	<div class="g-doc">
+		<!-- 头部 -->	
+		<header id="g-head" class="g-head">
+			<a href="index.html">
+				<img src="images/yeching.jpg" />
+			</a>
+			<div>
+				<a href="index.html">HOME</a>
+				<a href="http://www.jianshu.com/u/d271393bb1d4">简书</a>
+				<a href="http://www.cnblogs.com/YeChing/">博客园</a>
+				<a href="https://github.com/yeching">GitHub</a>
+				<a href="sitenav.html">网址导航</a>
 			</div>
-			<div id="resource">
-				<div class="caption">
-					<span class="listname">Links</span>
-				</div>
-				<ul>
-					<li>工具</li>
-					<li><a href="https://jsfiddle.net/">在线IDE编辑工具jsfiddle</a></li>
-					<li><a href="https://codepen.io">在线IDE编辑工具codeopen</a></li>
-					<li><a href="http://mahua.jser.me/">在线markdown编辑器</a></li>
-					<li><a href="http://tool.oschina.net/">C在线工具</a></li>
-					<li><a href="http://www.w3cschool.cn/">w3cschool在线工具库</a></li>					
-					<li><a href="http://www.iconfont.cn/">图标下载</a></li>	
-					
-					
-				</ul>
-				<ul>
-					<li>书籍</li>
-					<li><a href="javascript:void(0);">HTML5秘籍</a></li>
-					<li><a href="javascript:void(0);">HTML5与css3权威指南</a></li>
-					<li><a href="javascript:void(0);">HTML5揭秘</a></li>
-					<li><a href="javascript:void(0);">HTML5与CSS3基础教程</a></li>
-					<li><a href="javascript:void(0);">HTML5高级程序设计</a></li>
-					<li><a href="javascript:void(0);">HTML5网页开发实例详解</a></li>
-					<li><a href="javascript:void(0);">HTML5开发精要与实例详解</a></li>
-					<li><a href="javascript:void(0);">css权威指南</a></li>
-					<li><a href="javascript:void(0);">css设计指南</a></li>
-					<li><a href="javascript:void(0);">响应式Web设计实践 </a></li>
-					<li><a href="javascript:void(0);">响应式Web设计：HTML5和CSS3实战</a></li>
-					<li><a href="javascript:void(0);">数据结构与算法JavaScript描述</a></li>
-					<li><a href="javascript:void(0);">基于MVC的JavaScript Web富应用开发</a></li>
-					<li><a href="javascript:void(0);">超实用的CSS代码段</a></li>
-					<li><a href="javascript:void(0);">超实用的JavaScript代码段</a></li>
-					<li><a href="javascript:void(0);">超实用的jQuery代码段</a></li>
-					<li><a href="javascript:void(0);">JavaScript语言精粹</a></li>
-					<li><a href="javascript:void(0);">javascript权威指南</a></li>
-					<li><a href="javascript:void(0);">JavaScript高级程序设计</a></li>		
-					<li><a href="javascript:void(0);">Django Book </a></li>
-				</ul>
-				<ul>
-					<li>网站社区</li>
-					<li><a href="http://www.w3cschool.cn">W3Cschool</a></li>
-					<li><a href="https://www.w3.org/">W3Cplus</a></li>
-					<li><a href="https://www.w3.org/">W3C</a></li>
-					<li><a href="https://www.w3ctech.com/">w3ctech</a></li>
-					<li><a href="https://gold.xitu.io/">稀土掘金</a></li>
-					<li><a href="http://div.io/#/welcome">Div.IO</a></li>	
-					<li><a href="http://www.tuicool.com/">推库</a></li>	
-					<li><a href="http://nec.netease.com/">NEC</a></li>					
-					<li><a href="http://nej.netease.com/">NEJ</a></li>	
-					<li><a href="https://modernizr.com">Modernizr</a></li>
-					<li><a href="http://tinyurl.com/">tingurl</a></li>
-					<li><a href="http://tinyurl.com/polyfills">腻子脚本库</a></li>
-					<li><a href="http://how2j.cn">how2j.cn</a></li>
-					<li><a href="http://www.cnblogs.com/">博客园</a></li>
-					<li><a href="http://www.csdn.net/">CSDN</a></li>
-					<li><a href="http://blog.jobbole.com/">伯乐在线</a></li>					
-					<li><a href="https://segmentfault.com/">segmentfault</a></li>
-					<li><a href="http://stackoverflow.com/">stackoverflow</a></li>	
-					<li><a href="https://developer.mozilla.org/zh-CN/">MDN开发者文档</a></li>
-					<li><a href="http://mindhacks.cn/">刘未鹏 | Mind Hacks</a></li>	
-					<li><a href="http://www.cnblogs.com/TomXu/">汤姆大叔的博客</a></li>	
-					<li><a href="http://www.ruanyifeng.com">阮一峰的个人网站</a></li>
-					<li><a href="http://wangjianshuo.com/">Wangjianshuo's Blog</a></li>
-					<li><a href="https://thinkjs.org/">ThinkJs</a></li>
-					<li><a href="http://es6.ruanyifeng.com">ECMAScript 6 入门</a></li>
-					<li><a href="http://javascript.ruanyifeng.com/">JavaScript 标准参考教程（alpha）</a></li>
-				</ul>
-			</div>			
-		</div>	
-	</div>			
-	<footer class="g-foot">
-		<span>yeching's website - 学习，整理，分享 ©2017 Create by yeching</span>
-	</footer>
-	<div class="backtop" onclick="backtop()"></div>
-<script src="js/function.js"></script>
-</div>
-</body>
+		</header>
+		<!-- /头部 -->
+		<!-- 主体 -->
+		<div id="g-body" class="g-body">
+			<a href="javascriptlibrary.html">front-end-demo-2</a>
+			<a href="codelibrary.html">front-end-demo-1</a>
+			<a href="resource.html">front-end-demo-1</a>
+		</div>
+		<!-- /主体 -->
+	</div>
+	</body>
 </html>
