@@ -11,7 +11,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="author" content="yeching yeching.info" />
 <link rel="stylesheet" href="css/style.css" />
-<script type="text/javascript" src="js/mui.min.js" ></script>
 <style type="text/css">
 
 </style>
@@ -20,25 +19,16 @@
 <body>
 <!-- 文档 -->
 <div class="g-doc">
-	<div class="g-logo">
-		轿运联盟
-	</div>	
 	<article class="article">
 		<div class="login-header">
 			<a class="login-active" href="login.html">账户登入</a><span>|</span><a href="register.html">会员注册</a>
 		</div>
 		<div class="article-content">
 			<form id='login-form' class="login-form">
-				<div class="login-row">
-					<label>账号</label>
-					<input type="text" placeholder="请输入账号">
-				</div>
-				<div class="login-row">
-					<label>密码</label>
-					<input type="password"  placeholder="请输入密码">
-				</div>
-				<span><a href="findpassword.html">忘记密码？</a></span>
-				<div><button type="submit">登入</button></div>
+				<input type="text" class="user-icon" placeholder="请输入用户名">
+				<input type="password"  placeholder="请输入密码">
+				<a href="findpassword.html" class="lostpwd">忘记密码？</a>
+				<input type="button" value="登入">
 			</form>
 		</div>
 	</article>
