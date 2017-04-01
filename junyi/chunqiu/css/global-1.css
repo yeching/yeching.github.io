@@ -1,0 +1,123 @@
+/*
+Powered by ly200.com		http://www.ly200.com
+广州联雅网络科技有限公司		020-83226791
+*/
+
+#global_support_point{height:16px;}
+#global_support{position:fixed; bottom:0; height:16px; line-height:18px; overflow:hidden; width:100%; z-index:999;}
+#global_support .bg{background:#ccc; width:100%; height:100%; position:absolute; left:0; top:0;}
+#global_support a{font-size:10px; color:#fefefe; position:absolute; display:block; left:0; width:100%; height:100%; left:0; top:0; text-align:center;}
+
+.myform{ width:94%; margin:0 auto}
+.myform .lbar{ float:left}
+.myform .rbar{ float:right}
+/* 左右
+.myform .row{ background:#fff; border-radius:3px; border:1px solid #e0e0e0; height:38px; line-height:38px; margin-top:10px; position:relative; padding-left:82px; overflow:hidden}
+.myform select{height:35px; border:0px; background:url(../../../images/ico/select_icon.jpg) 100% center no-repeat #fff; background-size: auto 25px;border:1px solid #e9e9e9; width:100%;color:#aaa;}
+.myform .row span{ float:left; display:inline-block; width:100%;height:38px; overflow:hidden}
+.myform .row span.label{ position:absolute; left:0px; top:0; height:38px; width:72px; padding:0 0px 0 6px; background:#F5F5F5; color:#000; }
+.myform  input.form_input{ border:0px;line-height:normal;height:36px; width:98%;}
+.myform .row .select_box{ width:99%; height:38px;background:url(../../images/ico/select_icon.jpg) right center no-repeat;background-size: auto 32px;}
+.myform .row .select_box select{ border:0px; line-height:normal; background:none;height:35px; border-radius:0px; padding-left:6px; width:100%; }
+.myform  select.w_80{width:80px;background:url(../../images/ico/select_icon.jpg) 50px center no-repeat;background-size: auto 25px; margin:0 5px}
+   上下*/
+.myform .row{ background:#fff; border-radius:3px; border:1px solid #e0e0e0; margin-top:10px; overflow:hidden;}
+.myform select{height:35px; border:0px; background:url(../../../images/ico/select_icon.jpg) 100% center no-repeat #fff; background-size: auto 25px;border:1px solid #e9e9e9; width:100%;color:#aaa;}
+.myform .row span{ display:inline-block; width:100%;height:38px; overflow:hidden}
+.myform .row span.label{ height:38px; line-height:38px; text-indent:5px; background:#F5F5F5; color:#000; }
+.myform  input.form_input{ border:0px;line-height:normal;height:36px; width:98%;}
+.myform .row .select_box{ width:99%; height:38px;background:url(../../images/ico/select_icon.jpg) right center no-repeat;background-size: auto 32px;}
+.myform .row .select_box select{ border:0px; line-height:normal; background:none;height:35px; border-radius:0px; padding-left:6px; width:100%; }
+.myform  select.w_80{width:80px;background:url(../../images/ico/select_icon.jpg) 50px center no-repeat;background-size: auto 25px; margin:0 5px}
+
+.myform .sms{ width:100%; margin-top:10px; }
+.myform .sms .lbar{background:#fff; border-radius:3px; border:1px solid #e0e0e0; height:38px; line-height:38px; width:50%}
+.myform .sms .rbar{ width:48%;}
+.myform .sms .sms_button{ height:40px; line-height:40px; border-radius:3px; text-align:center; width:100%; background-color:#209900;color:#FFF; font-size:16px}
+
+.myform .select_col_2{margin-top:10px;}
+.myform .select_col_2 .lbar,.myform .select_col_2 .rbar{ width:49.8%;}
+.myform .select_col_3{ margin-top:9px;}
+
+.myform .textarea{ width:100%; height:70px; margin-top:10px}
+.myform .textarea textarea{ width:100%; height:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; border-radius:5px; padding:5px; line-height:20px}
+
+.myform .btn{ padding:10px 0}
+.myform .btn_60{ width:62%; background:#209900; border-radius:5px;color:#fff; height:40px; line-height:40px; font-size:16px; float:left; font-weight:bold;border:0}
+.myform .btn_40{width:34%; background:#cacac8; border-radius:5px;color:#474747; height:40px; line-height:40px; font-size:16px; float:right; font-weight:bold;border:0; text-align:center}
+.myform .submit{width:100%; margin:5px auto; margin-bottom:12px; background-color:#209900; padding:8px; font-size:18px; font-weight:bold;color:#FFF; border-radius:5px;}
+
+.upload_box{width:100%;}
+.upload_box .items{float:left; border-radius:5px; width:55px; height:55px;text-align:center; margin:0px 5px 5px 0}
+.upload_box .del{ position:relative; z-index:1}
+.upload_box .del span{ display:block; width:15px; height:15px; background:url(../images/global/icon/close_red.png) no-repeat;background-size:100% 100%; position:absolute; right:-3px; top:-6px}
+.upload_box .items img{width:100%; height:100%; border-radius:5px}
+
+#global_waiting{ width:45px; position:absolute; height:36px; z-index:100000}
+#global_waiting li{ height:36px; width:5px; border-radius:5px; background:#fff; float:left; margin-right:3px}
+#global_waiting li:last-child{margin-right:0px}
+#global_waiting li:nth-child(1){ -webkit-animation:line-scale 1s 0.1s infinite;animation:line-scale 1s 0.1s infinite;}
+#global_waiting li:nth-child(2){ -webkit-animation:line-scale 1s 0.2s infinite;animation:line-scale 1s 0.2s infinite;}
+#global_waiting li:nth-child(3){ -webkit-animation:line-scale 1s 0.3s infinite;animation:line-scale 1s 0.3s infinite;}
+#global_waiting li:nth-child(4){ -webkit-animation:line-scale 1s 0.4s infinite;animation:line-scale 1s 0.4s infinite;}
+#global_waiting li:nth-child(5){ -webkit-animation:line-scale 1s 0.5s infinite;animation:line-scale 1s 0.5s infinite;}
+#global_waiting li:nth-child(6){ -webkit-animation:line-scale 1s 0.6s infinite;animation:line-scale 1s 0.6s infinite;}
+
+
+#payment .i-ture{border:1px solid #ddd; border-radius:5px; margin:8px; padding:8px; background:#fff;}
+#payment .i-ture h1.t{font-weight:bold; height:22px; border-bottom:1px solid #ddd; font-size:16px;}
+#payment .i-ture .info{line-height:200%; padding-top:8px;}
+#payment .i-ture ul{padding-top:5px;}
+#payment .i-ture ul li{padding-top:10px;}
+#payment .i-ture ul li .payment_info{line-height:150%; padding-left:20px; color:#888;}
+#payment .i-ture ul li textarea{width:97%; height:80px; line-height:150%; border-radius:5px;}
+#payment .payment{padding:5px 8px 10px 0; height:38px;}
+#payment .payment input{float:right; height:36px; color:#fff; text-align:center; border-radius:5px; width:150px; font-weight:bold; font-size:16px; background-color:#F00019; border:1px solid #c10001; background-image:linear-gradient(bottom, #E20018 0, #DC3749 100%); background-image:-moz-linear-gradient(bottom, #E20018 0, #DC3749 100%); background-image:-webkit-linear-gradient(bottom, #E20018 0, #DC3749 100%); box-shadow:0 1px 0 #D95260 inset, 0 1px 2px rgba(0,0,0,0.5);}
+/*payment_new*/
+#payment .container{ padding:3%; background:#fff;}
+#payment label{ font-size:16px; color:#000;}
+#payment .line{ height:1px; margin:10px 0; background:#ddd;}
+#payment .rows{ color:#646464; font-size:16px;}
+#payment .rows_txt{ padding:10px 0;}
+#payment .rows .img{ width:40px; float:left;}
+#payment .rows .img img{ width:100%;}
+#payment .rows .txt{ float:left; margin-left:10px; padding-top:10px;}
+#payment .rows .btn{ width:20px; height:20px; background:#000; background:url(../images/global/icon/default.jpg) no-repeat; background-size:contain; float:right; margin-top:13px;}
+#payment .rows .select{ background:url(../images/global/icon/select.jpg) no-repeat; background-size:contain;}
+#payment .rows .info{ font-size:14px; color:#646464; display:none;}
+#payment .rows .info textarea{ width:100%; height:80px;}
+/*#payment .footer{ height:61px;}
+#payment .footer .menu_list{ width:100%; height:60px; border-top:1px solid #ddd; background:#fff;}
+#payment .footer input{ float:right; height:60px; line-height:60px; width:35%; background:#df3031; color:#fff; font-weight:bold; font-size:18px; text-align:center; border:none;}
+#payment .footer span{ display:block; height:60px; line-height:60px; margin:0 15px; font-weight:normal; color:#858585; font-size:16px;}
+#payment .footer span b{ color:#df3031;}*/
+#payment .footer input{ height:45px; line-height:45px; width:200px; background:#df3031; color:#fff; font-weight:bold; font-size:18px; text-align:center; border:none; margin:0 auto; display:block; margin-top:15px;}
+#payment .footer span{ font-weight:normal; color:#858585; font-size:24px; display:block; text-align:center;}
+#payment .footer span b{ color:#df3031;}
+/*payment_new*/
+
+@-webkit-keyframes line-scale{
+	0%{ -webkit-transform:scale(1);}	
+	50%{ -webkit-transform:scale(0.4);}
+	100%{ -webkit-transform:scale(1);}
+}
+@keyframes line-scale{
+	0%{ -webkit-transform:scale(1);}	
+	50%{ -webkit-transform:scale(0.4);}
+	100%{ -webkit-transform:scale(1);}
+}
+
+
+#loading{width:100%; height:100px; background:url(../../images/ico/loading.gif) center center no-repeat;}/*加载*/
+#not_data{width:100%; height:100px; background:url(../images/global/icon/no_data.png) center top no-repeat; background-size:80px auto; padding-top:84px; text-align:center; font-size:12px; color:#999; display:none; margin-top:80px}/*当前没有记录*/
+
+#global_payment_log .total{ text-align:center; font-size:30px; color:#000000; border:1px solid #e8e8e8; padding:20px 0px; border-left:0; border-right:0; margin-bottom:15px}
+#global_payment_log .total span{ font-size:12px;}
+#global_payment_log .detail{ color:#747474}
+#global_payment_log .detail .rows{ width:94%; margin:8px auto}
+#global_payment_log .detail .lbar{ float:left}
+#global_payment_log .detail .rbar{ float:right}
+#global_payment_log .Success{ width:100%; background:url(../images/bizpay/pay_success.png) center 20px no-repeat; background-size:90px auto; text-align:center; padding:150px 0 10px 0;font-size:24px;}
+#global_payment_log .Lose,#global_payment_log .Handle{ width:100%; background:url(../images/bizpay/pay_lose.png) center 20px no-repeat; background-size:90px auto; text-align:center; padding:150px 0 10px 0;font-size:24px;}
+#global_payment_log .btn{ width:100%; height:45px; text-align:center; margin-top:20px;}
+#global_payment_log .btn a{ display:block; width:94%; height:45px; line-height:45px; color:#fff; background:#b3b3b3; font-size:20px; border-radius:5px; margin:0 auto}
