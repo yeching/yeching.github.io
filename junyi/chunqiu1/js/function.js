@@ -10,10 +10,20 @@ $('.ck-slide').ckSlide({
 	var menu1=document.getElementById("menu-1");
 	var ul1=document.querySelector("#menu-1>ul");
 	var menu2=document.getElementById("menu-2");
-	var ul2=document.querySelector("#menu-2>ul");	
-	menu1.onclick=function(){
-		ul1.style.display=(ul1.style.display=="block")?"none":"block";
+	var ul2=document.querySelector("#menu-2>ul");
+	var lis=document.querySelectorAll("#g-fix-menu>li");
+	var uls=document.querySelectorAll("#g-fix-menu>li>ul");
+	lis[0].onclick=function(){
+		ul1.style.display="none";
 		ul2.style.display="none";
+	}
+	lis[2].onclick=function(){
+		ul1.style.display="none";
+		ul2.style.display="none";
+	}	
+	menu1.onclick=function(){
+		ul2.style.display="none";
+		ul1.style.display=(ul1.style.display=="block")?"none":"block";
 	}
 	menu2.onclick=function(){
 		ul2.style.display=(ul2.style.display=="block")?"none":"block";
