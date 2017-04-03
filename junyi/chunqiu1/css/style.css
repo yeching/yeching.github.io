@@ -1,0 +1,259 @@
+/*base*/
+*{padding:0;margin:0;}
+body{
+	font-size:62.5%;
+	font-family:"Microsoft YaHei",Arial;
+	 overflow-x:hidden; 
+	 overflow-y:auto;
+	 scroll:no;
+	 }
+.g-doc{  
+	min-width:300px; 
+	margin:0 auto;
+	}
+ul{list-style:none;}	
+a{
+	text-decoration: none;
+	color:black;
+	}
+img{
+	margin:0;
+	padding:0;
+}
+/*header*/
+.g-header-menu{
+	background:#1C2628;
+	position: relative;
+	z-index: 10;
+	display: flex;
+	height:30px;
+	
+}
+.g-header-menu>a{
+	width:20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right:1px solid white;
+	z-index: 10;
+}
+.g-header-menu>a:nth-of-type(5){
+	border-right:1px solid black;
+}
+.g-header-menu>a img{
+	width:21px;
+	height:21px;
+}
+.g-header-menu .search{
+	position:absolute;
+	z-index: 1;
+	display: none;
+}
+
+/*banner*/
+.ck-slide { box-sizing:border-box;width: 100vw; height: 50vw; margin: 0 auto;}
+.ck-slide ul.ck-slide-wrapper { height: 50vw;}
+ul.ck-slide-wrapper img{width:100vw;height:50vw;}
+.ck-slide ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	z-index:1001
+}
+.ck-slide {
+	position: relative;
+	overflow: hidden;
+}
+.ck-slide ul.ck-slide-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+.ck-slide ul.ck-slide-wrapper li {
+	position: absolute; margin-top:0px;
+}
+.ck-slide ul.ck-slide-wrapper li a{
+	/*a标签是行内元素，宽高对a标签不起作用，这里必须添加line-height:0px;display:black，否则垂直滚动<li>之间会出现间隔*/
+	line-height:0px;
+	display:block;
+}
+.ck-slide .ck-prev, .ck-slide .ck-next {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 30px;
+	height: 40px;
+	margin-top: -15px;
+	border-radius: 3px;
+	opacity: 0.5;
+	background-repeat: no-repeat;
+	transition: opacity .2s linear 0s;
+	color:white;
+	font-weight:bold;
+	font-size:1rem;
+	line-height:40px;
+	text-align: center;
+}
+.ck-slide .ck-prev {
+	left: 2px;
+	background: #000 50% no-repeat;
+}
+.ck-slide .ck-next {
+	right: 2px;
+	background: #000 50% no-repeat;
+}
+.ck-slidebox {
+	position: absolute;
+	left: 50%;
+	bottom: 12px;
+	z-index: 30;
+}
+.ck-slidebox ul {
+	height: 20px;
+	padding: 0 4px;
+	border-radius: 8px;
+	background: rgba(0,0,0,0.5);
+}
+.ck-slidebox ul li {
+	float: left;
+	height: 12px;
+	margin: 4px 4px;
+}
+.ck-slidebox ul li em {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: #fff;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.ck-slidebox ul li.current em {
+	background-color: #fe6500;
+}
+.ck-slidebox ul li em:hover {
+	background-color: #fe6500;
+}
+/*g-menu*/
+.g-main-menu{
+	display: flex;
+	flex-direction: column;
+	font-size:12px;
+
+}
+.g-main-menu .pic-row{
+	display: flex;
+	box-sizing: border-box;
+	height:33vw;
+}
+.g-main-menu .pic-row>a{
+	width:33.3333%;
+}
+.g-main-menu .pic-row:nth-of-type(1)>a{
+	border-right:1px solid #000;
+}
+.g-main-menu .pic-row:nth-of-type(3)>img{
+	border-right:1px solid #000;
+}
+.g-main-menu .pic-row>img{
+	width:66.6666%;
+	height:33vw;
+}
+.g-main-menu .pic-row>a>img{
+	width:100%;
+	height:33vw;
+}
+.g-main-menu .title-row{
+	display: flex;
+	background: #4b4b4b;
+}
+.g-main-menu .title-row a{
+	width:33.3333%;
+	color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-right:1px solid #000;
+}
+.g-main-menu .title-row a:nth-of-type(3){
+	border-right:1px solid #4b4b4b;
+}
+
+/*height30*/
+.height30{
+	height:30px;
+	width:100vw;
+}
+/*fix menu*/
+
+.g-fix-menu{
+	box-sizing: border-box;
+	width:100vw;
+	display: flex;
+	background-color: #bbbbbb;
+	height:30px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:1001;
+	
+}
+.g-fix-menu>li{
+	box-sizing: border-box;
+	position: relative;
+	width:25%;
+	text-align: center;
+	border-right:1px solid rgba(0,0,0,.6);    
+	line-height: 30px;
+	font-size:12px;
+	z-index:1000;
+}
+.g-fix-menu>li:nth-of-type(4){
+	border-right:1px solid #bbbbbb; 
+}
+.g-fix-menu>li:nth-of-type(2)>ul{
+	width:100%;
+	position:absolute;
+	top:-150px;
+	background-color: #bbbbbb;
+	display: none;
+}
+.g-fix-menu>li:nth-of-type(4)>ul{
+	width:100%;
+	position:absolute;
+	top:-60px;
+	background-color: #bbbbbb;
+	display: none;
+
+}
+.g-fix-menu>li li{
+	box-sizing: border-box;
+	height:30px;
+	border-bottom:1px solid rgba(0,0,0,.2); 
+}
+/*baidu map*/
+.allmap{
+	box-sizing: border-box;
+	width:100vw;
+	height:88vh;
+}
+.callpan{
+	margin:0 2rem;
+	margin-top:60vh;
+	border:2px solid #E30735;
+	position: relative;
+}
+.callpan:after{
+	content:"";
+	display: block;
+	width:0;
+	height:0;
+	border:1rem solid transparent;
+	border-top:1rem solid #E30735;
+	position:absolute;
+	top:100%;
+	left:56%;
+}
