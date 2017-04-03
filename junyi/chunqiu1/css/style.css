@@ -221,6 +221,12 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-size:14px;
 	z-index:1000;
 }
+.g-fix-menu>li:nth-of-type(2)>a:after{
+	content:url(../img/arrow.png);
+}
+.g-fix-menu>li:nth-of-type(4)>a:after{
+	content:url(../img/arrow.png);
+}
 .g-fix-menu>li:nth-of-type(4){
 	border-right:1px solid #bbbbbb; 
 }
@@ -308,6 +314,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-size:16px;
 	padding:5px 5px;
 	line-height:24px;
+	
 }
 .article img{
 	width:100%;
