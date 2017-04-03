@@ -5,7 +5,6 @@ body{
 	font-family:"Microsoft YaHei",Arial;
 	 overflow-x:hidden; 
 	 overflow-y:auto;
-	 scroll:no;
 	 }
 .g-doc{  
 	min-width:300px; 
@@ -182,7 +181,15 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 .g-main-menu .title-row a:nth-of-type(3){
 	border-right:1px solid #4b4b4b;
 }
-
+/*returnTop*/
+.returnTop{
+	background:gray;
+	padding:6px;
+	color:white;
+	font-size:14px;
+	margin:2px 5px;
+	text-align: center;
+}
 /*height30*/
 .height30{
 	height:40px;
@@ -257,4 +264,50 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	position:absolute;
 	top:100%;
 	left:56%;
+}
+
+
+/*listbox*/
+.list-box{
+	display: flex;
+	flex-direction: column;
+	font-size:14px;
+	
+}
+.list-box a{
+	box-sizing: border-box;
+	display: flex;
+	width:100%;
+	height:80px;	
+	padding:4px;	
+	position: relative;
+	background:rgba(221,221,221,.4);
+	box-shadow:0 2px 1px #ddd;
+	color: #9d9286;
+}
+.item-icon{
+	width:20px;
+	height:20px;
+	background:url(../img/list_icon.png) no-repeat;
+	background-size: 20px;
+	position: absolute;
+	top:50%;
+	right:15px;
+	margin-top:-10px;
+}
+.list-box a img{
+	width:33%;
+	padding-right:5px;
+}
+.article{
+	box-sizing: border-box;
+	font-size:14px;
+	padding:5px 2px;
+}
+.article img{
+	width:100%;
+	margin-bottom:4px;
+}
+.article p{
+	margin-bottom:4px;
 }
