@@ -301,9 +301,11 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	width:33%;
 	padding-right:5px;
 }
+
+/*article*/
 .article{
 	box-sizing: border-box;
-	font-size:14px;
+	font-size:16px;
 	padding:5px 2px;
 }
 .article img{
