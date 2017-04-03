@@ -223,9 +223,13 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 .g-fix-menu>li:nth-of-type(2)>a:after{
 	content:url(../img/arrow.png);
+	width:16px;
+	height:16px;	
 }
 .g-fix-menu>li:nth-of-type(4)>a:after{
 	content:url(../img/arrow.png);
+	width:16px;
+	height:16px;
 }
 .g-fix-menu>li:nth-of-type(4){
 	border-right:1px solid #bbbbbb; 
