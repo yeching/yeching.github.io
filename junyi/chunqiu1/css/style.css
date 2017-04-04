@@ -326,14 +326,14 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-weight:bold;
 }
 .pre-group input,select{
-	padding:4px;
+	padding:8px;
 	border:1px solid #BBBBBB;
 	border-radius: 2px;
 }
 .pre-online input[type="submit"]{
 	width:100%;
-	padding:5px;
-	border:1px solid #BBBBBB;
+	padding:10px;
+	border:1px solid transparent;
 	border-radius: 2px;
 	background:#007AFF;
 	color:#fff;
