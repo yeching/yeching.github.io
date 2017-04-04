@@ -313,6 +313,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 /*预约听课*/
 .pre-online{
+	box-sizing: border-box;
 	padding:5px;
 }
 .pre-group{
@@ -326,6 +327,8 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-weight:bold;
 }
 .pre-group input,select{
+	box-sizing: border-box;
+	width:100%;
 	padding:8px;
 	border:1px solid #BBBBBB;
 	border-radius: 2px;
