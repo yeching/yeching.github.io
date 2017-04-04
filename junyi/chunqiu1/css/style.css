@@ -327,6 +327,8 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-weight:bold;
 }
 .pre-group input,select{
+	-webkit-appearance:none;
+	outline:none;	
 	box-sizing: border-box;
 	width:100%;
 	padding:8px;
@@ -334,6 +336,8 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	border-radius: 2px;
 }
 .pre-online input[type="submit"]{
+	-webkit-appearance:none;
+	outline:none;	
 	width:100%;
 	padding:10px;
 	border:1px solid transparent;
