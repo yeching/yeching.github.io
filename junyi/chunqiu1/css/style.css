@@ -327,6 +327,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-weight:bold;
 }
 .pre-group input,select{
+	height:40px;
 	-webkit-appearance:none;
 	outline:none;	
 	box-sizing: border-box;
