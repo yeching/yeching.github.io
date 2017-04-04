@@ -184,10 +184,10 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 /*returnTop*/
 .returnTop{
 	background:gray;
-	padding:6px;
+	padding:10px;
 	color:white;
 	font-size:14px;
-	margin:5px 5px;
+	margin:15px 5px;
 	text-align: center;
 }
 /*height30*/
@@ -349,6 +349,57 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	font-size:16px;
 	font-weight:bold;
 	
+}
+
+/*最新活动*/
+.activity-list{
+	box-sizing: border-box;
+	padding:5px;
+}
+.activity-item{
+	box-sizing: border-box;
+	margin-bottom:5px;
+	width:100%;
+	padding-right:2px;
+	border:1px solid #DDDDDD;
+	border-radius:2px;
+	overflow: hidden;
+}
+.activity-item img{
+	box-sizing: border-box;
+	width:100%;
+	padding:5px;
+}
+.activity-item .activity-content{
+	box-sizing: border-box;
+	width:100%;
+	padding:5px;	
+	display: flex;
+	flex-direction: column;
+}
+.activity-item .activity-content h1{
+	margin-bottom:5px;
+	color:#fe8400;
+}
+.activity-item .activity-content p{
+	font-size:12px;
+	margin-bottom:5px;
+	line-height: 20px;
+}
+.activity-item .activity-content span{
+	color:#000;
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.activity-item .activity-content a{
+	margin-top:10px;
+	background:#fe8400;
+	padding:8px;
+	font-size: 16px;
+	border-radius: 32px;
+	color:#fff;
+	align-self: flex-end;
 }
 /*article*/
 .article{
