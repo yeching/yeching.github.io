@@ -334,6 +334,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	padding:10px;
 	border:1px solid #BBBBBB;
 	border-radius: 2px;
+	background: #fff;
 }
 .pre-online input[type="submit"]{
 	-webkit-appearance:none;
