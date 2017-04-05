@@ -431,3 +431,80 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 .article p{
 	margin-bottom:4px;
 }
+
+/*定位*/
+.location-contain{
+	background:#DDDDDD;
+	margin:0;
+	
+}
+.location-top{
+	height:70px;
+	display: flex;
+	font-size:14px;
+	background:#fff;
+	
+	
+}
+.location-top img{
+	width:50px;
+	height:50px;
+	align-self:center;
+}
+.location-tip-box{
+	display: flex;
+	flex-direction: column;
+	padding:10px 0;
+	padding-left:10px;
+
+}
+.location-top .location-tip{
+	margin-bottom:5px;
+	font-weight:bold;	
+}
+
+.location-list{
+	padding:0 4px 4px 4px;
+}
+.location-list-item{
+	box-sizing: border-box;
+	display: flex;
+	width:100%;
+	height:70px;
+	background:#fff;
+	margin:4px 0;
+}
+.location-list-item img{
+	box-sizing: border-box;
+	width:30%;
+	height:70px;
+	padding:2px;
+}
+.location-list-right{
+	box-sizing: border-box;
+	width:70%;
+	height:70px;
+	padding:2px;
+}
+.location-list-right .location-city{
+	margin-bottom:2px;
+	font-size:14px;
+	font-weight:bold;
+}
+.location-list-right .location-street{
+	margin-bottom:2px;
+}
+.location-contact{
+	display: flex;
+	
+}
+.location-contact-item{
+	width:50%;
+}
+.location-contact-item img{
+	width:20px;
+	height:20px;
+}
+.location-contact-item span{
+	line-height:20px;
+}

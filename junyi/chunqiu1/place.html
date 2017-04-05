@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="author" content="" />
+<meta name="author" content=" " />
 <link rel="stylesheet" href="css/style.css" />
 <style type="text/css">
 
@@ -32,7 +32,85 @@
 			<img src="img/nav_lbs.png" />			
 		</a>
 	</header>
-    <div class="locationTxt"></div>
+	<div class="location-contain">
+		<div class="location-top">
+			<img src="img/location.png">
+			<div class="location-tip-box">
+				<div class="location-tip">我的当前位置</div>
+				<div class="locationTxt"></div>
+			</div>
+		</div>
+		<div class="location-list">
+			<div class="location-list-item">
+				<img src="img/spring.jpg">
+				<div class="location-list-right">
+					<div class="location-city">花都区</div>
+					<div class="location-street">建设北路71-3</div>
+					<div class="location-contact">
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>
+						</div>
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>					
+						</div>			
+					</div>
+				</div>
+			</div>    
+			<div class="location-list-item">
+				<img src="img/spring.jpg">
+				<div class="location-list-right">
+					<div class="location-city">花都区</div>
+					<div class="location-street">建设北路71-3</div>
+					<div class="location-contact">
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>
+						</div>
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>					
+						</div>			
+					</div>
+				</div>
+			</div>   
+			<div class="location-list-item">
+				<img src="img/spring.jpg">
+				<div class="location-list-right">
+					<div class="location-city">花都区</div>
+					<div class="location-street">建设北路71-3</div>
+					<div class="location-contact">
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>
+						</div>
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>					
+						</div>			
+					</div>
+				</div>
+			</div> 
+			<div class="location-list-item">
+				<img src="img/spring.jpg">
+				<div class="location-list-right">
+					<div class="location-city">花都区</div>
+					<div class="location-street">建设北路71-3</div>
+					<div class="location-contact">
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>
+						</div>
+						<div class="location-contact-item">
+							<img src="img/location.png">
+							<span>联系电话</span>					
+						</div>			
+					</div>
+				</div>
+			</div> 			
+	</div>
+	</div>	
 </div>
 <!--fix-menu-->
 <ul id="g-fix-menu" class="g-fix-menu">
@@ -61,57 +139,7 @@
 <!--<script src="js/slide.min.js"></script>-->
 <script src="js/slide.js"></script>
 <script type='text/JavaScript' src='http://api.map.baidu.com/api?v=2.0&ak=pZgfgzOoBQwggUGWSlVWhmwXr7q4mYCH'></script>
-<!--
-<script type='text/javascript'>
-//声明地址解析器
-var geoc = new BMap.Geocoder();
-  
-//自动定位
-var autoLocation = function () {
-  if (navigator.geolocation) { //判断浏览器是否能获取当前位置
-    navigator.geolocation.getCurrentPosition(AddrSuc, AddrFail);
-  }
-  else {
-    simpleNoty("无法自动定位");
-  }
-}
-  
-//获取当前坐标成功
-function AddrSuc(param) {
-  var lng = param.coords.longitude;
-  var lat = param.coords.latitude;
-  var point = new BMap.Point(lng, lat);
-  //将gps坐标转换为百度地址坐标
-  BMap.Convertor.translate(point, 0, translateCallback);
-}
-  
-//获取坐标失败
-function AddrFail(err) {
-  showNotify("自动定位失败");
-}
-  
-//坐标转换
-function translateCallback(point) {
-    
-  geoc.getLocation(point, function (rs) {
-    var addComp = rs.addressComponents; //查询得到的地址对象组件
-    //addComp.streetNumber：街道门牌号
-    //addComp.city：城市
-    //addComp.district：区
-    //addComp.street：街道
-    //addComp.province：省
-    var address = addComp.city + addComp.district + addComp.street;
-    var lng_t = point.lng; //经度
-    var lat_t = point.lat;  //纬度 
-  
-    $(".locationTxt").innerHTML("当前位置:" + address);
-  })
-}
-$(function(){
-  autoLocation();
-});
-</script>
--->
+
 <script type="text/javascript">
 	var geolocation = new BMap.Geolocation();
 	var geoc = new BMap.Geocoder();  
@@ -121,7 +149,7 @@ $(function(){
 			geoc.getLocation(pt, function(rs){
 				var addComp = rs.addressComponents;
 				var address=addComp.province  + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
-				$(".locationTxt").text("当前位置:" + address);
+				$(".locationTxt").text(address);
 			});    			
 		}
 		else {
