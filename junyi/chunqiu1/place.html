@@ -114,17 +114,10 @@ $(function(){
 -->
 <script type="text/javascript">
 	// 百度地图API功能
-	var map = new BMap.Map("allmap");
-	var point = new BMap.Point(116.331398,39.897445);
-	map.centerAndZoom(point,12);
-
 	var geolocation = new BMap.Geolocation();
 	geolocation.getCurrentPosition(function(r){
 		if(this.getStatus() == BMAP_STATUS_SUCCESS){
-			var mk = new BMap.Marker(r.point);
-			map.addOverlay(mk);
-			map.panTo(r.point);
-			var addComp = r.addressComponents; //查询得到的地址对象组件
+			var addComp = r.addressComponent; //查询得到的地址对象组件
 		    //addComp.streetNumber：街道门牌号
 		    //addComp.city：城市
 		    //addComp.district：区
