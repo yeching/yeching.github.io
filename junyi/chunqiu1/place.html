@@ -32,7 +32,7 @@
 			<img src="img/nav_lbs.png" />			
 		</a>
 	</header>
-    <div id='allmap' class="locationTxt"></div>
+    <div class="locationTxt"></div>
 </div>
 <!--fix-menu-->
 <ul id="g-fix-menu" class="g-fix-menu">
@@ -121,7 +121,7 @@ $(function(){
 			geoc.getLocation(pt, function(rs){
 				var addComp = rs.addressComponents;
 				var address=addComp.province  + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
-				$(".locationTxt").innerHTML("当前位置:" + address);
+				$(".locationTxt").text("当前位置:" + address);
 			});    			
 		}
 		else {
