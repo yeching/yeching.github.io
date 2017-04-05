@@ -470,20 +470,20 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	box-sizing: border-box;
 	display: flex;
 	width:100%;
-	height:70px;
+	height:80px;
 	background:#fff;
 	margin:4px 0;
 }
 .location-list-item img{
 	box-sizing: border-box;
 	width:30%;
-	height:70px;
+	height:80px;
 	padding:2px;
 }
 .location-list-right{
 	box-sizing: border-box;
 	width:70%;
-	height:70px;
+	height:80px;
 	padding:2px;
 }
 .location-list-right .location-city{
@@ -493,6 +493,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 .location-list-right .location-street{
 	margin-bottom:2px;
+	font-size:12px;
 }
 .location-contact{
 	display: flex;
@@ -500,11 +501,13 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 .location-contact-item{
 	width:50%;
+	font-size:12px;
+	display: flex;
 }
 .location-contact-item img{
-	width:20px;
-	height:20px;
+	width:25px;
+	height:25px;
 }
 .location-contact-item span{
-	line-height:20px;
+	align-self: center;
 }
