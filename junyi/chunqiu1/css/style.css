@@ -497,7 +497,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 .location-contact{
 	display: flex;
-	
+	margin-top:5px;
 }
 .location-contact-item{
 	width:50%;
@@ -508,6 +508,9 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	width:25px;
 	height:25px;
 }
-.location-contact-item span{
+.location-contact-item a{
 	align-self: center;
+}
+.location-contact-item a:hover{
+	color:palevioletred;
 }
