@@ -236,14 +236,12 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 .g-fix-menu>li:nth-of-type(2)>ul{
 	width:100%;
 	position:absolute;
-	top:-200px;
 	background-color: #bbbbbb;
 	display: none;
 }
 .g-fix-menu>li:nth-of-type(4)>ul{
 	width:100%;
 	position:absolute;
-	top:-80px;
 	background-color: #bbbbbb;
 	display: none;
 
@@ -484,7 +482,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	box-sizing: border-box;
 	width:70%;
 	height:80px;
-	padding:2px;
+	padding:2px 8px;
 }
 .location-list-right .location-city{
 	margin-bottom:2px;
@@ -501,7 +499,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 .location-contact-item{
 	width:50%;
-	font-size:12px;
+	font-size:14px;
 	display: flex;
 }
 .location-contact-item img{
@@ -510,6 +508,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 }
 .location-contact-item a{
 	align-self: center;
+	padding-left:5px;
 }
 .location-contact-item a:hover{
 	color:palevioletred;

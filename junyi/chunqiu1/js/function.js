@@ -9,10 +9,14 @@ $('.ck-slide').ckSlide({
 (function(){
 	var menu1=document.getElementById("menu-1");
 	var ul1=document.querySelector("#menu-1>ul");
+	var ul1lis=document.querySelectorAll("#menu-1>ul>li");
 	var menu2=document.getElementById("menu-2");
 	var ul2=document.querySelector("#menu-2>ul");
+	var ul2lis=document.querySelectorAll("#menu-2>ul>li");
 	var lis=document.querySelectorAll("#g-fix-menu>li");
 	var uls=document.querySelectorAll("#g-fix-menu>li>ul");
+	ul1.style.top=ul1lis.length*(-40)+"px";
+	ul2.style.top=ul2lis.length*(-40)+"px";
 	lis[0].onclick=function(){
 		ul1.style.display="none";
 		ul2.style.display="none";
