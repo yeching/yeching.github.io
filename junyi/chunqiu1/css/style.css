@@ -308,6 +308,17 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	width:33%;
 	padding-right:5px;
 }
+.list-box a .grow-footer{
+	box-sizing: border-box;
+	width:66%;
+	overflow: hidden;
+}
+.list-box a .publish-time{
+	color:#000;
+	position: absolute;
+	right:10px;
+	bottom:2px;
+}
 /*预约听课*/
 .pre-online{
 	box-sizing: border-box;
@@ -422,12 +433,14 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	line-height:24px;
 	
 }
+.article *{
+	margin:4px 0;
+}
 .article img{
 	width:100%;
-	margin-bottom:4px;
 }
 .article p{
-	margin-bottom:4px;
+	font-size:14px;
 }
 
 /*定位*/
