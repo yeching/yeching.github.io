@@ -29,14 +29,14 @@
 			<div class="search-row">
 				<div class="search-row-left">
 					<span class="search-name">出发地</span>
-					<input id="inputarea" class="sg-area-result" type="text" placeholder="广东-广州" />
+					<input id="inputarea1" class="sg-area-result" type="text" placeholder="广东-广州" />
 				</div>
 				<span class="item-icon"></span>
 			</div>
 			<div class="search-row">
 				<div class="search-row-left">
 					<span class="search-name">目的地</span>
-					<input id="inputarea" class="sg-area-result" type="text" placeholder="广东-广州" />
+					<input id="inputarea2" class="sg-area-result" type="text" placeholder="广东-广州" />
 				</div>
 				<span class="item-icon"></span>
 			</div>		
@@ -81,9 +81,13 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		$('#inputarea').on('focus',function(){
+		$('#inputarea1').on('focus',function(){
 			$.areaSelect(); 
-		})	
+		});
+		$('#inputarea2').on('focus',function(){
+			$.areaSelect(); 
+		});
+				
 
 	})
 </script>
