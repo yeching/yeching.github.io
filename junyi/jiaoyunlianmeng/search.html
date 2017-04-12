@@ -82,7 +82,7 @@
 <script>
 	$(document).ready(function(){ 	
 		$.get('data.json', function (result) {
-			var input_selectArea= result.data;
+			var input_selectArea= result;
 
 			var selectArea1 = new MobileSelectArea();
 			selectArea1.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
