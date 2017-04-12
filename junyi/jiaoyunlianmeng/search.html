@@ -84,17 +84,17 @@
 		$.get('data.json', function (result) {
 			var input_selectArea= result.data;
 			return input_selectArea;
-		});	
-	var selectArea1 = new MobileSelectArea();
-	selectArea1.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
-	selectArea1.settings.data = input_selectArea.data;
-	selectArea1.data = input_selectArea.data;
 	
-	var selectArea2 = new MobileSelectArea();
-	selectArea2.init({ trigger: '#txt_area2', value: $('#hd_area').val(), data: [],eventName: 'click' });
-	selectArea2.settings.data = input_selectArea.data;
-	selectArea2.data = input_selectArea.data;
-		
+			var selectArea1 = new MobileSelectArea();
+			selectArea1.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
+			selectArea1.settings.data = input_selectArea.data;
+			selectArea1.data = input_selectArea.data;
+			
+			var selectArea2 = new MobileSelectArea();
+			selectArea2.init({ trigger: '#txt_area2', value: $('#hd_area').val(), data: [],eventName: 'click' });
+			selectArea2.settings.data = input_selectArea.data;
+			selectArea2.data = input_selectArea.data;
+		});
 	});		
 
 </script>
