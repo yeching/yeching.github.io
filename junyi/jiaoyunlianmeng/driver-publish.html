@@ -60,8 +60,8 @@
 			<div class="content-row img-row">
 				<span>车辆照片：</span>
 				<img src="img/banner1.jpg"/>
-				<input type="file" onclick="document.getElementById("img-upload").click()" class="img-upload">
-				<input id="img-upload" type="button" value="点击上传照片">
+				<input type="file" id="fileInput" class="img-upload">
+				<input id="img-upload" type="button"  onclick="showFileInput()" value="点击上传照片">
 			</div>	
 			<div class="content-row">
 				<span>运输要求：</span>
@@ -79,16 +79,16 @@
 			<img src="img/home.png" />
 			<span>首页</span>
 		</a>
-		<a href="place.html">
-			<img src="img/home.png" />
+		<a href="publish.html">
+			<img src="img/sort.png" />
 			<span>发布</span>
 		</a>
 		<a href="tel:13808828050">
-			<img src="img/home.png" />
+			<img src="img/car.png" />
 			<span>司机之家</span>
 		</a> 	
 		<a href="member.html">
-			<img src="img/home.png" />
+			<img src="img/huiyuan.png" />
 			<span>会员</span>
 		</a> 			
 </div>
@@ -102,6 +102,12 @@
 		interval:3000,//默认间隔3000毫秒
 		isAnimate:true
 	});
+</script>
+<script>
+function showFileInput(){
+	var fileInput=document.getElementById("fileInput");
+	fileInput.click();
+}
 </script>
 </body>
 </html>
