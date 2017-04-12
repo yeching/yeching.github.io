@@ -80,6 +80,14 @@
 	});
 </script>
 <script>
+	$(document).ready(function(){ 
+		$.get('data.json', function (result) {
+			selectArea1.settings.data = result.data;
+			selectArea1.data = result.data;
+		})
+	})	
+</script>
+<script>
 	var selectArea1 = new MobileSelectArea();
 	selectArea1.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
 	$(document).ready(function(){ 
