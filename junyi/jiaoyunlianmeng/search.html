@@ -91,7 +91,7 @@
 </script>
 <script>
 	var selectArea2 = new MobileSelectArea();
-	selectArea2.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
+	selectArea2.init({ trigger: '#txt_area2', value: $('#hd_area').val(), data: [],eventName: 'click' });
 	$(document).ready(function(){ 
 		$.get('data.json', function (result) {
 			selectArea2.settings.data = result.data;
