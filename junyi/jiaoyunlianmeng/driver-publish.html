@@ -1,9 +1,109 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<head>
+<meta charset="utf-8">
+<title>轿运联盟</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="" />
+<link rel="stylesheet" href="css/style.css" />
+<style type="text/css">
+
+</style>
+ </head>
+ 
+<body>
+<!-- 文档 -->
+<div class="g-doc">
+	<div class="nav-head">
+		<a href="javascript:window.history.go(-1);">返回</a>
+		<span>我是司机，我要接单</span>
+		<a class="hide-layout">查找</a>
+	</div>
+	<div class="car-contentbox">
+		<div class="car-content">
+			<div class="content-row">
+				<span>出发地：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>详细地址：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>目的地：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>详细地址：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>轿运车型：</span>
+				<input type="text" />
+			</div>		
+			<div class="content-row">
+				<span>车长：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>载重：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>剩余空位：</span>
+				<input type="text" />
+			</div>			
+			<div class="content-row img-row">
+				<span>车辆照片：</span>
+				<img src="img/banner1.jpg"/>
+				<input type="file" onclick="document.getElementById("img-upload").click()" class="img-upload">
+				<input id="img-upload" type="button" value="点击上传照片">
+			</div>	
+			<div class="content-row">
+				<span>运输要求：</span>
+				<textarea></textarea>
+			</div>				
+		</div>
+		<button>立即发布</button>
+	</div>
+</div>
+
+<div class="height40"></div>
+<!--fix-menu-->
+<div id="g-fix-menu" class="g-fix-menu">
+		<a href="index.html">
+			<img src="img/home.png" />
+			<span>首页</span>
+		</a>
+		<a href="place.html">
+			<img src="img/home.png" />
+			<span>发布</span>
+		</a>
+		<a href="tel:13808828050">
+			<img src="img/home.png" />
+			<span>司机之家</span>
+		</a> 	
+		<a href="member.html">
+			<img src="img/home.png" />
+			<span>会员</span>
+		</a> 			
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<!--<script src="js/slide.min.js"></script>-->
+<script src="js/slide.js"></script>
+<script>
+	$('.ck-slide').ckSlide({
+		autoPlay: true,//默认为不自动播放，需要时请以此设置
+		dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
+		interval:3000,//默认间隔3000毫秒
+		isAnimate:true
+	});
+</script>
+</body>
 </html>
+
+
