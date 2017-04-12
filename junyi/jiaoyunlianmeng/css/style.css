@@ -530,6 +530,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	border-bottom:1px solid #BBBBBB;
 	flex:auto;
 	font-size:16px;
+	padding:2px;
 }
 .img-row{
 	display: flex;
@@ -567,6 +568,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	margin-left:10px;
 	height:60px;
 	border:1px solid #BBBBBB;
+	padding:3px;
 }
 .car-contentbox button{
 	background:#0D34D4;
