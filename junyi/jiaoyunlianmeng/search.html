@@ -9,6 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="author" content="" />
+<link rel="stylesheet" href="css/dialog.css" />
 <link rel="stylesheet" type="text/css" href="css/mobile-select-area.css">
 <link rel="stylesheet" href="css/style.css" />
 <style type="text/css">
@@ -29,14 +30,14 @@
 			<div class="search-row">
 				<div class="search-row-left">
 					<span class="search-name">出发地</span>
-					<input id="inputarea1" class="sg-area-result" type="text" placeholder="广东-广州" />
+					<input type="text" id="txt_area1" value="" />
 				</div>
 				<span class="item-icon"></span>
 			</div>
 			<div class="search-row">
 				<div class="search-row-left">
 					<span class="search-name">目的地</span>
-					<input id="inputarea2" class="sg-area-result" type="text" placeholder="广东-广州" />
+					<input type="text" id="txt_area2" value="" />
 				</div>
 				<span class="item-icon"></span>
 			</div>		
@@ -77,6 +78,26 @@
 		interval:3000,//默认间隔3000毫秒
 		isAnimate:true
 	});
+</script>
+<script>
+	var selectArea1 = new MobileSelectArea();
+	selectArea1.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
+	$(document).ready(function(){ 
+		$.get('data.json', function (result) {
+			selectArea1.settings.data = result.data;
+			selectArea1.data = result.data;
+		})
+	})
+</script>
+<script>
+	var selectArea2 = new MobileSelectArea();
+	selectArea2.init({ trigger: '#txt_area1', value: $('#hd_area').val(), data: [],eventName: 'click' });
+	$(document).ready(function(){ 
+		$.get('data.json', function (result) {
+			selectArea2.settings.data = result.data;
+			selectArea2.data = result.data;
+		})
+	})
 </script>
 </body>
 </html>

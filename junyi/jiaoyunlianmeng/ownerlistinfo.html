@@ -18,9 +18,56 @@
 <body>
 <!-- 文档 -->
 <div class="g-doc">
-	<div class="publish-page">
-		<a href="driver.html">我是司机，我要接单</a>
-		<a href="owner.html">我是货主，我要发货</a>
+	<div class="nav-head">
+		<a href="javascript:window.history.go(-1);">返回</a>
+		<span>发车信息详情</span>
+		<a class="hide-layout">查找</a>
+	</div>
+	<div class="car-contentbox">
+		<div class="car-content">
+			<div class="content-row">
+				<span>出发地：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>详细地址：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>目的地：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>详细地址：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>轿运车型：</span>
+				<input type="text" />
+			</div>		
+			<div class="content-row">
+				<span>车长：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>载重：</span>
+				<input type="text" />
+			</div>
+			<div class="content-row">
+				<span>剩余空位：</span>
+				<input type="text" />
+			</div>			
+			<div class="content-row img-row">
+				<span>车辆照片：</span>
+				<img src="img/banner1.jpg"/>
+				<input type="file" onclick="document.getElementById("img-upload").click()" class="img-upload">
+				<input id="img-upload" type="button" value="点击上传照片">
+			</div>	
+			<div class="content-row">
+				<span>运输要求：</span>
+				<textarea></textarea>
+			</div>				
+		</div>
 	</div>
 </div>
 
@@ -57,3 +104,4 @@
 </script>
 </body>
 </html>
+
