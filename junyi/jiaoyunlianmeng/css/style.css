@@ -557,6 +557,7 @@ ul.ck-slide-wrapper img{width:100vw;height:50vw;}
 	outline: none;
 	border:1px solid transparent;
 	border-bottom: 1px solid #BBBBBB;
+	flex:auto;
 }
 .content-row input[type="button"]{
 	display: block;
