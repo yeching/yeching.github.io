@@ -18,20 +18,25 @@
 <body>
 <!-- 文档 -->
 <div class="g-doc">
-	<div class="member-page">
-		<div class="member-header">
-			<a href="accountlogin.html"><img src="img/banner1.jpg"></a>
-			<a href="accountlogin.html">点击登入</a>
+	<div class="login-page">
+		<div class="logo-img"><img src="img/logo.png"></div>		
+		<div class="login-header">
+			<a class="login-active" href="accountlogin.html">账户登入</a><span>|</span><a href="identifylogin.html">验证码登入</a>
 		</div>
-		<div class="member-content">
-			<a href="modifyinfo.html"><span>资料修改</span></a>
-			<a><span>会员认证</span></a>
-			<a><span>公司认证</span></a>
-			<a href="mytransportinfo.html"><span>我的承运</span></a>
-			<a href="mysource.html"><span>我的货源</span></a>			
-		</div>		
+		<form id='login-form' class="login-form">
+			<section class="login-row">
+				<span class="user-icon" ></span>
+				<input type="text" placeholder="用户名/已验证手机号码">
+			</section>
+			<section class="login-row">
+				<span class="password-icon" ></span>
+				<input type="password"  placeholder="密码">
+			</section>			
+			<a href="findpassword.html" class="lostpwd">找回密码</a>
+			<input type="button" value="登录">
+			<a href="register.html" class="lostpwd regs-btn">立即注册</a>
+		</form>
 	</div>
-	
 </div>
 
 <div class="height40"></div>
