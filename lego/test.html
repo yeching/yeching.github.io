@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Interpolation and Color Adjustment</title>
+  <style>
+    #canvas {
+      border: 1px solid black;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="upload" accept="image/*">
+  <br>
+  <select id="interpolation">
+    <option value="nearest">Nearest Neighbor</option>
+    <option value="bilinear">Bilinear</option>
+    <option value="bicubic">Bicubic</option>
+  </select>
+  <br>
+  <input type="range" id="brightness" min="-100" max="100" value="0">
+  <label for="brightness">Brightness</label>
+  <br>
+  <input type="range" id="contrast" min="-100" max="100" value="0">
+  <label for="contrast">Contrast</label>
+  <br>
+  <canvas id="canvas"></canvas>
+
+  <script src="image-interpolation.js"></script>
+</body>
+</html>
